@@ -260,7 +260,7 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.99);
   font-family: Oswald, sans-serif; }
   .show-title figure {
     position: absolute;
