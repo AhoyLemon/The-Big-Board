@@ -7,7 +7,7 @@ for (i = 0; i < 12; i++) {
   r.slug = wikiHow[i].slug;
   r.imgSrc ='https://damn.dog/img/pics/'+wikiHow[i].slug.toLowerCase()+'.jpg';
   r.title = wikiHow[i].slug.replace(/-/g, ' ');
-  let c = randomNumber(1,4);
+  let c = randomNumber(1,5);
   
   if (c == 2) {
     r.selected = true;
@@ -20,6 +20,16 @@ for (i = 0; i < 12; i++) {
 
   roundOne.push(r);
 }
+
+var sound = new Howl({
+  src: ['audio/boop1.mp3']
+});
+
+var dingdingding = new Howl({
+  src: ['audio/dingdingding.mp3']
+});
+
+//var audio = new Audio('audio/boop1.mp3');
 
 
 var app = new Vue({
@@ -47,7 +57,7 @@ var app = new Vue({
       let self = this;
       console.log(e.keyCode);
       
-      if (e.keyCode == 32) {
+      if (e.keyCode == 32 && self.mode == 'spin') {
         this.pickOneRandomly();
       }
 
@@ -63,13 +73,15 @@ var app = new Vue({
             callback();
           } else {
 
+            dingdingding.play();
+            
             self.current = self.rounds[0][self.temp.currentFocus];
             self.rounds[0][self.temp.currentFocus].blinking = true;
 
             setTimeout(function(){ 
               self.spinning = false;
               self.mode = 'show title';
-            }, 1200);
+            }, 3200);
 
           }
         }
@@ -100,13 +112,23 @@ var app = new Vue({
         }
       }
       if (validToFocus == true) {
+        sound.play();
         self.rounds[0][self.temp.lastFocused].focus = false;
         self.rounds[0][c].focus = true;
         self.temp.lastFocused = c;
-        self.temp.currentFocus = c;      
+        self.temp.currentFocus = c; 
       }
+    },
 
+    closeTheTitle() {
+      let self = this;
+      self.rounds[0][self.temp.currentFocus].blinking = false;
+      self.rounds[0][self.temp.currentFocus].selected = true;
+      self.mode = 'spin'; 
     }
+
+
+
   },
 
 

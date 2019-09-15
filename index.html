@@ -18,7 +18,7 @@
         </div>
       </div>
       <transition name="fade">
-        <div class="show-title" v-if="mode == 'show title'">
+        <div class="show-title" v-if="mode == 'show title'" @click="closeTheTitle()">
           <transition name="zoom">
             <figure v-if="mode == 'show title'" :style="{ 'backgroundImage': 'url(' + current.imgSrc +')' }"></figure>
           </transition>
@@ -31,7 +31,8 @@
     <div class="javascripts">
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
-      <script src="js/min/site.min.js?updated2019-08-15@16:16:39"></script>
+      <script src="js/libraries/howler.min.js"></script>
+      <script src="js/min/site.min.js?updated2019-08-15@16:38:25"></script>
     </div>
   </body>
 </html>
