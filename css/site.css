@@ -274,12 +274,12 @@ body {
   .show-title h1 {
     color: #eee;
     text-align: center;
-    font-size: 5vw;
+    font-size: 6.5vw;
     position: relative;
     font-weight: 300;
     text-shadow: 1px 1px 0 black, -1px -1px 0 black, 0.05em 0.05em 0.05em black;
     background: rgba(0, 0, 0, 0.5);
-    line-height: 100%;
+    line-height: 120%;
     padding: 0.5em 1em; }
 
 .fade-enter-active, .fade-leave-active {

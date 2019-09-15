@@ -95,7 +95,7 @@ var app = new Vue({
         self.spinning = false;
 
         //setDeceleratingTimeout(function(){ console.log('bye'); }, 100, 10);
-        self.setDeceleratingTimeout(function(){ self.boop(); }, 10, 33);
+        self.setDeceleratingTimeout(function(){ self.boop(); }, 10, 47);
 
       }
     },
