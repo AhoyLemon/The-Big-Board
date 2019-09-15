@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700&amp;display=swap" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+    <meta name="description" content="">
+  </head>
+  <!--include _favicons.pug-->
+  <!--include _social.pug-->
+  <body>
+    <div id="app" v-cloak>
+      <div class="keywatch" tabindex="-1" @keyup.enter="doSomething"></div>
+      <div class="press-your-luck" v-if="mode == 'spin' || mode == 'show title'">
+        <div class="box" v-for="(box, index) in rounds[0]" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }">
+          <figure :style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }"></figure>
+          <figcaption v-text="box.title"> </figcaption>
+        </div>
+      </div>
+      <transition name="fade">
+        <div class="show-title" v-if="mode == 'show title'">
+          <transition name="zoom">
+            <figure v-if="mode == 'show title'" :style="{ 'backgroundImage': 'url(' + current.imgSrc +')' }"></figure>
+          </transition>
+          <div class="inner">
+            <h1 v-text="'How To ' + current.title"></h1>
+          </div>
+        </div>
+      </transition>
+    </div>
+    <div class="javascripts">
+      <script src="js/libraries/vue.full.js"></script>
+      <script>const testing = true;</script>
+      <script src="js/min/site.min.js?updated2019-08-15@16:16:39"></script>
+    </div>
+  </body>
+</html>

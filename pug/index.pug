@@ -1,0 +1,33 @@
+- var testing = true
+- var siteTitle = ""
+- var siteURL = ""
+- var description = ""
+- var d = new Date()
+- var lastUpdated = d.getFullYear() + '-' + (d.getMonth()<10?'0':'') + d.getMonth() + '-' + (d.getDate()<10?'0':'') + d.getDate() + '@' + (d.getHours()<10?'0':'') + d.getHours() + ':' + (d.getMinutes()<10?'0':'') + d.getMinutes() + ':' + (d.getSeconds()<10?'0':'') + d.getSeconds()
+
+include partials/_patterns
+include partials/_mixins
+
+doctype html
+html(lang="en")
+  
+  include partials/_head.pug
+    
+  body
+    #app(v-cloak)
+
+      .keywatch(tabindex="-1" @keyup.enter="doSomething")
+
+      .press-your-luck(v-if="mode == 'spin' || mode == 'show title'")
+        .box(v-for="(box, index) in rounds[0]" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }")
+          figure(:style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }")
+          figcaption(v-text="box.title") 
+      
+      transition(name="fade")
+        .show-title(v-if="mode == 'show title'")
+          transition(name="zoom")
+            figure(v-if="mode == 'show title'" :style="{ 'backgroundImage': 'url(' + current.imgSrc +')' }")
+          .inner
+            h1(v-text="'How To ' + current.title")
+
+    include partials/_javascripts
