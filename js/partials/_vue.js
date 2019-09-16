@@ -1,10 +1,7 @@
 var app = new Vue({
   el: '#app',
   data: {
-
     mode: 'spin',
-
-    h1: "Hello/?",
     spinning: false,
     polling: null,
     ticks: 0,
@@ -37,7 +34,7 @@ var app = new Vue({
         return function() {
           if (--tick >= 0) {
             if (tick < 5) {
-              factor = (factor * 1.2);
+              factor = (factor * 1.1);
             }
             window.setTimeout(internalCallback, ++counter * factor);
             callback();

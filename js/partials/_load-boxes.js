@@ -7,7 +7,7 @@ for (i = 0; i < 12; i++) {
   r.slug = wikiHow[i].slug;
   r.imgSrc ='https://damn.dog/img/pics/'+wikiHow[i].slug.toLowerCase()+'.jpg';
   r.title = 'How To ' + wikiHow[i].slug.replace(/-/g, ' ');
-  let c = randomNumber(1,3);
+  let c = randomNumber(1,5);
   
   if (c == 2) {
     r.selected = true;
