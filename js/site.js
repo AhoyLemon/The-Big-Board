@@ -2,4 +2,7 @@
 
 //@prepros-append partials/_variables.js
 //@prepros-append partials/_drawings.js
+
+//@prepros-append partials/_load-boxes.js
+
 //@prepros-append partials/_vue.js
