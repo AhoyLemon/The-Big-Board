@@ -28,6 +28,6 @@ html(lang="en")
           transition(name="zoom")
             figure(v-if="mode == 'show title'" :style="{ 'backgroundImage': 'url(' + current.imgSrc +')' }")
           .inner
-            h1(v-text="'How To ' + current.title")
+            h1(v-text="current.title")
 
     include partials/_javascripts
