@@ -64,3 +64,16 @@ $redFilter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
   from { filter:none; }
   to   { filter:$redFilter; }
 }
+
+
+.make-your-choice { @include position(fixed,0,0,0,0); background:black;
+  .choice { width:57%;  @include position(absolute,0,null,0);
+    figcaption { font-size:9vh;  font-family: Oswald, sans-serif; color:white; text-shadow:2px 2px 0 black, -2px -2px 0 black, 0.1em 0.1em 0.1em black; position: absolute; }
+    &.a { left:0; background:blue; background-position:left center; background-size:contain; background-repeat: no-repeat;
+      figcaption { top:20px; left:20px; }
+    }
+    &.b { right:0; background-color:red; clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%); background-position: center; background-size:contain; background-repeat: no-repeat;
+      figcaption { bottom:20px; right:20px; }
+    }
+  }
+}

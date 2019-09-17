@@ -20,7 +20,7 @@ html(lang="en")
 
       .press-your-luck(v-if="mode == 'spin' || mode == 'show title'")
         .box(v-for="(box, index) in rounds[0]" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }")
-          figure(:style="{ 'backgroundImage': 'url(img/drawings/' + box.file +')' }")
+          figure(:style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }")
           figcaption(v-text="box.title") 
       
       transition(name="fade")
@@ -33,5 +33,12 @@ html(lang="en")
             figure(v-if="mode == 'show title'" :style="{ 'backgroundImage': 'url(img/drawings/' + current.file +')' }")
           .inner
             h1(v-text="current.title")
+
+      .make-your-choice(v-if="mode == 'a/b'")
+        figure.choice.a(style="background-image:url(img/drawings/math.png)")
+          figcaption A
+        figure.choice.b(style="background-image:url(img/temp/jesus-karate.jpg); background-size:cover; background-position:top center;")
+          figcaption B
+
 
     include partials/_javascripts

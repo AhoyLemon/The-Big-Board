@@ -336,3 +336,42 @@ body {
   to {
     -webkit-filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
     filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1); } }
+
+.make-your-choice {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: black; }
+  .make-your-choice .choice {
+    width: 57%;
+    position: absolute;
+    top: 0;
+    bottom: 0; }
+    .make-your-choice .choice figcaption {
+      font-size: 9vh;
+      font-family: Oswald, sans-serif;
+      color: white;
+      text-shadow: 2px 2px 0 black, -2px -2px 0 black, 0.1em 0.1em 0.1em black;
+      position: absolute; }
+    .make-your-choice .choice.a {
+      left: 0;
+      background: blue;
+      background-position: left center;
+      background-size: contain;
+      background-repeat: no-repeat; }
+      .make-your-choice .choice.a figcaption {
+        top: 20px;
+        left: 20px; }
+    .make-your-choice .choice.b {
+      right: 0;
+      background-color: red;
+      -webkit-clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat; }
+      .make-your-choice .choice.b figcaption {
+        bottom: 20px;
+        right: 20px; }

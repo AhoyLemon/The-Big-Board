@@ -13,7 +13,7 @@
       <div class="keywatch" tabindex="-1" @keyup.enter="doSomething"></div>
       <div class="press-your-luck" v-if="mode == 'spin' || mode == 'show title'">
         <div class="box" v-for="(box, index) in rounds[0]" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }">
-          <figure :style="{ 'backgroundImage': 'url(img/drawings/' + box.file +')' }"></figure>
+          <figure :style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }"></figure>
           <figcaption v-text="box.title"> </figcaption>
         </div>
       </div>
@@ -28,12 +28,20 @@
           </div>
         </div>
       </transition>
+      <div class="make-your-choice" v-if="mode == 'a/b'">
+        <figure class="choice a" style="background-image:url(img/drawings/math.png)">
+          <figcaption>A</figcaption>
+        </figure>
+        <figure class="choice b" style="background-image:url(img/temp/jesus-karate.jpg); background-size:cover; background-position:top center;">
+          <figcaption>B</figcaption>
+        </figure>
+      </div>
     </div>
     <div class="javascripts">
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-08-17@13:30:22"></script>
+      <script src="js/min/site.min.js?updated2019-08-17@14:56:48"></script>
     </div>
   </body>
 </html>

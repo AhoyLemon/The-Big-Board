@@ -11,3 +11,5 @@ var dingdingding = new Howl({
 var whammySound = new Howl({
   src: ['audio/whammy.mp3']
 });
+
+const loadDamnDog = true;
