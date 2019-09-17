@@ -20,8 +20,14 @@ var app = new Vue({
       let self = this;
       console.log(e.keyCode);
       
-      if (e.keyCode == 32 && self.mode == 'spin') {
-        this.pickOneRandomly();
+      if (e.keyCode == 32) {
+
+        if (self.mode == 'spin') {
+          self.pickOneRandomly();
+        } else if (self.mode == 'show title') {
+          self.closeTheTitle();
+        }
+        
       }
 
 

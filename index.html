@@ -13,14 +13,15 @@
       <div class="keywatch" tabindex="-1" @keyup.enter="doSomething"></div>
       <div class="press-your-luck" v-if="mode == 'spin' || mode == 'show title'">
         <div class="box" v-for="(box, index) in rounds[0]" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }">
-          <figure :style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }"></figure>
+          <figure :style="{ 'backgroundImage': 'url(img/drawings/' + box.file +')' }"></figure>
           <figcaption v-text="box.title"> </figcaption>
         </div>
       </div>
       <transition name="fade">
         <div class="show-title" v-if="mode == 'show title'" @click="closeTheTitle()">
+          <div class="whammy-holder" v-if="current.whammy"><img class="whammy" src="img/whammy1.png"></div>
           <transition name="zoom">
-            <figure v-if="mode == 'show title'" :style="{ 'backgroundImage': 'url(' + current.imgSrc +')' }"></figure>
+            <figure v-if="mode == 'show title'" :style="{ 'backgroundImage': 'url(img/drawings/' + current.file +')' }"></figure>
           </transition>
           <div class="inner">
             <h1 v-text="current.title"></h1>
@@ -32,7 +33,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-08-15@20:16:19"></script>
+      <script src="js/min/site.min.js?updated2019-08-17@13:30:22"></script>
     </div>
   </body>
 </html>

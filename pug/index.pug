@@ -20,13 +20,17 @@ html(lang="en")
 
       .press-your-luck(v-if="mode == 'spin' || mode == 'show title'")
         .box(v-for="(box, index) in rounds[0]" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }")
-          figure(:style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }")
+          figure(:style="{ 'backgroundImage': 'url(img/drawings/' + box.file +')' }")
           figcaption(v-text="box.title") 
       
       transition(name="fade")
         .show-title(v-if="mode == 'show title'" @click="closeTheTitle()")
+
+          .whammy-holder(v-if="current.whammy")
+            img.whammy(src="img/whammy1.png")
+
           transition(name="zoom")
-            figure(v-if="mode == 'show title'" :style="{ 'backgroundImage': 'url(' + current.imgSrc +')' }")
+            figure(v-if="mode == 'show title'" :style="{ 'backgroundImage': 'url(img/drawings/' + current.file +')' }")
           .inner
             h1(v-text="current.title")
 

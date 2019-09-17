@@ -280,7 +280,15 @@ body {
     text-shadow: 1px 1px 0 black, -1px -1px 0 black, 0.05em 0.05em 0.05em black;
     background: rgba(0, 0, 0, 0.5);
     line-height: 120%;
-    padding: 0.5em 1em; }
+    padding: 0.5em 1em;
+    z-index: 3; }
+  .show-title .whammy-holder {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1; }
+    .show-title .whammy-holder .whammy {
+      width: 40vh; }
 
 .fade-enter-active, .fade-leave-active {
   -webkit-transition: opacity .5s;

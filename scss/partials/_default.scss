@@ -32,7 +32,12 @@ $redFilter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
 
 .show-title { @include position(fixed,0,0,0,0); @include flex-center(); background:rgba(0,0,0,0.99); font-family: Oswald, sans-serif;
   figure { @include position(absolute,20px,20px,20px,20px); background-size:contain; background-position: center; background-repeat: no-repeat; }
-  h1 { color:$white; text-align: center; font-size:6.5vw; position: relative; font-weight: 300;  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 0.05em 0.05em 0.05em black; background:rgba(0,0,0,0.5); line-height: 120%; padding:0.5em 1em; }
+  h1 { color:$white; text-align: center; font-size:6.5vw; position: relative; font-weight: 300;  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 0.05em 0.05em 0.05em black; background:rgba(0,0,0,0.5); line-height: 120%; padding:0.5em 1em; z-index: 3; }
+
+  .whammy-holder { @include position(absolute,null,20px,20px); z-index: 1;
+    .whammy { width:40vh; }
+  }
+
 }
 
 .fade-enter-active, .fade-leave-active {
