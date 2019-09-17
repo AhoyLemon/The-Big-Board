@@ -8,7 +8,6 @@ for (i = 0; i < roundOneBoxes.length; i++) {
   console.log(r);
   r.focus = false;
   r.selected = false;
-  r.whammy = false;
   r.blinking = false;
 
   if (!r.whammy) {
