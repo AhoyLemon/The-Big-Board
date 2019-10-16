@@ -1,7 +1,7 @@
 var app = new Vue({
   el: '#app',
   data: {
-    mode: 'spin',
+    mode: 'countdown',
     spinning: false,
     polling: null,
     ticks: 0,
@@ -12,7 +12,11 @@ var app = new Vue({
     current: {},
     rounds: [
       roundOne
-    ]
+    ],
+    countdown: {
+      percent: 50,
+      interval: {}
+    }
   },
 
   methods: {
@@ -112,14 +116,33 @@ var app = new Vue({
 
 
   computed: {
+    computedRotate() {
+      let self = this;
+      return (self.countdown.percent * 3.6) + 'deg';
+    },
 
+    computedCircleFill() {
+      let self = this;
+      if (self.countdown.percent <  50) {
+        return 'white';
+      } else if (self.countdown.percent < 80) {
+        return 'yellow';
+      } else {
+        return 'red';
+      }
+    }
   },
 
 
   mounted: function() {
-
+    let self = this;
+    self.countdown.interval = setInterval(() => {
+      self.countdown.percent = self.countdown.percent + 1;
+      if (self.countdown.percent >= 100) {
+        self.countdown.percent = 0;
+      }
+    }, 300);
   },
-
 
 });
 

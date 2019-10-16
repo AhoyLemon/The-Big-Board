@@ -14,7 +14,7 @@ if (loadDamnDog) {
     r.slug = wikiHow[i].slug;
     r.imgSrc ='https://damn.dog/img/pics/'+wikiHow[i].slug.toLowerCase()+'.jpg';
     r.title = 'How To ' + wikiHow[i].slug.replace(/-/g, ' ');
-    let c = randomNumber(1,5);
+    let c = randomNumber(1,50);
     
     if (c == 2) {
       r.selected = true;

@@ -1,0 +1,13 @@
+.countdown { min-height: 100vh; background:#111; @include flex-center();
+  .circle { height:50vh; width:50vh; background: radial-gradient(lime, blue,aqua,magenta,yellow,red,lime); border-radius: 50%; position: relative;
+    transition: background 1s ease;
+    &:before { background:#111; content: ' '; @include position(absolute,0,0,0,0); transform:scale(0.8); border-radius: 50%; }
+    text-align: center;
+  }
+  .flipper-holder { position: relative; transform-origin: bottom; width:10vh; height:25vh; display: inline-block; }
+  .flipper { height:35vh; transform:translateY(-15%);
+    .fill { fill:white; }
+    .outline { fill:#111; }
+  }
+
+}
