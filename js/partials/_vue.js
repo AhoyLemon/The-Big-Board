@@ -83,7 +83,8 @@ var app = new Vue({
     pickOneRandomly() {
       let self = this;
       self.spinning = true;
-      self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 42);
+      //self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 42);
+      self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 11);
 
     },
 
@@ -137,7 +138,12 @@ var app = new Vue({
   computed: {
     computedRotate() {
       let self = this;
-      return (self.countdown.percent * 3.6) + 'deg';
+
+      if (self.countdown.percent >= 100) {
+        return '0deg';
+      } else {
+        return (self.countdown.percent * 3.6) + 'deg';
+      }
     },
 
     computedCircleFill() {
@@ -154,13 +160,14 @@ var app = new Vue({
     computedWarningLights() {
       let self = this;
       let styles = {
-        width: 0
+        height: 0
       };
 
-      if (self.countdown.percent > 96) {
-        styles.width = '100%';
-      } else if (self.countdown.percent > 87) {
-        styles.width = (self.countdown.percent - 88) * 10 + '%';
+      if (self.countdown.percent >= 100) {
+        styles.height = '100%';
+      }
+      if (self.countdown.percent > 90) {
+        styles.height = (self.countdown.percent - 90) * 10 + '%';
       }
 
 

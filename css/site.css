@@ -398,7 +398,12 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  position: relative; }
+  position: relative;
+  /*
+  &.time-up { background: linear-gradient(to bottom, #93291E, #ED213A);
+    .circle, .warning-lights { display:none; animation: blinki; }
+  }
+  */ }
   .countdown .circle {
     height: 50vh;
     width: 50vh;
@@ -442,37 +447,30 @@ body {
       fill: #111; }
   .countdown .warning-lights {
     position: absolute;
+    right: 0;
     bottom: 0;
     left: 0;
-    height: 32px;
+    height: 0;
     background: -webkit-gradient(linear, right top, left top, from(#f00000), to(#dc281e));
     background: -webkit-linear-gradient(right, #f00000, #dc281e);
     background: -o-linear-gradient(right, #f00000, #dc281e);
-    background: linear-gradient(to left, #f00000, #dc281e);
-    width: 0%; }
+    background: linear-gradient(to left, #f00000, #dc281e); }
     .countdown .warning-lights.blinking {
       -webkit-animation: blinkingKF 0.3s infinite;
       animation: blinkingKF 0.3s infinite; }
-  .countdown.time-up {
-    background: -webkit-gradient(linear, left top, left bottom, from(#f00000), to(#dc281e));
-    background: -webkit-linear-gradient(top, #f00000, #dc281e);
-    background: -o-linear-gradient(top, #f00000, #dc281e);
-    background: linear-gradient(to bottom, #f00000, #dc281e); }
-    .countdown.time-up .circle, .countdown.time-up .warning-lights {
-      display: none; }
 
 @-webkit-keyframes blinkingKF {
-  0% {
+  25% {
     opacity: 1; }
   50% {
     opacity: 0; }
-  100% {
+  75% {
     opacity: 1; } }
 
 @keyframes blinkingKF {
-  0% {
+  25% {
     opacity: 1; }
   50% {
     opacity: 0; }
-  100% {
+  75% {
     opacity: 1; } }

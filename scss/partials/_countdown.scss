@@ -10,19 +10,21 @@
     .outline { fill:#111; }
   }
 
-  .warning-lights { @include position(absolute,null,null,0,0); height:32px; background:linear-gradient(to left, #f00000, #dc281e); width:0%;
+  .warning-lights { @include position(absolute,null,0,0,0); height:0; background:linear-gradient(to left, #f00000, #dc281e);
     &.blinking { animation: blinkingKF 0.3s infinite; }
   }
 
 
-  &.time-up { background:linear-gradient(to bottom, #f00000, #dc281e);
-    .circle, .warning-lights { display:none; }
+  /*
+  &.time-up { background: linear-gradient(to bottom, #93291E, #ED213A);
+    .circle, .warning-lights { display:none; animation: blinki; }
   }
+  */
 
 }
 
 @keyframes blinkingKF {
-  0%   { opacity: 1; }
+  25%  { opacity: 1; }
   50%  { opacity: 0; }
-  100% { opacity: 1; }
+  75%  { opacity: 1; }
 }
