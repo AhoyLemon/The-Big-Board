@@ -455,9 +455,6 @@ body {
     background: -webkit-linear-gradient(right, #f00000, #dc281e);
     background: -o-linear-gradient(right, #f00000, #dc281e);
     background: linear-gradient(to left, #f00000, #dc281e); }
-    .countdown .warning-lights.blinking {
-      -webkit-animation: blinkingKF 0.3s infinite;
-      animation: blinkingKF 0.3s infinite; }
 
 @-webkit-keyframes blinkingKF {
   25% {

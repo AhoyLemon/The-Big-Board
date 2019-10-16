@@ -24,7 +24,7 @@ html(lang="en")
           figcaption(v-text="box.title") 
       
       transition(name="fade")
-        .show-title(v-if="mode == 'show title'" @click="closeTheTitle()")
+        .show-title(v-if="mode == 'show title'")
 
           .whammy-holder(v-if="current.whammy")
             img.whammy(src="img/whammy1.png")

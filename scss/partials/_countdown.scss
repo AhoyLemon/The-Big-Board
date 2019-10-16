@@ -11,7 +11,7 @@
   }
 
   .warning-lights { @include position(absolute,null,0,0,0); height:0; background:linear-gradient(to left, #f00000, #dc281e);
-    &.blinking { animation: blinkingKF 0.3s infinite; }
+    //&.blinking { animation: blinkingKF 0.3s infinite; }
   }
 
 

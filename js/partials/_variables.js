@@ -12,4 +12,8 @@ var whammySound = new Howl({
   src: ['audio/whammy.mp3']
 });
 
+var nngg = new Howl({
+  src: ['audio/nngg.mp3']
+});
+
 const loadDamnDog = true;

@@ -125,7 +125,11 @@ var app = new Vue({
         self.countdown.percent = self.countdown.percent + 1;
         if (self.countdown.percent >= 100) {
           clearInterval(self.countdown.interval);
+          //nngg.play();
           //self.countdown.percent = 0;
+        }
+        if (self.countdown.percent == 100) {
+          nngg.play();
         }
       }, 300);
     }
@@ -181,8 +185,6 @@ var app = new Vue({
 
   mounted: function() {
     let self = this;
-    
-    self.moveTheClock();
   },
 
 });
