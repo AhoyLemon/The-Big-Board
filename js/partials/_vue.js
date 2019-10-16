@@ -1,7 +1,7 @@
 var app = new Vue({
   el: '#app',
   data: {
-    mode: 'countdown',
+    mode: 'spin',
     spinning: false,
     polling: null,
     ticks: 0,
@@ -14,7 +14,7 @@ var app = new Vue({
       roundOne
     ],
     countdown: {
-      percent: 50,
+      percent: 0,
       interval: {}
     }
   },
@@ -27,14 +27,24 @@ var app = new Vue({
       if (e.keyCode == 32) {
 
         if (self.mode == 'spin') {
-          self.pickOneRandomly();
+          if (self.spinning == false) {
+            self.pickOneRandomly();
+          }
         } else if (self.mode == 'show title') {
           self.closeTheTitle();
+        } else if (self.mode == 'countdown') {
+          self.setupNewSpin();
         }
         
       }
 
 
+    },
+
+    setupNewSpin() {
+      let self = this;
+      self.countdown.percent = 0;
+      self.mode = 'spin';
     },
 
     setDeceleratingTimeout(callback, factor, times) {
@@ -72,14 +82,9 @@ var app = new Vue({
     },
     pickOneRandomly() {
       let self = this;
+      self.spinning = true;
+      self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 42);
 
-      if (self.spinning == false) {
-        self.spinning = false;
-
-        //setDeceleratingTimeout(function(){ console.log('bye'); }, 100, 10);
-        self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 42);
-
-      }
     },
 
     boop() {
@@ -106,9 +111,23 @@ var app = new Vue({
       let self = this;
       self.rounds[0][self.temp.currentFocus].blinking = false;
       self.rounds[0][self.temp.currentFocus].selected = true;
-      self.mode = 'spin'; 
-    }
+      self.countdown.percent = 0;
+      self.mode = 'countdown'; 
 
+      self.moveTheClock();
+    },
+
+
+    moveTheClock() {
+      let self = this;
+      self.countdown.interval = setInterval(() => {
+        self.countdown.percent = self.countdown.percent + 1;
+        if (self.countdown.percent >= 100) {
+          clearInterval(self.countdown.interval);
+          //self.countdown.percent = 0;
+        }
+      }, 300);
+    }
 
 
   },
@@ -124,24 +143,39 @@ var app = new Vue({
     computedCircleFill() {
       let self = this;
       if (self.countdown.percent <  50) {
-        return 'white';
+        return 'radial-gradient(#00ff00, #bbbbbb, #dddddd)';
       } else if (self.countdown.percent < 80) {
-        return 'yellow';
+        return 'radial-gradient(#00ff00, #9f9f34, #ffff00)';
       } else {
-        return 'red';
+        return 'radial-gradient(#f00000, #dc281e)';
       }
+    },
+
+    computedWarningLights() {
+      let self = this;
+      let styles = {
+        width: 0
+      };
+
+      if (self.countdown.percent > 96) {
+        styles.width = '100%';
+      } else if (self.countdown.percent > 87) {
+        styles.width = (self.countdown.percent - 88) * 10 + '%';
+      }
+
+
+
+
+      return styles;
     }
+
   },
 
 
   mounted: function() {
     let self = this;
-    self.countdown.interval = setInterval(() => {
-      self.countdown.percent = self.countdown.percent + 1;
-      if (self.countdown.percent >= 100) {
-        self.countdown.percent = 0;
-      }
-    }, 300);
+    
+    self.moveTheClock();
   },
 
 });

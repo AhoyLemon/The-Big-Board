@@ -36,7 +36,7 @@
           <figcaption>B</figcaption>
         </figure>
       </div>
-      <div class="countdown" v-if="mode == 'countdown'">
+      <div class="countdown" v-if="mode == 'countdown'" v-bind:class="{ 'time-up': (countdown.percent &gt;= 100) }">
         <div class="circle" v-bind:style="{ background: computedCircleFill }">
           <div class="flipper-holder" v-bind:style="'transform:rotate('+computedRotate+');'">
             <svg class="flipper" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewbox="0 0 78.3 260" xml:space="preserve">
@@ -45,13 +45,14 @@
             </svg>
           </div>
         </div>
+        <div class="warning-lights" v-bind:style="computedWarningLights" v-bind:class="{ blinking: (countdown.percent &gt; 96) }"></div>
       </div>
     </div>
     <div class="javascripts">
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-09-15@20:51:44"></script>
+      <script src="js/min/site.min.js?updated2019-09-16@13:26:03"></script>
     </div>
   </body>
 </html>

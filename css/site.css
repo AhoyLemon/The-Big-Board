@@ -397,7 +397,8 @@ body {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
   .countdown .circle {
     height: 50vh;
     width: 50vh;
@@ -406,9 +407,9 @@ body {
     background: radial-gradient(lime, blue, aqua, magenta, yellow, red, lime);
     border-radius: 50%;
     position: relative;
-    -webkit-transition: background 1s ease;
-    -o-transition: background 1s ease;
-    transition: background 1s ease;
+    -webkit-transition: background 2s ease;
+    -o-transition: background 2s ease;
+    transition: background 2s ease;
     text-align: center; }
     .countdown .circle:before {
       background: #111;
@@ -436,6 +437,42 @@ body {
     -ms-transform: translateY(-15%);
     transform: translateY(-15%); }
     .countdown .flipper .fill {
-      fill: white; }
+      fill: #bbbbbb; }
     .countdown .flipper .outline {
       fill: #111; }
+  .countdown .warning-lights {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 32px;
+    background: -webkit-gradient(linear, right top, left top, from(#f00000), to(#dc281e));
+    background: -webkit-linear-gradient(right, #f00000, #dc281e);
+    background: -o-linear-gradient(right, #f00000, #dc281e);
+    background: linear-gradient(to left, #f00000, #dc281e);
+    width: 0%; }
+    .countdown .warning-lights.blinking {
+      -webkit-animation: blinkingKF 0.3s infinite;
+      animation: blinkingKF 0.3s infinite; }
+  .countdown.time-up {
+    background: -webkit-gradient(linear, left top, left bottom, from(#f00000), to(#dc281e));
+    background: -webkit-linear-gradient(top, #f00000, #dc281e);
+    background: -o-linear-gradient(top, #f00000, #dc281e);
+    background: linear-gradient(to bottom, #f00000, #dc281e); }
+    .countdown.time-up .circle, .countdown.time-up .warning-lights {
+      display: none; }
+
+@-webkit-keyframes blinkingKF {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes blinkingKF {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
