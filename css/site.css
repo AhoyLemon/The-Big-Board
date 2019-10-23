@@ -216,7 +216,8 @@ body {
     height: 100%;
     background-size: cover;
     background-position: center;
-    opacity: 0.8; }
+    opacity: 0.8;
+    border: 3px solid #212121; }
   .press-your-luck .box figcaption {
     display: none; }
   .press-your-luck .box.focus figure {

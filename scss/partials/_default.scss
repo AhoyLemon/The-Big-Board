@@ -14,8 +14,8 @@ a { @extend %textlink; }
 $redFilter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
 
 .press-your-luck { display:grid;  grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, 1fr); height:100vh; background:#131313;
-  .box { 
-    figure { height:100%; background-size:cover; background-position: center; opacity:0.8; }
+  .box {
+    figure { height:100%; background-size:cover; background-position: center; opacity:0.8; border:3px solid $black; }
     figcaption { display:none; }
     &.focus {
       figure { filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1); opacity: 1; }
