@@ -19,7 +19,7 @@ html(lang="en")
       .keywatch(tabindex="-1" @keyup.enter="doSomething")
 
       .press-your-luck(v-if="mode == 'spin' || mode == 'show title'")
-        .box(v-for="(box, index) in rounds[0]" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }")
+        .box(v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }")
           figure(:style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }")
           figcaption(v-text="box.title") 
       

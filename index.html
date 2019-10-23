@@ -12,7 +12,7 @@
     <div id="app" v-cloak>
       <div class="keywatch" tabindex="-1" @keyup.enter="doSomething"></div>
       <div class="press-your-luck" v-if="mode == 'spin' || mode == 'show title'">
-        <div class="box" v-for="(box, index) in rounds[0]" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }">
+        <div class="box" v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }">
           <figure :style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }"></figure>
           <figcaption v-text="box.title"> </figcaption>
         </div>
@@ -52,7 +52,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-09-16@18:03:41"></script>
+      <script src="js/min/site.min.js?updated2019-09-23@14:41:56"></script>
     </div>
   </body>
 </html>

@@ -10,9 +10,8 @@ var app = new Vue({
       currentFocus: 0
     },
     current: {},
-    rounds: [
-      roundOne
-    ],
+    boxes: initialBoxes,
+    queue: exhibitionQueue,
     countdown: {
       percent: 0,
       interval: {}
@@ -33,6 +32,7 @@ var app = new Vue({
         } else if (self.mode == 'show title') {
           self.closeTheTitle();
         } else if (self.mode == 'countdown') {
+          clearInterval(self.countdown.interval);
           self.setupNewSpin();
         }
         
@@ -41,8 +41,21 @@ var app = new Vue({
 
     },
 
+    
+
     setupNewSpin() {
       let self = this;
+
+      // Rehydrate filled box
+      let b = self.queue[0];
+      b.imgSrc = 'img/drawings/' + b.file;
+
+      self.boxes.splice(self.current.index, 1, b);
+      self.queue.shift();
+      
+      self.current = {};
+
+
       self.countdown.percent = 0;
       self.mode = 'spin';
     },
@@ -60,15 +73,19 @@ var app = new Vue({
             callback();
           } else {
 
-            if (self.rounds[0][self.temp.currentFocus].whammy == true) {
+            if (self.boxes[self.temp.currentFocus].whammy == true) {
               whammySound.play();
             } else {
               dingdingding.play();
             }
             
             
-            self.current = self.rounds[0][self.temp.currentFocus];
-            self.rounds[0][self.temp.currentFocus].blinking = true;
+            self.current = self.boxes[self.temp.currentFocus];
+
+            self.current.index = self.temp.currentFocus;
+            
+
+            self.boxes[self.temp.currentFocus].blinking = true;
 
             setTimeout(function(){ 
               self.spinning = false;
@@ -94,15 +111,15 @@ var app = new Vue({
       let c;
       let validToFocus = false;
       while (validToFocus == false) {
-        c = randomNumber(0,self.rounds[0].length);
-        if (c != self.temp.lastFocused && self.rounds[0][c].selected != true) {
+        c = randomNumber(0,self.boxes.length);
+        if (c != self.temp.lastFocused && self.boxes[c].selected != true) {
           validToFocus = true;
         }
       }
       if (validToFocus == true) {
         sound.play();
-        self.rounds[0][self.temp.lastFocused].focus = false;
-        self.rounds[0][c].focus = true;
+        self.boxes[self.temp.lastFocused].focus = false;
+        self.boxes[c].focus = true;
         self.temp.lastFocused = c;
         self.temp.currentFocus = c; 
       }
@@ -110,8 +127,8 @@ var app = new Vue({
 
     closeTheTitle() {
       let self = this;
-      self.rounds[0][self.temp.currentFocus].blinking = false;
-      self.rounds[0][self.temp.currentFocus].selected = true;
+      self.boxes[self.temp.currentFocus].blinking = false;
+      self.boxes[self.temp.currentFocus].selected = true;
       self.countdown.percent = 0;
       self.mode = 'countdown'; 
 
@@ -125,8 +142,6 @@ var app = new Vue({
         self.countdown.percent = self.countdown.percent + 1;
         if (self.countdown.percent >= 100) {
           clearInterval(self.countdown.interval);
-          //nngg.play();
-          //self.countdown.percent = 0;
         }
         if (self.countdown.percent == 100) {
           nngg.play();

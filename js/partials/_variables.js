@@ -16,4 +16,4 @@ var nngg = new Howl({
   src: ['audio/nngg.mp3']
 });
 
-const loadDamnDog = true;
+const loadDamnDog = false;

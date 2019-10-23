@@ -1,7 +1,8 @@
-shuffle(roundOneBoxes);
+//shuffle(roundOneBoxes);
 
 
-const roundOne = [];
+const exhibitionQueue = [];
+const initialBoxes = [];
 
 
 
@@ -44,12 +45,9 @@ if (loadDamnDog) {
 }
 
 
-
-
-
 if (!loadDamnDog) {
-  for (i = 0; i < roundOneBoxes.length; i++) {
-    let r = roundOneBoxes[i];
+  for (i = 0; i < queue.length; i++) {
+    let r = queue[i];
   
     r.imgSrc = 'img/drawings/' + r.file;
 
@@ -61,6 +59,25 @@ if (!loadDamnDog) {
       r.whammy = false;
     }
   
-    roundOne.push(r);
+    exhibitionQueue.push(r);
   }
+
+
+  for (i = 0; i < 12; i++) {
+    
+    let r = exhibitionQueue[0];
+
+    initialBoxes.push(r);
+
+    exhibitionQueue.shift();
+
+  }
+
+
+
+
+
+
+
+
 }
