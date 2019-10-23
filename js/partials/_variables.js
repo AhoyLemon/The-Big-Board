@@ -17,3 +17,30 @@ var nngg = new Howl({
 });
 
 const loadDamnDog = false;
+
+const contestants = [
+  [
+    "Boots Raingear",
+    "Achilles' Heelies",
+    "Frank West",
+    "Victor Laszlo"
+  ],
+  [
+    "Lou Fernandez",
+    "Jack Chick",
+    "Lemon",
+    "Kumquatxop"
+  ],
+  [
+    "Nutshell Gulag",
+    "Adam Bozarth",
+    "K Thor?",
+    "Shell Game"
+  ],
+  [
+    "bumpgrrl",
+    "Jimmyfranks",
+    "Bunnybread",
+    "STOG"
+  ]
+];
