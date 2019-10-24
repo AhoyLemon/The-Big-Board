@@ -291,6 +291,181 @@ body {
     .show-title .whammy-holder .whammy {
       width: 40vh; }
 
+@-webkit-keyframes PlayerPicZoom {
+  from {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    -webkit-filter: brightness(10%);
+    filter: brightness(10%); }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%); } }
+
+@keyframes PlayerPicZoom {
+  from {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    -webkit-filter: brightness(10%);
+    filter: brightness(10%); }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%); } }
+
+@-webkit-keyframes PlayerNumberSlide {
+  from {
+    -webkit-transform: translate(-60vw);
+    transform: translate(-60vw);
+    opacity: 1; }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    opacity: 1; } }
+
+@keyframes PlayerNumberSlide {
+  from {
+    -webkit-transform: translate(-60vw);
+    transform: translate(-60vw);
+    opacity: 1; }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    opacity: 1; } }
+
+@-webkit-keyframes PlayerNameSlide {
+  from {
+    -webkit-transform: translate(60vw);
+    transform: translate(60vw);
+    opacity: 1; }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    opacity: 1; } }
+
+@keyframes PlayerNameSlide {
+  from {
+    -webkit-transform: translate(60vw);
+    transform: translate(60vw);
+    opacity: 1; }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    opacity: 1; } }
+
+.show-player {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  font-family: Oswald, sans-serif; }
+  .show-player figure {
+    width: 80vw;
+    height: 80vh;
+    position: relative; }
+    .show-player figure .pic {
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      -webkit-animation-name: PlayerPicZoom;
+      animation-name: PlayerPicZoom;
+      -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards; }
+    .show-player figure figcaption {
+      position: absolute;
+      font-size: 5vw;
+      line-height: 100%;
+      padding: 0.15em .75em;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: bold;
+      font-family: Helvetica;
+      text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
+    .show-player figure .player-number {
+      top: -3vh;
+      left: -3vw;
+      padding-right: 1.25em;
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+      background: -webkit-gradient(linear, left bottom, left top, from(#F37335), to(#FDC830));
+      background: -webkit-linear-gradient(bottom, #F37335, #FDC830);
+      background: -o-linear-gradient(bottom, #F37335, #FDC830);
+      background: linear-gradient(to top, #F37335, #FDC830);
+      -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 83% 100%, 0% 100%);
+      clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 83% 100%, 0% 100%);
+      -webkit-transform: translateX(-60vw);
+      -ms-transform: translateX(-60vw);
+      transform: translateX(-60vw);
+      -webkit-animation-name: PlayerNumberSlide;
+      animation-name: PlayerNumberSlide;
+      -webkit-animation-duration: 1.5s;
+      animation-duration: 1.5s;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+      -webkit-animation-timing-function: cubic-bezier(0.75, -0.5, 0, 1.75);
+      animation-timing-function: cubic-bezier(0.75, -0.5, 0, 1.75);
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards; }
+    .show-player figure .player-name {
+      bottom: -3vw;
+      right: -3vw;
+      padding-left: 1.25em;
+      background: -webkit-gradient(linear, left bottom, left top, from(#1e3c72), to(#2a5298));
+      background: -webkit-linear-gradient(bottom, #1e3c72, #2a5298);
+      background: -o-linear-gradient(bottom, #1e3c72, #2a5298);
+      background: linear-gradient(to top, #1e3c72, #2a5298);
+      -webkit-clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+      clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+      -webkit-transform: translateX(60vw);
+      -ms-transform: translateX(60vw);
+      transform: translateX(60vw);
+      -webkit-animation-name: PlayerNameSlide;
+      animation-name: PlayerNameSlide;
+      -webkit-animation-duration: 1.2s;
+      animation-duration: 1.2s;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+      -webkit-animation-timing-function: cubic-bezier(0.75, -0.5, 0, 1.75);
+      animation-timing-function: cubic-bezier(0.75, -0.5, 0, 1.75);
+      -webkit-animation-delay: 4s;
+      animation-delay: 4s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards; }
+
 .fade-enter-active, .fade-leave-active {
   -webkit-transition: opacity .5s;
   -o-transition: opacity .5s;

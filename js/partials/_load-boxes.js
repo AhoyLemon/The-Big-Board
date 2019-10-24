@@ -73,11 +73,5 @@ if (!loadDamnDog) {
 
   }
 
-
-
-
-
-
-
-
 }
+

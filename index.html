@@ -11,11 +11,19 @@
   <body>
     <div id="app" v-cloak>
       <div class="keywatch" tabindex="-1" @keyup.enter="doSomething"></div>
-      <div class="press-your-luck" v-if="mode == 'spin' || mode == 'show title'">
+      <div class="break-screen" v-if="mode == 'vote'"></div>
+      <div class="press-your-luck" v-if="mode == 'show player' || mode == 'spin' || mode == 'show title'">
         <div class="box" v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }">
           <figure :style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }"></figure>
           <figcaption v-text="box.title"> </figcaption>
         </div>
+      </div>
+      <div class="show-player" v-if="mode == 'show player'">
+        <figure>
+          <div class="pic" :style=" { 'background-image': 'url(img/players/big/'+player.pic+')' }"></div>
+          <figcaption class="player-number">Player {{player.number}}</figcaption>
+          <figcaption class="player-name">{{player.name}}</figcaption>
+        </figure>
       </div>
       <transition name="fade">
         <div class="show-title" v-if="mode == 'show title'">
@@ -52,7 +60,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-09-23@14:41:56"></script>
+      <script src="js/min/site.min.js?updated2019-09-24@13:35:50"></script>
     </div>
   </body>
 </html>

@@ -18,10 +18,20 @@ html(lang="en")
 
       .keywatch(tabindex="-1" @keyup.enter="doSomething")
 
-      .press-your-luck(v-if="mode == 'spin' || mode == 'show title'")
+
+      .break-screen(v-if="mode == 'vote'")
+
+
+      .press-your-luck(v-if="mode == 'show player' || mode == 'spin' || mode == 'show title'")
         .box(v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }")
           figure(:style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }")
           figcaption(v-text="box.title") 
+
+      .show-player(v-if="mode == 'show player'")
+        figure()
+          .pic(:style=" { 'background-image': 'url(img/players/big/'+player.pic+')' }")
+          figcaption.player-number Player {{player.number}}
+          figcaption.player-name {{player.name}}
       
       transition(name="fade")
         .show-title(v-if="mode == 'show title'")

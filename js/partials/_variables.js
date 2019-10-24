@@ -18,12 +18,24 @@ var nngg = new Howl({
 
 const loadDamnDog = false;
 
-const contestants = [
+const players = [
   [
-    "Boots Raingear",
-    "Achilles' Heelies",
-    "Frank West",
-    "Victor Laszlo"
+    {
+      name: "Boots Raingear",
+      pic:  "boots.jpg"
+    },
+    {
+      name: "Achilles' Heelies",
+      pic:  "heelies.jpg"
+    },
+    {
+      name: "Frank West",
+      pic:  "frank.jpg"
+    },
+    {
+      name: "Victor Laszlo",
+      pic:  "victor.jpg"
+    }
   ],
   [
     "Lou Fernandez",
@@ -33,7 +45,10 @@ const contestants = [
   ],
   [
     "Nutshell Gulag",
-    "Adam Bozarth",
+    {
+      name: "Adam Bozarth",
+      pic:  "bozarth.jpg"
+    },
     "K Thor?",
     "Shell Game"
   ],

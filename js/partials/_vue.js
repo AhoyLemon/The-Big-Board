@@ -1,7 +1,7 @@
 var app = new Vue({
   el: '#app',
   data: {
-    mode: 'spin',
+    mode: 'show player',
     spinning: false,
     polling: null,
     ticks: 0,
@@ -10,6 +10,9 @@ var app = new Vue({
       currentFocus: 0
     },
     current: {},
+    player: {
+      number: 0,
+    },
     boxes: initialBoxes,
     queue: exhibitionQueue,
     countdown: {
@@ -23,9 +26,17 @@ var app = new Vue({
       let self = this;
       console.log(e.keyCode);
       
-      if (e.keyCode == 32) {
 
-        if (self.mode == 'spin') {
+      if (e.keyCode == 83) { // "S" key pressed
+
+      }
+
+      if (e.keyCode == 32) { // Spacebar pressed.
+
+        if (self.mode == 'show player') {
+          //self.chooseNewPlayer();
+          self.mode = 'spin';
+        } else if (self.mode == 'spin') {
           if (self.spinning == false) {
             self.pickOneRandomly();
           }
@@ -36,28 +47,56 @@ var app = new Vue({
           self.setupNewSpin();
         }
         
-      }
+      } 
 
 
     },
 
-    
+    chooseNewPlayer() {
+      let self = this;
+
+
+      self.player.number++;
+      let p;
+      if (self.player.number < 5) {
+        p = players[0][(self.player.number - 1)];
+      } else if (self.player.number < 9) {
+        p = players[1][(self.player.number - 5)];
+      } else if (self.player.number < 13) {
+        p = players[2][(self.player.number - 9)];
+      } else if (self.player.number < 17) {
+        p = players[3][(self.player.number - 13)];
+      }
+      
+      if (p.pic) {
+        self.player.name = p.name;
+        self.player.pic  = p.pic;
+      } else {
+        self.player.name = p;
+        self.player.pic  = "zangief.jpg";
+      }
+      
+
+    },
 
     setupNewSpin() {
       let self = this;
 
-      // Rehydrate filled box
-      let b = self.queue[0];
-      b.imgSrc = 'img/drawings/' + b.file;
+      self.chooseNewPlayer();
 
-      self.boxes.splice(self.current.index, 1, b);
-      self.queue.shift();
-      
-      self.current = {};
 
+      // Rehydrate filled box -------------------------------
+      if (self.current && self.current != {} ) {
+        let b = self.queue[0];
+        b.imgSrc = 'img/drawings/' + b.file;
+        self.boxes.splice(self.current.index, 1, b);
+        self.queue.shift();
+        self.current = {};
+      }
+      // End rehydrate ---------------------------------------
 
       self.countdown.percent = 0;
-      self.mode = 'spin';
+      self.mode = 'show player';
     },
 
     setDeceleratingTimeout(callback, factor, times) {
@@ -200,6 +239,7 @@ var app = new Vue({
 
   mounted: function() {
     let self = this;
+    self.chooseNewPlayer();
   },
 
 });
