@@ -44,6 +44,9 @@ html(lang="en")
           .inner
             h1(v-text="current.title")
 
+          .code-holder(v-if="current.code")
+            .code(v-text="current.code")
+
       .make-your-choice(v-if="mode == 'a/b'")
         figure.choice.a(style="background-image:url(img/drawings/math.png)")
           figcaption A

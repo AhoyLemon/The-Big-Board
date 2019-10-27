@@ -1,7 +1,8 @@
 var app = new Vue({
   el: '#app',
   data: {
-    mode: 'show player',
+    //mode: 'show player',
+    mode: 'spin',
     spinning: false,
     polling: null,
     ticks: 0,

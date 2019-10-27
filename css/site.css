@@ -290,6 +290,15 @@ body {
     z-index: 1; }
     .show-title .whammy-holder .whammy {
       width: 40vh; }
+  .show-title .code-holder {
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+    .show-title .code-holder .code {
+      font-size: 4vw;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 0.25em 0.5em;
+      font-weight: 900; }
 
 @-webkit-keyframes PlayerPicZoom {
   from {
