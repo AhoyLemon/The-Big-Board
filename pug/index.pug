@@ -23,7 +23,7 @@ html(lang="en")
 
 
       .press-your-luck(v-if="mode == 'show player' || mode == 'spin' || mode == 'show title'")
-        .box(v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }")
+        .box(v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }" @click="clickBoxOverride(box)" )
           figure(:style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }")
           figcaption(v-text="box.title") 
 
@@ -33,19 +33,18 @@ html(lang="en")
           figcaption.player-number Player {{player.number}}
           figcaption.player-name {{player.name}}
       
-      transition(name="fade")
-        .show-title(v-if="mode == 'show title'")
+      .show-title(v-if="mode == 'show title'")
 
-          .whammy-holder(v-if="current.whammy")
-            img.whammy(src="img/whammy1.png")
+        .whammy-holder(v-if="current.whammy")
+          img.whammy(src="img/whammy1.png")
 
-          transition(name="zoom")
-            figure(v-if="mode == 'show title'" :style="{ 'backgroundImage': 'url(img/drawings/' + current.file +')' }")
-          .inner
-            h1(v-text="current.title")
+        transition(name="zoom")
+          figure.box-drawing(v-if="mode == 'show title'" :style="{ 'backgroundImage': 'url(img/drawings/' + current.file +')' }")
+        .inner.box-title
+          h1(v-text="current.title")
 
-          .code-holder(v-if="current.code")
-            .code(v-text="current.code")
+        .code-holder(v-if="current.code")
+          .code(v-text="current.code")
 
       .make-your-choice(v-if="mode == 'a/b'")
         figure.choice.a(style="background-image:url(img/drawings/math.png)")

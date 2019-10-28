@@ -2,7 +2,7 @@ var app = new Vue({
   el: '#app',
   data: {
     //mode: 'show player',
-    mode: 'spin',
+    mode: 'show player',
     spinning: false,
     polling: null,
     ticks: 0,
@@ -35,7 +35,6 @@ var app = new Vue({
       if (e.keyCode == 32) { // Spacebar pressed.
 
         if (self.mode == 'show player') {
-          //self.chooseNewPlayer();
           self.mode = 'spin';
         } else if (self.mode == 'spin') {
           if (self.spinning == false) {
@@ -137,6 +136,16 @@ var app = new Vue({
       }(times, 0);
       window.setTimeout(internalCallback, factor);
     },
+
+
+    clickBoxOverride(b) {
+      let self = this;
+      b.focus = true;
+      self.current = b;
+      self.spinning = false;
+      self.mode = 'show title';
+    },
+
     pickOneRandomly() {
       let self = this;
       self.spinning = true;
