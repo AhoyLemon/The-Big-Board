@@ -250,67 +250,6 @@ const queue = [
     code:     "M_19",
     provider: "dickthedick",
     rating:   "YUK",
-  },
-
-
-  {
-    title:    "How to Divorce a Missing Spouse in the USA",
-    provider: "advancedclass",
-    rating:   "WTF",
-    url:      "https://www.wikihow.com/Divorce-a-Missing-Spouse-in-the-USA",
-    file:     "divorce-a-missing-spouse-in-the-usa.jpg"
-  },
-  
-  {
-    title:    "How to Hogtie Someone",
-    provider: "Eider Duck",
-    rating:   "WTF",
-    url:      "https://www.wikihow.com/Hogtie-Someone",
-    file:     "Hogtie-Someone.jpg"
-  },
-  {
-    title:    "How to Become Good at Knife Fighting",
-    provider: "Jack Chick",
-    rating:   "WTF",
-    url:      "https://www.wikihow.com/Become-Good-at-Knife-Fighting",
-    file:     "Become-Good-at-Knife-Fighting.jpg"
-  },
-  
-  {
-    title:    "How to Perform a Monologue",
-    provider: "Spooks",
-    rating:   "LOL",
-    url:      "https://www.wikihow.com/Perform-a-Monologue",
-    file:     "Perform-a-Monologue.jpg"
-  },
-  {
-    title:    "How to Do Black Magic",
-    provider: "crow",
-    rating:   "LOL",
-    url:      "https://www.wikihow.com/Do-Black-Magic",
-    file:     "Do-Black-Magic.jpg"
-  },
-  {
-    title:    "How to Become Pope",
-    provider: "crow",
-    rating:   "WTF",
-    url:      "https://www.wikihow.com/Become-Pope",
-    file:     "Become-Pope.jpg"
-  },
-  {
-    title:    "How to Detect Arogant People",
-    provider: "Montrith",
-    rating:   "LOL",
-    url:      "https://www.wikihow.com/Detect-Arrogant-People",
-    file:     "Detect-Arrogant-People.jpg"
-  },
-  
-  {
-    title:    "How to Avoid Having Anything to Do with Halloween",
-    provider: "Darkly",
-    rating:   "LOL",
-    url:      "https://www.wikihow.com/Avoid-Having-Anything-to-Do-with-Halloween",
-    file:     "Avoid-Having-Anything-to-Do-with-Halloween.jpg"
-  },
+  }
 
 ];

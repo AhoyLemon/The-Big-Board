@@ -37,6 +37,7 @@
         </transition>
         <div class="inner box-title">
           <h1 v-text="current.title"></h1>
+          <cite v-if="current.provider"><span>Suggested by {{current.provider}}</span></cite>
         </div>
         <div class="code-holder" v-if="current.code">
           <div class="code" v-text="current.code"></div>
@@ -66,7 +67,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-09-28@13:16:29"></script>
+      <script src="js/min/site.min.js?updated2019-09-28@13:44:14"></script>
     </div>
   </body>
 </html>

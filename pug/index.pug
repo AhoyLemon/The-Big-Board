@@ -45,6 +45,8 @@ html(lang="en")
           figure.box-drawing(v-if="mode == 'show title'" :style="{ 'backgroundImage': 'url(img/drawings/' + current.file +')' }")
         .inner.box-title
           h1(v-text="current.title")
+          cite(v-if="current.provider")
+            span Suggested by {{current.provider}}
 
         .code-holder(v-if="current.code")
           .code(v-text="current.code")

@@ -327,6 +327,18 @@ a {
     -webkit-transform: scale(1, 0.6);
     transform: scale(1, 0.6); } }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 @-webkit-keyframes blinkRedFilter {
   from {
     -webkit-filter: none;
@@ -438,17 +450,23 @@ body {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; }
-  .show-title h1 {
-    color: #eee;
+  .show-title .box-title {
     text-align: center;
-    font-size: 6.5vw;
     position: relative;
-    font-weight: 300;
-    text-shadow: 1px 1px 0 black, -1px -1px 0 black, 0.05em 0.05em 0.05em black;
     background: rgba(0, 0, 0, 0.5);
-    line-height: 120%;
-    padding: 0.5em 1em;
+    padding: 0.5em 3vw;
     z-index: 3; }
+    .show-title .box-title h1 {
+      color: #eee;
+      font-size: 6.5vw;
+      font-weight: 300;
+      text-shadow: 1px 1px 0 black, -1px -1px 0 black, 0.05em 0.05em 0.05em black; }
+    .show-title .box-title cite {
+      color: #eee;
+      font-size: 2.5vw;
+      text-shadow: 1px 1px 0 black, 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.5);
+      display: block;
+      text-align: right; }
   .show-title .whammy-holder {
     position: absolute;
     bottom: 20px;
@@ -603,6 +621,20 @@ body {
   animation-delay: 1.8s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
+  .box-title cite {
+    opacity: 0;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-delay: 4.8s;
+    animation-delay: 4.8s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
 
 .whammy-holder {
   opacity: 0;
