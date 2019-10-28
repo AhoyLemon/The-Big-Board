@@ -19,8 +19,11 @@ html(lang="en")
       .keywatch(tabindex="-1" @keyup.enter="doSomething")
 
 
-      .break-screen(v-if="mode == 'vote'")
+      .screen(v-if="mode == 'sit down'")
+        figure(:style="{ 'background-image': 'url(img/bg/sitdown.jpg)' }")
 
+      .screen.break-screen(v-if="mode == 'vote'")
+        figure(:style="{ 'background-image': 'url(img/bg/tempvotescreen.jpg)' }")
 
       .press-your-luck(v-if="mode == 'show player' || mode == 'spin' || mode == 'show title'")
         .box(v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }" @click="clickBoxOverride(box)" )

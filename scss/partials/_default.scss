@@ -10,9 +10,6 @@ h6 { font-size: .75rem; }
 body { background:$body; color:$copy; font-family:$font-family; }
 a { @extend %textlink; }
 
-
-$redFilter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
-
 .press-your-luck { display:grid;  grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, 1fr); height:100vh; background:#131313;
   .box {
     figure { height:100%; background-size:cover; background-position: center; opacity:0.8; border:3px solid $black; }
@@ -43,56 +40,6 @@ $redFilter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
     
   }
 }
-
-
-@keyframes PlayerPicZoom {
-  from { transform:scale(0.1); filter: brightness(10%);  }
-  to   { transform:scale(1);   filter: brightness(100%); }
-}
-
-@keyframes PlayerNumberSlide {
-  from { transform: translate(-60vw); opacity: 1; }
-  to   { transform: translate(0); opacity: 1; }
-}
-@keyframes PlayerNameSlide {
-  from { transform: translate(60vw); opacity: 1; }
-  to   { transform: translate(0); opacity: 1; }
-}
-
-@keyframes boxTitleSlide {
-  from { transform: translateY(-100vh); opacity: 0; }
-  to   { transform: translate(0); opacity: 1; }
-}
-
-@keyframes whammySlide {
-  from { transform: translateY(50vh); opacity: 1; }
-  to   { transform: translate(0); opacity: 1; }
-}
-
-@keyframes jump {
-  0% {
-    transform: scale(1, .75);
-  }
-  15% {
-    transform: scale(.75, 1.1)
-  }
-  30% {
-    transform: translateY(-5vh);
-  }
-  50% {
-    transform: translateY(-6vh);
-  }
-  70% {
-    transform: translateY(-5vh);
-  }
-  95% {
-    transform: scale(1, 1);
-  }
-  100% {
-    transform: scale(1, .6);
-  }
-}
-
 
 
 .show-player { @include position(fixed,0,0,0,0); @include flex-center(); background:rgba(0,0,0,0.85); font-family: Oswald, sans-serif;
@@ -159,10 +106,10 @@ $redFilter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
 .box-title {
   opacity: 0;
   animation-name: boxTitleSlide;
-  animation-duration: 2.2s;
+  animation-duration: 2s;
   animation-iteration-count: 1;
   animation-timing-function: cubic-bezier(.75,-0.5,0,1.75);
-  animation-delay: 3.25s;
+  animation-delay: 1.8s;
   animation-fill-mode: forwards;
 }
 .whammy-holder {
@@ -179,13 +126,6 @@ $redFilter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
   animation: jump 1s linear infinite;
 }
 
-
-@keyframes blinkRedFilter {
-  from { filter:none; }
-  to   { filter:$redFilter; }
-}
-
-
 .make-your-choice { @include position(fixed,0,0,0,0); background:black;
   .choice { width:57%;  @include position(absolute,0,null,0);
     figcaption { font-size:9vh;  font-family: Oswald, sans-serif; color:white; text-shadow:2px 2px 0 black, -2px -2px 0 black, 0.1em 0.1em 0.1em black; position: absolute; }
@@ -196,4 +136,9 @@ $redFilter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
       figcaption { bottom:20px; right:20px; }
     }
   }
+}
+
+
+.screen { @include position(fixed,0,0,0,0); 
+  figure { @include position(absolute,0,0,0,0); }
 }

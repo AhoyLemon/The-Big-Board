@@ -177,129 +177,6 @@ a {
   a:hover {
     border-bottom: 0.05em solid currentColor; }
 
-[v-cloak] {
-  display: none !important; }
-
-h1 {
-  font-size: 2rem; }
-
-h2 {
-  font-size: 1.5rem; }
-
-h3 {
-  font-size: 1.17rem; }
-
-h4 {
-  font-size: 1.12rem; }
-
-h5 {
-  font-size: .83rem; }
-
-h6 {
-  font-size: .75rem; }
-
-body {
-  background: #eee;
-  color: #212121;
-  font-family: Helvetica, sans-serif; }
-
-.press-your-luck {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: (1fr)[3];
-  grid-template-rows: repeat(3, 1fr);
-  height: 100vh;
-  background: #131313; }
-  .press-your-luck .box figure {
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.8;
-    border: 3px solid #212121; }
-  .press-your-luck .box figcaption {
-    display: none; }
-  .press-your-luck .box.focus figure {
-    -webkit-filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
-    filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
-    opacity: 1; }
-  .press-your-luck .box.selected figure {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    opacity: 0.5; }
-  .press-your-luck .box.blinking figure {
-    -webkit-animation-name: blinkRedFilter;
-    animation-name: blinkRedFilter;
-    -webkit-animation-duration: 0.15s;
-    animation-duration: 0.15s;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite; }
-
-.show-title {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.99);
-  font-family: Oswald, sans-serif; }
-  .show-title figure {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    bottom: 20px;
-    left: 20px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat; }
-  .show-title h1 {
-    color: #eee;
-    text-align: center;
-    font-size: 6.5vw;
-    position: relative;
-    font-weight: 300;
-    text-shadow: 1px 1px 0 black, -1px -1px 0 black, 0.05em 0.05em 0.05em black;
-    background: rgba(0, 0, 0, 0.5);
-    line-height: 120%;
-    padding: 0.5em 1em;
-    z-index: 3; }
-  .show-title .whammy-holder {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1; }
-    .show-title .whammy-holder .whammy {
-      width: 35vh; }
-  .show-title .code-holder {
-    position: absolute;
-    right: 0;
-    bottom: 0; }
-    .show-title .code-holder .code {
-      font-size: 4vw;
-      background: rgba(255, 255, 255, 0.8);
-      padding: 0.25em 0.5em;
-      font-weight: 900; }
-
 @-webkit-keyframes PlayerPicZoom {
   from {
     -webkit-transform: scale(0.1);
@@ -450,6 +327,145 @@ body {
     -webkit-transform: scale(1, 0.6);
     transform: scale(1, 0.6); } }
 
+@-webkit-keyframes blinkRedFilter {
+  from {
+    -webkit-filter: none;
+    filter: none; }
+  to {
+    -webkit-filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
+    filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1); } }
+
+@keyframes blinkRedFilter {
+  from {
+    -webkit-filter: none;
+    filter: none; }
+  to {
+    -webkit-filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
+    filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1); } }
+
+[v-cloak] {
+  display: none !important; }
+
+h1 {
+  font-size: 2rem; }
+
+h2 {
+  font-size: 1.5rem; }
+
+h3 {
+  font-size: 1.17rem; }
+
+h4 {
+  font-size: 1.12rem; }
+
+h5 {
+  font-size: .83rem; }
+
+h6 {
+  font-size: .75rem; }
+
+body {
+  background: #eee;
+  color: #212121;
+  font-family: Helvetica, sans-serif; }
+
+.press-your-luck {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[3];
+  grid-template-rows: repeat(3, 1fr);
+  height: 100vh;
+  background: #131313; }
+  .press-your-luck .box figure {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    border: 3px solid #212121; }
+  .press-your-luck .box figcaption {
+    display: none; }
+  .press-your-luck .box.focus figure {
+    -webkit-filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
+    filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
+    opacity: 1; }
+  .press-your-luck .box.selected figure {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.5; }
+  .press-your-luck .box.blinking figure {
+    -webkit-animation-name: blinkRedFilter;
+    animation-name: blinkRedFilter;
+    -webkit-animation-duration: 0.15s;
+    animation-duration: 0.15s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; }
+
+.show-title {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.99);
+  font-family: Oswald, sans-serif; }
+  .show-title figure {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .show-title h1 {
+    color: #eee;
+    text-align: center;
+    font-size: 6.5vw;
+    position: relative;
+    font-weight: 300;
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, 0.05em 0.05em 0.05em black;
+    background: rgba(0, 0, 0, 0.5);
+    line-height: 120%;
+    padding: 0.5em 1em;
+    z-index: 3; }
+  .show-title .whammy-holder {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1; }
+    .show-title .whammy-holder .whammy {
+      width: 35vh; }
+  .show-title .code-holder {
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+    .show-title .code-holder .code {
+      font-size: 4vw;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 0.25em 0.5em;
+      font-weight: 900; }
+
 .show-player {
   position: fixed;
   top: 0;
@@ -577,14 +593,14 @@ body {
   opacity: 0;
   -webkit-animation-name: boxTitleSlide;
   animation-name: boxTitleSlide;
-  -webkit-animation-duration: 2.2s;
-  animation-duration: 2.2s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   -webkit-animation-timing-function: cubic-bezier(0.75, -0.5, 0, 1.75);
   animation-timing-function: cubic-bezier(0.75, -0.5, 0, 1.75);
-  -webkit-animation-delay: 3.25s;
-  animation-delay: 3.25s;
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
 
@@ -609,22 +625,6 @@ body {
   transform-origin: 50% 100%;
   -webkit-animation: jump 1s linear infinite;
   animation: jump 1s linear infinite; }
-
-@-webkit-keyframes blinkRedFilter {
-  from {
-    -webkit-filter: none;
-    filter: none; }
-  to {
-    -webkit-filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
-    filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1); } }
-
-@keyframes blinkRedFilter {
-  from {
-    -webkit-filter: none;
-    filter: none; }
-  to {
-    -webkit-filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
-    filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1); } }
 
 .make-your-choice {
   position: fixed;
@@ -664,6 +664,19 @@ body {
       .make-your-choice .choice.b figcaption {
         bottom: 20px;
         right: 20px; }
+
+.screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  .screen figure {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
 
 .countdown {
   min-height: 100vh;

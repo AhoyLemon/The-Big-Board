@@ -11,7 +11,12 @@
   <body>
     <div id="app" v-cloak>
       <div class="keywatch" tabindex="-1" @keyup.enter="doSomething"></div>
-      <div class="break-screen" v-if="mode == 'vote'"></div>
+      <div class="screen" v-if="mode == 'sit down'">
+        <figure :style="{ 'background-image': 'url(img/bg/sitdown.jpg)' }"></figure>
+      </div>
+      <div class="screen break-screen" v-if="mode == 'vote'">
+        <figure :style="{ 'background-image': 'url(img/bg/tempvotescreen.jpg)' }"></figure>
+      </div>
       <div class="press-your-luck" v-if="mode == 'show player' || mode == 'spin' || mode == 'show title'">
         <div class="box" v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }" @click="clickBoxOverride(box)">
           <figure :style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }"></figure>
@@ -61,7 +66,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-09-28@12:31:05"></script>
+      <script src="js/min/site.min.js?updated2019-09-28@13:16:29"></script>
     </div>
   </body>
 </html>

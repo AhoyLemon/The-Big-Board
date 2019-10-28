@@ -2,7 +2,7 @@ var app = new Vue({
   el: '#app',
   data: {
     //mode: 'show player',
-    mode: 'show player',
+    mode: 'sit down',
     spinning: false,
     polling: null,
     ticks: 0,
@@ -34,7 +34,10 @@ var app = new Vue({
 
       if (e.keyCode == 32) { // Spacebar pressed.
 
-        if (self.mode == 'show player') {
+        if (self.mode == 'sit down') {
+          self.chooseNewPlayer();
+          self.mode = 'show player';
+        } else if (self.mode == 'show player') {
           self.mode = 'spin';
         } else if (self.mode == 'spin') {
           if (self.spinning == false) {
@@ -44,6 +47,12 @@ var app = new Vue({
           self.closeTheTitle();
         } else if (self.mode == 'countdown') {
           clearInterval(self.countdown.interval);
+          if ((self.mode != 'vote') && (self.player.number == 4 || self.player.number == 8 || self.player.number == 12 )) {
+            self.mode = 'vote';
+          } else {
+            self.setupNewSpin();
+          }
+        } else if (self.mode == 'vote') { 
           self.setupNewSpin();
         }
         
@@ -55,27 +64,30 @@ var app = new Vue({
     chooseNewPlayer() {
       let self = this;
 
-
-      self.player.number++;
-      let p;
-      if (self.player.number < 5) {
-        p = players[0][(self.player.number - 1)];
-      } else if (self.player.number < 9) {
-        p = players[1][(self.player.number - 5)];
-      } else if (self.player.number < 13) {
-        p = players[2][(self.player.number - 9)];
-      } else if (self.player.number < 17) {
-        p = players[3][(self.player.number - 13)];
-      }
-      
-      if (p.pic) {
-        self.player.name = p.name;
-        self.player.pic  = p.pic;
+      if ((self.mode != 'vote') && (self.player.number == 4 || self.player.number == 8 || self.player.number == 12 )) {
+        self.mode = 'vote';
       } else {
-        self.player.name = p;
-        self.player.pic  = "zangief.jpg";
+        self.player.number++;
+        let p;
+        if (self.player.number < 5) {
+          p = players[0][(self.player.number - 1)];
+        } else if (self.player.number < 9) {
+          p = players[1][(self.player.number - 5)];
+        } else if (self.player.number < 13) {
+          p = players[2][(self.player.number - 9)];
+        } else if (self.player.number < 17) {
+          p = players[3][(self.player.number - 13)];
+        }
+        
+        if (p.pic) {
+          self.player.name = p.name;
+          self.player.pic  = p.pic;
+        } else {
+          self.player.name = p;
+          self.player.pic  = "zangief.jpg";
+        }
+
       }
-      
 
     },
 
@@ -140,7 +152,6 @@ var app = new Vue({
 
     clickBoxOverride(b) {
       let self = this;
-      b.focus = true;
       self.current = b;
       self.spinning = false;
       self.mode = 'show title';
@@ -249,7 +260,6 @@ var app = new Vue({
 
   mounted: function() {
     let self = this;
-    self.chooseNewPlayer();
   },
 
 });
