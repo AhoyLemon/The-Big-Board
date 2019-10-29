@@ -1,7 +1,7 @@
 const siteURL = "";
 
 var sound = new Howl({
-  src: ['audio/boop1.mp3']
+  src: ['audio/wheel2.ogg']
 });
 
 var dingdingding = new Howl({
@@ -9,7 +9,7 @@ var dingdingding = new Howl({
 });
 
 var whammySound = new Howl({
-  src: ['audio/whammy.mp3']
+  src: ['audio/klaxon.ogg']
 });
 
 var nngg = new Howl({

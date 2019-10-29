@@ -160,8 +160,8 @@ var app = new Vue({
     pickOneRandomly() {
       let self = this;
       self.spinning = true;
-      //self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 42);
-      self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 11);
+      self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 42);
+      //self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 11);
 
     },
 
