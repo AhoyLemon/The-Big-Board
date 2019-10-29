@@ -12,8 +12,12 @@ var whammySound = new Howl({
   src: ['audio/klaxon.ogg']
 });
 
+var hurryUp = new Howl({
+  src: ['audio/carclock.ogg']
+});
+
 var nngg = new Howl({
-  src: ['audio/nngg.mp3']
+  src: ['audio/5buzz.ogg']
 });
 
 const loadDamnDog = false;

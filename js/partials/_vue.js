@@ -160,7 +160,7 @@ var app = new Vue({
     pickOneRandomly() {
       let self = this;
       self.spinning = true;
-      self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 42);
+      self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 36);
       //self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 11);
 
     },
@@ -203,7 +203,13 @@ var app = new Vue({
         if (self.countdown.percent >= 100) {
           clearInterval(self.countdown.interval);
         }
+
+        if (self.countdown.percent == 55 ) {
+          hurryUp.play();
+        }
+
         if (self.countdown.percent == 100) {
+          hurryUp.stop();
           nngg.play();
         }
       }, 300);
