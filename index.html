@@ -18,7 +18,7 @@
         <figure :style="{ 'background-image': 'url(img/bg/tempvotescreen.jpg)' }"></figure>
       </div>
       <div class="press-your-luck" v-if="mode == 'show player' || mode == 'spin' || mode == 'show title'">
-        <div class="box" v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }" @click="clickBoxOverride(box)">
+        <div class="box" v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }">
           <figure :style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }"></figure>
           <figcaption v-text="box.title"> </figcaption>
         </div>
@@ -67,7 +67,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-09-28@13:44:14"></script>
+      <script src="js/min/site.min.js?updated2019-10-03@21:07:44"></script>
     </div>
   </body>
 </html>

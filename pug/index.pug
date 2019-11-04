@@ -26,7 +26,7 @@ html(lang="en")
         figure(:style="{ 'background-image': 'url(img/bg/tempvotescreen.jpg)' }")
 
       .press-your-luck(v-if="mode == 'show player' || mode == 'spin' || mode == 'show title'")
-        .box(v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }" @click="clickBoxOverride(box)" )
+        .box(v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }")
           figure(:style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }")
           figcaption(v-text="box.title") 
 
