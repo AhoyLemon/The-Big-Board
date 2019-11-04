@@ -142,12 +142,19 @@ a { @extend %textlink; }
 
 .make-your-choice { @include position(fixed,0,0,0,0); background:black;
   .choice { width:57%;  @include position(absolute,0,null,0);
+
+    > figure { @include position(absolute,0,0,0,0); background-size:cover; background-position: center; filter:grayscale(100%); opacity: 0.5; }
+
     figcaption { font-size:9vh;  font-family: Oswald, sans-serif; color:white; text-shadow:2px 2px 0 black, -2px -2px 0 black, 0.1em 0.1em 0.1em black; position: absolute; }
+    figcaption { display: none; }
+    .title { color: #050505; position: absolute;  font-size:11vh; right:5vw; font-family: Oswald, sans-serif; }
     &.a { left:0; background:blue; background-position:left center; background-size:contain; background-repeat: no-repeat;
-      figcaption { top:20px; left:20px; }
+      figure { mix-blend-mode: darken; }
+      .title { top:2.5vh; left:2.5vw;  }
     }
     &.b { right:0; background-color:red; clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%); background-position: center; background-size:contain; background-repeat: no-repeat;
-      figcaption { bottom:20px; right:20px; }
+      figure { mix-blend-mode: lighten; }
+      .title { bottom:2.5vh; right:2.5vw; text-align: right; left:12vw; color:#e1e1e1;  }
     }
   }
 }

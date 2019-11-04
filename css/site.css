@@ -670,21 +670,42 @@ body {
     position: absolute;
     top: 0;
     bottom: 0; }
+    .make-your-choice .choice > figure {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-size: cover;
+      background-position: center;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      opacity: 0.5; }
     .make-your-choice .choice figcaption {
       font-size: 9vh;
       font-family: Oswald, sans-serif;
       color: white;
       text-shadow: 2px 2px 0 black, -2px -2px 0 black, 0.1em 0.1em 0.1em black;
       position: absolute; }
+    .make-your-choice .choice figcaption {
+      display: none; }
+    .make-your-choice .choice .title {
+      color: #050505;
+      position: absolute;
+      font-size: 11vh;
+      right: 5vw;
+      font-family: Oswald, sans-serif; }
     .make-your-choice .choice.a {
       left: 0;
       background: blue;
       background-position: left center;
       background-size: contain;
       background-repeat: no-repeat; }
-      .make-your-choice .choice.a figcaption {
-        top: 20px;
-        left: 20px; }
+      .make-your-choice .choice.a figure {
+        mix-blend-mode: darken; }
+      .make-your-choice .choice.a .title {
+        top: 2.5vh;
+        left: 2.5vw; }
     .make-your-choice .choice.b {
       right: 0;
       background-color: red;
@@ -693,9 +714,14 @@ body {
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat; }
-      .make-your-choice .choice.b figcaption {
-        bottom: 20px;
-        right: 20px; }
+      .make-your-choice .choice.b figure {
+        mix-blend-mode: lighten; }
+      .make-your-choice .choice.b .title {
+        bottom: 2.5vh;
+        right: 2.5vw;
+        text-align: right;
+        left: 12vw;
+        color: #e1e1e1; }
 
 .screen {
   position: fixed;

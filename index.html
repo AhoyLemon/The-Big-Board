@@ -44,11 +44,13 @@
         </div>
       </div>
       <div class="make-your-choice" v-if="mode == 'a/b'">
-        <figure class="choice a" style="background-image:url(img/drawings/math.png)">
+        <div class="choice a" style="background-color:#e8771c">
           <figcaption>A</figcaption>
-        </figure>
-        <figure class="choice b" style="background-image:url(img/temp/jesus-karate.jpg); background-size:cover; background-position:top center;">
+          <div class="title" v-text="finalChoices[0][0].title"></div>
+        </div>
+        <figure class="choice b" style="background-color:#080256">
           <figcaption>B</figcaption>
+          <div class="title" v-text="finalChoices[0][1].title"></div>
         </figure>
       </div>
       <div class="countdown" v-if="mode == 'countdown'" v-bind:class="{ 'time-up': (countdown.percent &gt;= 100) }">
@@ -67,7 +69,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-10-03@21:07:44"></script>
+      <script src="js/min/site.min.js?updated2019-10-04@16:10:17"></script>
     </div>
   </body>
 </html>

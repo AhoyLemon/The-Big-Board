@@ -2,7 +2,7 @@ var app = new Vue({
   el: '#app',
   data: {
     //mode: 'show player',
-    mode: 'sit down',
+    mode: 'a/b',
     spinning: false,
     polling: null,
     ticks: 0,
@@ -16,6 +16,28 @@ var app = new Vue({
     },
     boxes: initialBoxes,
     queue: exhibitionQueue,
+
+    finalChoices: [
+      [
+        { 
+          title: "How to Cook Lasagna in Your Dishwasher",
+          pic:   "dishwasher.jpg"
+        },
+        { 
+          title: "How to Arrive at ‐1 and 1 from Spaces or Zeroes",
+          pic:   "ven.jpg"
+        }
+      ],
+      [
+        "How to Stop a Wedding",
+        "How to Win a Swordfight"
+      ],
+      [
+        "How to Tell if Someone is High",
+        "How to Live in a Dungeon"
+      ]
+    ],
+
     countdown: {
       percent: 0,
       interval: {}

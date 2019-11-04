@@ -52,10 +52,12 @@ html(lang="en")
           .code(v-text="current.code")
 
       .make-your-choice(v-if="mode == 'a/b'")
-        figure.choice.a(style="background-image:url(img/drawings/math.png)")
+        .choice.a(style="background-color:#e8771c")
           figcaption A
-        figure.choice.b(style="background-image:url(img/temp/jesus-karate.jpg); background-size:cover; background-position:top center;")
+          .title(v-text="finalChoices[0][0].title")
+        figure.choice.b(style="background-color:#080256")
           figcaption B
+          .title(v-text="finalChoices[0][1].title")
 
       .countdown(v-if="mode == 'countdown'" v-bind:class="{ 'time-up': (countdown.percent >= 100) }")
 
