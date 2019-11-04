@@ -28,21 +28,12 @@ var app = new Vue({
       console.log(e.keyCode);
       
 
-      if (e.keyCode == 83) { // "S" key pressed
-
-      }
-
-      if (e.keyCode == 32) { // Spacebar pressed.
-
+      if (e.keyCode == 34) { // Page Down
         if (self.mode == 'sit down') {
           self.chooseNewPlayer();
           self.mode = 'show player';
         } else if (self.mode == 'show player') {
           self.mode = 'spin';
-        } else if (self.mode == 'spin') {
-          if (self.spinning == false) {
-            self.pickOneRandomly();
-          }
         } else if (self.mode == 'show title') {
           self.closeTheTitle();
         } else if (self.mode == 'countdown') {
@@ -54,6 +45,24 @@ var app = new Vue({
           }
         } else if (self.mode == 'vote') { 
           self.setupNewSpin();
+        }
+      }
+
+
+      if (e.keyCode == 33) { // Page Up
+        if (self.mode == 'spin') {
+          self.mode = 'show player';
+        }
+      }
+
+
+
+      if (e.keyCode == 32) { // Spacebar pressed.
+
+        if (self.mode == 'spin') {
+          if (self.spinning == false) {
+            self.pickOneRandomly();
+          }
         }
         
       } 

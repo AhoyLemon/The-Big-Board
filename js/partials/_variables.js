@@ -5,11 +5,11 @@ var sound = new Howl({
 });
 
 var dingdingding = new Howl({
-  src: ['audio/gong.mp3']
+  src: ['audio/3chimes.ogg']
 });
 
 var whammySound = new Howl({
-  src: ['audio/klaxon.ogg']
+  src: ['audio/blarp.ogg']
 });
 
 var hurryUp = new Howl({
