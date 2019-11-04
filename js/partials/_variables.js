@@ -5,7 +5,7 @@ var sound = new Howl({
 });
 
 var dingdingding = new Howl({
-  src: ['audio/6chimes.ogg']
+  src: ['audio/4bells.ogg']
 });
 
 var whammySound = new Howl({
