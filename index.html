@@ -43,15 +43,23 @@
           <div class="code" v-text="current.code"></div>
         </div>
       </div>
-      <div class="make-your-choice" v-if="mode == 'a/b'">
-        <div class="choice a" style="background-color:#e8771c">
+      <div class="make-your-choice" v-if="mode == 'a/b'" :class="{ chosen: abPicked }">
+        <div class="choice a" style="background-color:#e8771c" @click="abPick('a')">
           <figcaption>A</figcaption>
           <div class="title" v-text="finalChoices[0][0].title"></div>
         </div>
-        <figure class="choice b" style="background-color:#080256">
+        <div class="choice b" style="background-color:#080256" @click="abPick('b')">
           <figcaption>B</figcaption>
           <div class="title" v-text="finalChoices[0][1].title"></div>
-        </figure>
+        </div>
+        <div class="chosen-item" v-if="abPicked">
+          <figure class="chosen" :style="{ 'background-image': 'url(img/drawings/'+finalChoices[0][0].pic+')' }">
+            <figcaption>
+              <div class="title" v-text="finalChoices[0][0].title"></div>
+              <cite v-if="finalChoices[0][0].provider"><span>Suggested by {{finalChoices[0][0].provider}}</span></cite>
+            </figcaption>
+          </figure>
+        </div>
       </div>
       <div class="countdown" v-if="mode == 'countdown'" v-bind:class="{ 'time-up': (countdown.percent &gt;= 100) }">
         <div class="circle" v-bind:style="{ background: computedCircleFill }">
@@ -69,7 +77,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-10-04@16:10:17"></script>
+      <script src="js/min/site.min.js?updated2019-10-04@19:58:43"></script>
     </div>
   </body>
 </html>

@@ -74,7 +74,10 @@ var app = new Vue({
     countdown: {
       percent: 0,
       interval: {}
-    }
+    },
+
+    abPicked: false
+
   },
 
   methods: {
@@ -278,6 +281,11 @@ var app = new Vue({
           nngg.play();
         }
       }, 300);
+    },
+
+    abPick(which) {
+      let self = this;
+      self.abPicked = true;
     }
 
 

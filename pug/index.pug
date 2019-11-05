@@ -51,13 +51,20 @@ html(lang="en")
         .code-holder(v-if="current.code")
           .code(v-text="current.code")
 
-      .make-your-choice(v-if="mode == 'a/b'")
-        .choice.a(style="background-color:#e8771c")
+      .make-your-choice(v-if="mode == 'a/b'" :class="{ chosen: abPicked }")
+        
+        .choice.a(style="background-color:#e8771c" @click="abPick('a')")
           figcaption A
           .title(v-text="finalChoices[0][0].title")
-        figure.choice.b(style="background-color:#080256")
+        .choice.b(style="background-color:#080256" @click="abPick('b')")
           figcaption B
           .title(v-text="finalChoices[0][1].title")
+        .chosen-item(v-if="abPicked")
+          figure.chosen(:style="{ 'background-image': 'url(img/drawings/'+finalChoices[0][0].pic+')' }")
+            figcaption
+              .title(v-text="finalChoices[0][0].title")
+              cite(v-if="finalChoices[0][0].provider")
+                span Suggested by {{finalChoices[0][0].provider}}
 
       .countdown(v-if="mode == 'countdown'" v-bind:class="{ 'time-up': (countdown.percent >= 100) }")
 

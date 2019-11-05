@@ -697,10 +697,8 @@ body {
       font-family: Oswald, sans-serif; }
     .make-your-choice .choice.a {
       left: 0;
-      background: blue;
-      background-position: left center;
-      background-size: contain;
-      background-repeat: no-repeat; }
+      -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%); }
       .make-your-choice .choice.a figure {
         mix-blend-mode: darken; }
       .make-your-choice .choice.a .title {
@@ -708,9 +706,8 @@ body {
         left: 2.5vw; }
     .make-your-choice .choice.b {
       right: 0;
-      background-color: red;
-      -webkit-clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
-      clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
+      -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat; }
@@ -722,6 +719,77 @@ body {
         text-align: right;
         left: 12vw;
         color: #e1e1e1; }
+  .make-your-choice .choice {
+    z-index: 10; }
+  .make-your-choice.chosen .choice {
+    -webkit-transition: -webkit-transform 3s ease-out;
+    transition: -webkit-transform 3s ease-out;
+    -o-transition: transform 3s ease-out;
+    transition: transform 3s ease-out;
+    transition: transform 3s ease-out, -webkit-transform 3s ease-out; }
+  .make-your-choice.chosen .choice.a {
+    -webkit-transform: translateX(-75%);
+    -ms-transform: translateX(-75%);
+    transform: translateX(-75%); }
+  .make-your-choice.chosen .choice.b {
+    -webkit-transform: translateX(75%);
+    -ms-transform: translateX(75%);
+    transform: translateX(75%); }
+  .make-your-choice.chosen .chosen-item figure {
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .make-your-choice.chosen .chosen-item figcaption {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5em 3vw;
+    max-width: 90vw;
+    margin: 10vh auto 0 auto;
+    font-family: Oswald, sans-serif;
+    opacity: 0;
+    -webkit-animation-name: boxTitleSlide;
+    animation-name: boxTitleSlide;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: cubic-bezier(0.75, -0.5, 0, 1.75);
+    animation-timing-function: cubic-bezier(0.75, -0.5, 0, 1.75);
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
+    .make-your-choice.chosen .chosen-item figcaption .title {
+      color: #eee;
+      font-size: 6.5vw;
+      font-weight: 300;
+      text-shadow: 1px 1px 0 black, -1px -1px 0 black, 0.05em 0.05em 0.05em black;
+      text-align: center; }
+    .make-your-choice.chosen .chosen-item figcaption cite {
+      color: #eee;
+      font-size: 2.5vw;
+      text-align: right;
+      display: block; }
+    .make-your-choice.chosen .chosen-item figcaption cite {
+      opacity: 0;
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-delay: 4.8s;
+      animation-delay: 4.8s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards; }
 
 .screen {
   position: fixed;
