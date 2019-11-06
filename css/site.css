@@ -2778,7 +2778,7 @@ h6 {
 body {
   background: #eee;
   color: #212121;
-  font-family: Helvetica, sans-serif; }
+  font-family: "Barlow Condensed", "Comic Sans MS"; }
 
 .press-your-luck {
   display: -ms-grid;
@@ -2819,33 +2819,14 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.99);
-  font-family: Oswald, sans-serif; }
+  /* @include flex-center(); */
+  background: rgba(0, 0, 0, 0.99); }
   .show-title figure {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    bottom: 20px;
-    left: 20px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; }
@@ -2878,7 +2859,7 @@ body {
     right: 0;
     bottom: 0; }
     .show-title .code-holder .code {
-      font-size: 4vw;
+      font-size: 42px;
       background: rgba(255, 255, 255, 0.8);
       padding: 0.25em 0.5em;
       font-weight: 900; }
@@ -2908,8 +2889,7 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.85);
-  font-family: Oswald, sans-serif; }
+  background: rgba(0, 0, 0, 0.85); }
   .show-player figure {
     width: 80vw;
     height: 80vh;
@@ -2936,11 +2916,10 @@ body {
       position: absolute;
       font-size: 5vw;
       line-height: 100%;
-      padding: 0.15em .75em;
+      padding: 0.15em .75em 0.3em .75em;
       text-transform: uppercase;
       color: #fff;
       font-weight: bold;
-      font-family: Helvetica;
       text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
     .show-player figure .player-number {
       top: -3vh;
@@ -3272,7 +3251,7 @@ body {
     background: rgba(0, 0, 0, 0.5);
     padding: 0.5em 3vw;
     max-width: 90vw;
-    margin: 10vh auto 0 auto;
+    margin: 0 auto;
     font-family: Oswald, sans-serif;
     opacity: 0;
     -webkit-animation-name: boxTitleSlide;
@@ -3317,10 +3296,22 @@ body {
     right: 0;
     bottom: 0;
     z-index: 12;
-    font-family: Oswald, sans-serif;
-    opacity: 0; }
+    font-family: "Barlow Condensed", "Comic Sans MS";
+    opacity: 0;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-delay: 2.8s;
+    animation-delay: 2.8s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
     .make-your-choice.chosen .chosen-item .code-holder .code {
-      font-size: 4vw;
+      font-size: 42px;
       background: rgba(255, 255, 255, 0.8);
       padding: 0.25em 0.5em;
       font-weight: 900; }

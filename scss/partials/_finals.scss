@@ -35,7 +35,7 @@
 
     .chosen-item { 
       figure { z-index: 9; @include position(fixed,0,0,0,0); background-size:contain; background-position: center; background-repeat: no-repeat; }
-      figcaption { position: relative; background:rgba(0,0,0,0.5); padding:0.5em 3vw; max-width:90vw; margin:10vh auto 0 auto; font-family: Oswald, sans-serif;
+      figcaption { position: relative; background:rgba(0,0,0,0.5); padding:0.5em 3vw; max-width:90vw; margin:0 auto; font-family: Oswald, sans-serif;
         .title { color:$white; font-size:6.5vw;  font-weight: 300;  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 0.05em 0.05em 0.05em black; text-align: center; }
         cite { color:$white; font-size:2.5vw; text-align: right; display: block; }
         opacity: 0;
@@ -56,8 +56,16 @@
         }
       }
 
-      .code-holder { @include position(absolute,null,0,0,null); z-index: 12; font-family: $headline; opacity: 0;
-        .code { font-size:4vw; background:rgba(255,255,255,0.8); padding:0.25em 0.5em; font-weight: 900; }
+      .code-holder { @include position(absolute,null,0,0,null); z-index: 12; font-family: $headline;
+        .code { font-size:42px; background:rgba(255,255,255,0.8); padding:0.25em 0.5em; font-weight: 900; }
+        
+        opacity: 0;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+        animation-delay: 2.8s;
+        animation-fill-mode: forwards;
       }
 
     }

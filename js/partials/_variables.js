@@ -83,6 +83,8 @@ const finalists = [
   },
 ];
 
+
+
 const finalChoices = [
   [
     { 

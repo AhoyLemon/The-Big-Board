@@ -1,7 +1,7 @@
 var app = new Vue({
   el: '#app',
   data: {
-    mode: 'show player',
+    mode: 'sit down',
     spinning: false,
     polling: null,
     ticks: 0,
@@ -17,7 +17,7 @@ var app = new Vue({
     queue: exhibitionQueue,
 
     finals: {
-      active: true,
+      active: false,
       finalists: finalists,
       choices: finalChoices,
       
@@ -327,7 +327,10 @@ var app = new Vue({
 
   mounted: function() {
     let self = this;
-    self.setupNewFinalist();
+
+    // Uncomment if this is the finals
+    //self.finals.active = true;
+    //self.setupNewFinalist();
   },
 
 });

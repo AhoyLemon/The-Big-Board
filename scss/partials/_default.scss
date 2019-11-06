@@ -27,8 +27,8 @@ a { @extend %textlink; }
 }
 
 
-.show-title { @include position(fixed,0,0,0,0); @include flex-center(); background:rgba(0,0,0,0.99); font-family: Oswald, sans-serif;
-  figure { @include position(absolute,20px,20px,20px,20px); background-size:contain; background-position: center; background-repeat: no-repeat; }
+.show-title { @include position(fixed,0,0,0,0); /* @include flex-center(); */ background:rgba(0,0,0,0.99);
+  figure { @include position(absolute,0,0,0,0); background-size:contain; background-position: center; background-repeat: no-repeat; }
 
   .box-title { text-align: center; position: relative; background:rgba(0,0,0,0.5); padding:0.5em 3vw; z-index: 3;
     h1 { color:$white; font-size:6.5vw;  font-weight: 300;  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 0.05em 0.05em 0.05em black; }
@@ -41,12 +41,12 @@ a { @extend %textlink; }
   }
 
   .code-holder { @include position(absolute,null,0,0,null);
-    .code { font-size:4vw; background:rgba(255,255,255,0.8); padding:0.25em 0.5em; font-weight: 900; }
+    .code { font-size:42px; background:rgba(255,255,255,0.8); padding:0.25em 0.5em; font-weight: 900; }
   }
 }
 
 
-.show-player { @include position(fixed,0,0,0,0); @include flex-center(); background:rgba(0,0,0,0.85); font-family: Oswald, sans-serif;
+.show-player { @include position(fixed,0,0,0,0); @include flex-center(); background:rgba(0,0,0,0.85);
   figure { width:80vw; height:80vh; position: relative;
 
     .pic { background-size:cover; background-position: center; @include position(absolute,0,0,0,0);
@@ -57,8 +57,8 @@ a { @extend %textlink; }
       animation-fill-mode: forwards;
     }
 
-    figcaption { position: absolute; font-size:5vw; line-height: 100%; padding:0.15em .75em; text-transform: uppercase;
-      color: #fff; font-weight: bold; font-family: Helvetica;
+    figcaption { position: absolute; font-size:5vw; line-height: 100%; padding:0.15em .75em 0.3em .75em; text-transform: uppercase;
+      color: #fff; font-weight: bold;
       text-shadow: 
         0 1px 0 #ccc, 
         0 2px 0 #c9c9c9, 
