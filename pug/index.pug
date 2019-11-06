@@ -25,7 +25,7 @@ html(lang="en")
       .screen.break-screen(v-if="mode == 'vote'")
         figure(:style="{ 'background-image': 'url(img/bg/tempvotescreen.jpg)' }")
 
-      .press-your-luck(v-if="mode == 'show player' || mode == 'spin' || mode == 'show title'")
+      .press-your-luck(v-if="(mode == 'show player' || mode == 'spin' || mode == 'show title') && !finals.active")
         .box(v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }")
           figure(:style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }")
           figcaption(v-text="box.title") 
@@ -33,7 +33,8 @@ html(lang="en")
       .show-player(v-if="mode == 'show player'")
         figure()
           .pic(:style=" { 'background-image': 'url(img/players/big/'+player.pic+')' }")
-          figcaption.player-number Player {{player.number}}
+          figcaption.player-number(v-if="!finals.active") Player {{player.number}}
+          figcaption.player-number(v-if="finals.active") Finalist # {{player.number}}
           figcaption.player-name {{player.name}}
       
       .show-title(v-if="mode == 'show title'")
@@ -51,20 +52,22 @@ html(lang="en")
         .code-holder(v-if="current.code")
           .code(v-text="current.code")
 
-      .make-your-choice(v-if="mode == 'a/b'" :class="{ chosen: abPicked }")
+      .make-your-choice(v-if="mode == 'make your choice'" :class="{ chosen: finals.current.choiceMade }")
         
-        .choice.a(style="background-color:#e8771c" @click="abPick('a')")
+        .choice.a(style="background-color:#e8771c")
           figcaption A
-          .title(v-text="finalChoices[0][0].title")
-        .choice.b(style="background-color:#080256" @click="abPick('b')")
+          .title.animated.bounceInDown(v-text="finals.current.choices[0].title")
+        .choice.b(style="background-color:#080256")
           figcaption B
-          .title(v-text="finalChoices[0][1].title")
-        .chosen-item(v-if="abPicked")
-          figure.chosen(:style="{ 'background-image': 'url(img/drawings/'+finalChoices[0][0].pic+')' }")
+          .title.animated.bounceInUp(v-text="finals.current.choices[1].title")
+        .chosen-item(v-if="finals.current.choiceMade")
+          .code-holder(v-if="finals.current.choice.code")
+            .code(v-text="finals.current.choice.code")
+          figure.chosen(:style="{ 'background-image': 'url(img/drawings/'+finals.current.choice.pic+')' }")
             figcaption
-              .title(v-text="finalChoices[0][0].title")
-              cite(v-if="finalChoices[0][0].provider")
-                span Suggested by {{finalChoices[0][0].provider}}
+              .title(v-text="finals.current.choice.title")
+              cite(v-if="finals.current.choice.provider")
+                span Suggested by {{finals.current.choice.provider}}
 
       .countdown(v-if="mode == 'countdown'" v-bind:class="{ 'time-up': (countdown.percent >= 100) }")
 

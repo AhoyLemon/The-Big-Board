@@ -1,7 +1,9 @@
 $redFilter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
 
 
-
+////////////////////////////////////
+// Fonts
+$headline: Oswald, sans-serif;
 
 
 ///////////////////////////////////
@@ -17,7 +19,7 @@ $redFilter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
   to   { transform: translate(0); opacity: 1; }
 }
 @keyframes PlayerNameSlide {
-  from { transform: translate(60vw); opacity: 1; }
+  from { transform: translate(80vw); opacity: 1; }
   to   { transform: translate(0); opacity: 1; }
 }
 

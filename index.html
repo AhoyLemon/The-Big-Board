@@ -17,7 +17,7 @@
       <div class="screen break-screen" v-if="mode == 'vote'">
         <figure :style="{ 'background-image': 'url(img/bg/tempvotescreen.jpg)' }"></figure>
       </div>
-      <div class="press-your-luck" v-if="mode == 'show player' || mode == 'spin' || mode == 'show title'">
+      <div class="press-your-luck" v-if="(mode == 'show player' || mode == 'spin' || mode == 'show title') &amp;&amp; !finals.active">
         <div class="box" v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }">
           <figure :style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }"></figure>
           <figcaption v-text="box.title"> </figcaption>
@@ -26,7 +26,8 @@
       <div class="show-player" v-if="mode == 'show player'">
         <figure>
           <div class="pic" :style=" { 'background-image': 'url(img/players/big/'+player.pic+')' }"></div>
-          <figcaption class="player-number">Player {{player.number}}</figcaption>
+          <figcaption class="player-number" v-if="!finals.active">Player {{player.number}}</figcaption>
+          <figcaption class="player-number" v-if="finals.active">Finalist # {{player.number}}</figcaption>
           <figcaption class="player-name">{{player.name}}</figcaption>
         </figure>
       </div>
@@ -43,20 +44,23 @@
           <div class="code" v-text="current.code"></div>
         </div>
       </div>
-      <div class="make-your-choice" v-if="mode == 'a/b'" :class="{ chosen: abPicked }">
-        <div class="choice a" style="background-color:#e8771c" @click="abPick('a')">
+      <div class="make-your-choice" v-if="mode == 'make your choice'" :class="{ chosen: finals.current.choiceMade }">
+        <div class="choice a" style="background-color:#e8771c">
           <figcaption>A</figcaption>
-          <div class="title" v-text="finalChoices[0][0].title"></div>
+          <div class="title animated bounceInDown" v-text="finals.current.choices[0].title"></div>
         </div>
-        <div class="choice b" style="background-color:#080256" @click="abPick('b')">
+        <div class="choice b" style="background-color:#080256">
           <figcaption>B</figcaption>
-          <div class="title" v-text="finalChoices[0][1].title"></div>
+          <div class="title animated bounceInUp" v-text="finals.current.choices[1].title"></div>
         </div>
-        <div class="chosen-item" v-if="abPicked">
-          <figure class="chosen" :style="{ 'background-image': 'url(img/drawings/'+finalChoices[0][0].pic+')' }">
+        <div class="chosen-item" v-if="finals.current.choiceMade">
+          <div class="code-holder" v-if="finals.current.choice.code">
+            <div class="code" v-text="finals.current.choice.code"></div>
+          </div>
+          <figure class="chosen" :style="{ 'background-image': 'url(img/drawings/'+finals.current.choice.pic+')' }">
             <figcaption>
-              <div class="title" v-text="finalChoices[0][0].title"></div>
-              <cite v-if="finalChoices[0][0].provider"><span>Suggested by {{finalChoices[0][0].provider}}</span></cite>
+              <div class="title" v-text="finals.current.choice.title"></div>
+              <cite v-if="finals.current.choice.provider"><span>Suggested by {{finals.current.choice.provider}}</span></cite>
             </figcaption>
           </figure>
         </div>
@@ -77,7 +81,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-10-04@19:58:43"></script>
+      <script src="js/min/site.min.js?updated2019-10-06@15:19:31"></script>
     </div>
   </body>
 </html>

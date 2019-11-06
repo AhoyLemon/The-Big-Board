@@ -42,7 +42,6 @@ a { @extend %textlink; }
 
   .code-holder { @include position(absolute,null,0,0,null);
     .code { font-size:4vw; background:rgba(255,255,255,0.8); padding:0.25em 0.5em; font-weight: 900; }
-    
   }
 }
 
@@ -89,9 +88,9 @@ a { @extend %textlink; }
     .player-name { bottom:-3vw; right:-3vw; padding-left:1.25em;  //border-top-left-radius: 1.5em;
       background: linear-gradient(to top, #1e3c72, #2a5298);
       clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
-      transform:translateX(60vw);
+      transform:translateX(80vw);
       animation-name: PlayerNameSlide;
-      animation-duration: 1.2s;
+      animation-duration: 1.8s;
       animation-iteration-count: 1;
       animation-timing-function: cubic-bezier(.75,-0.5,0,1.75);
       animation-delay: 4s;
@@ -139,65 +138,6 @@ a { @extend %textlink; }
   transform-origin: 50% 100%;
   animation: jump 1s linear infinite;
 }
-
-.make-your-choice { @include position(fixed,0,0,0,0); background:black;
-  .choice { width:57%;  @include position(absolute,0,null,0);
-
-    > figure { @include position(absolute,0,0,0,0); background-size:cover; background-position: center; filter:grayscale(100%); opacity: 0.5; }
-
-    figcaption { font-size:9vh;  font-family: Oswald, sans-serif; color:white; text-shadow:2px 2px 0 black, -2px -2px 0 black, 0.1em 0.1em 0.1em black; position: absolute; }
-    figcaption { display: none; }
-    .title { color: #050505; position: absolute;  font-size:11vh; right:5vw; font-family: Oswald, sans-serif; }
-    &.a { left:0;
-      clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
-
-      figure { mix-blend-mode: darken; }
-      .title { top:2.5vh; left:2.5vw;  }
-    }
-    &.b { right:0;
-      clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%); 
-      background-position: center; background-size:contain; background-repeat: no-repeat;
-      figure { mix-blend-mode: lighten; }
-      .title { bottom:2.5vh; right:2.5vw; text-align: right; left:12vw; color:#e1e1e1;  }
-    }
-  }
-
-  .choice { z-index: 10;
-    //&.a { transform: translateX(-50%); }
-    //&.b { transform: translateX(50%); }
-  }
-
-  &.chosen {
-    .choice { transition: transform 3s ease-out; }
-    .choice.a { transform: translateX(-75%); }
-    .choice.b { transform: translateX(75%); }
-
-    .chosen-item { 
-      figure { z-index: 9; @include position(fixed,0,0,0,0); background-size:contain; background-position: center; background-repeat: no-repeat; }
-      figcaption { position: relative; background:rgba(0,0,0,0.5); padding:0.5em 3vw; max-width:90vw; margin:10vh auto 0 auto; font-family: Oswald, sans-serif;
-        .title { color:$white; font-size:6.5vw;  font-weight: 300;  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 0.05em 0.05em 0.05em black; text-align: center; }
-        cite { color:$white; font-size:2.5vw; text-align: right; display: block; }
-        opacity: 0;
-  animation-name: boxTitleSlide;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-timing-function: cubic-bezier(.75,-0.5,0,1.75);
-  animation-delay: 2.5s;
-  animation-fill-mode: forwards;
-  cite { 
-    opacity: 0;
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-    animation-delay: 4.8s;
-    animation-fill-mode: forwards;
-  }
-      }
-    }
-  }
-}
-
 
 .screen { @include position(fixed,0,0,0,0); 
   figure { @include position(absolute,0,0,0,0); background-size:cover; background-position: center; background-repeat: no-repeat; }
