@@ -1,0 +1,89 @@
+.fixed-title {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 99;
+  font-family: "Montserrat", Impact, sans-serif;
+  color: #eee;
+  text-shadow: 2px 2px 2px black;
+  font-size: 24px; }
+
+/*
+@keyframes strobeText{
+  0%{     color: transparent;    }
+  20%{     color: #ff0000;    }
+  40%{     color: #00ff00;    }
+  60%{     color: #0000ff;    }
+  80%{     color: #ffffff;    }
+}
+
+@keyframes blinkingText {
+  0% { opacity:1 }
+  40%{ opacity:1; }
+  41%{ opacity:0; }
+  70%{ opacity:0; }
+  71%{ opacity:1; }
+}
+
+
+
+.reveal { //font-family: $sans;
+  h1, h2, h3 { text-transform: none; }
+  pre { box-shadow: none; font-size:3vw;
+    code { background:transparent; }
+  }
+  section {
+    img { margin: 0; background:transparent; border:none; box-shadow:none; max-height: 65vh; }
+  }
+  img { background:none; }
+  ul.npm {
+    code { color:pink; }
+  }
+  a {
+    &:hover {
+      img { background:transparent; box-shadow: none; }
+    }
+  }
+
+  .overflow-scroll { overflow-y:auto; max-height:50vh; }
+
+  .domain-table { font-size:85%; width:100%;
+    td { border-left:1px solid currentColor; 
+      &:first-child { border-left: none; }
+    }
+  }
+
+  //iframe.youtube { position: fixed; top:0; right:0; left:0; bottom:0; }
+  //.youtube { position: absolute; top:0; right:0; bottom:0; left:0; height:100vh; width:100vw; }
+  .shadowed { text-shadow: 3px 3px 3px rgba(0,0,0,0.5), -1px 1px 1px rgba(0,0,0,0.5);}
+  .black { color:#212121; }
+
+
+  .grid { display: grid; grid-gap: 4vh;
+    img { display: block; max-width: 100%; max-height: 100%;  }
+    &[columns="2"] { grid-template-columns: repeat(2,1fr);
+      .box { height:65vh; }
+    }
+    &[columns="3"] { grid-template-columns: repeat(3,1fr);
+      .box { height: 17vh; }
+    }
+    &[columns="4"] { grid-template-columns: repeat(4,1fr);
+      .box { height: 15vh; }
+    }
+    .box { display:flex; align-items: center; }
+  }
+
+  .grid .box img { margin-left: auto; margin-right: auto; }
+  .blink {  animation:blinkingText .5s infinite; }
+  .strobe { animation:strobeText .5s infinite; }
+}
+
+
+.example { height:60vh; overflow-y: scroll; position:relative;
+  .inner { background:white; height:300vh;  }
+  .position-fixed { background: red; width:200px; height:200px; position: absolute; top:0; left:0; }
+}
+
+.bottom-center { background-position:center bottom 28% !important; }
+
+*/

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <head>
+    <title></title>
+    <!--link(href="https://fonts.googleapis.com/css?family=Oswald:300,400,700&display=swap" rel="stylesheet")-->
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,400i,700,700i,900&amp;display=swap" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+    <meta name="description">
+  </head>
+  <!--include _favicons.pug-->
+  <!--include _social.pug-->
+</head>
+<body> 
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>Fuck</h1>
+      </section>
+      <section>
+        <h1>You</h1>
+      </section>
+      <section>
+        <h1>Asshole</h1>
+      </section>
+    </div>
+  </div>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      history: true,
+      autoPlayMedia: true,
+      //slideNumber: true,
+      dependencies: [
+      { src: 'plugin/markdown/marked.js' },
+      { src: 'plugin/markdown/markdown.js' },
+      { src: 'plugin/zoom-js/zoom.js' },
+      { src: 'plugin/notes/notes.js', async: true },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+      ]
+    });
+  </script>
+</body>
