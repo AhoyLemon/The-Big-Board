@@ -8,6 +8,10 @@
   text-shadow: 2px 2px 2px black;
   font-size: 24px; }
 
+.slide-background {
+  background-repeat: no-repeat;
+  background-position: center; }
+
 /*
 @keyframes strobeText{
   0%{     color: transparent;    }
