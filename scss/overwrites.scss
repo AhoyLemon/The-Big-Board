@@ -2,7 +2,7 @@ $serif: 'Playfair Display', serif;
 $sans: 'Work Sans', sans-serif;
 
 
-.fixed-title { position: fixed; top:0.25em; left:0.25em; z-index: 99;
+.fixed-title { position: fixed; bottom:0.25em; left:0.25em; z-index: 99; writing-mode: vertical-lr; transform:rotate(180deg);
   font-family: "League Gothic", Impact, sans-serif; color:#212121; font-size:3vw;
 }
 .slide-background { background-repeat: no-repeat; background-position: center;}

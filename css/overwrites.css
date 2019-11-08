@@ -1,8 +1,14 @@
 .fixed-title {
   position: fixed;
-  top: 0.25em;
+  bottom: 0.25em;
   left: 0.25em;
   z-index: 99;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
   font-family: "League Gothic", Impact, sans-serif;
   color: #212121;
   font-size: 3vw; }
