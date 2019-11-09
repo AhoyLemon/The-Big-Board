@@ -27,9 +27,9 @@
       <div class="show-player" v-if="mode == 'show player'">
         <figure>
           <div class="pic" :style=" { 'background-image': 'url(img/players/big/'+player.pic+')' }"></div>
-          <figcaption class="player-number" v-if="!finals.active">Player {{player.number}}</figcaption>
-          <figcaption class="player-number" v-if="finals.active">Finalist # {{player.number}}</figcaption>
-          <figcaption class="player-name">{{player.name}}</figcaption>
+          <figcaption class="player-number" v-if="!finals.active" :class="'player-'+player.number">Player {{player.number}}</figcaption>
+          <figcaption class="player-number" v-if="finals.active" :class="'player-'+player.number">Finalist # {{player.number}}</figcaption>
+          <figcaption class="player-name" :class="'player-'+player.number">{{player.name}}</figcaption>
         </figure>
       </div>
       <div class="show-title" v-if="mode == 'show title'">
@@ -82,7 +82,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-10-06@16:48:30"></script>
+      <script src="js/min/site.min.js?updated2019-10-08@19:38:25"></script>
     </div>
   </body>
 </html>

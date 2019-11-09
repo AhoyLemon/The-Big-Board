@@ -33,9 +33,9 @@ html(lang="en")
       .show-player(v-if="mode == 'show player'")
         figure()
           .pic(:style=" { 'background-image': 'url(img/players/big/'+player.pic+')' }")
-          figcaption.player-number(v-if="!finals.active") Player {{player.number}}
-          figcaption.player-number(v-if="finals.active") Finalist # {{player.number}}
-          figcaption.player-name {{player.name}}
+          figcaption.player-number(v-if="!finals.active" :class="'player-'+player.number") Player {{player.number}}
+          figcaption.player-number(v-if="finals.active" :class="'player-'+player.number") Finalist # {{player.number}}
+          figcaption.player-name(:class="'player-'+player.number") {{player.name}}
       
       .show-title(v-if="mode == 'show title'")
 
