@@ -44,7 +44,10 @@ const players = [
   [
     "Lou Fernandez",
     "Jack Chick",
-    "Lemon",
+    {
+      name: "Lemon",
+      pic:  "lemon.jpg"
+    },
     "Kumquatxop"
   ],
   [
@@ -53,12 +56,15 @@ const players = [
       name: "Adam Bozarth",
       pic:  "bozarth.jpg"
     },
-    "K Thor?",
+    "K. Thor Jensen",
     "Shell Game"
   ],
   [
     "bumpgrrl",
-    "Jimmyfranks",
+    {
+      name: "Jimmyfranks",
+      pic:  "jimmyfranks.jpg"
+    },
     "Bunnybread",
     "STOG"
   ]
