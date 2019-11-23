@@ -23,7 +23,7 @@ html(lang="en")
         figure(:style="{ 'background-image': 'url(img/bg/sitdown.jpg)' }")
 
       .screen.break-screen(v-if="mode == 'vote'")
-        figure(:style="{ 'background-image': 'url(img/bg/tempvotescreen.jpg)' }")
+        figure(:style="{ 'background-image': 'url(img/bg/vote1.png)' }")
 
       .press-your-luck(v-if="(mode == 'show player' || mode == 'spin' || mode == 'show title') && !finals.active")
         .box(v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }")

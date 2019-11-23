@@ -16,7 +16,7 @@
         <figure :style="{ 'background-image': 'url(img/bg/sitdown.jpg)' }"></figure>
       </div>
       <div class="screen break-screen" v-if="mode == 'vote'">
-        <figure :style="{ 'background-image': 'url(img/bg/tempvotescreen.jpg)' }"></figure>
+        <figure :style="{ 'background-image': 'url(img/bg/vote1.png)' }"></figure>
       </div>
       <div class="press-your-luck" v-if="(mode == 'show player' || mode == 'spin' || mode == 'show title') &amp;&amp; !finals.active">
         <div class="box" v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }">
@@ -82,7 +82,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-10-08@19:38:25"></script>
+      <script src="js/min/site.min.js?updated2019-10-22@19:27:08"></script>
     </div>
   </body>
 </html>
