@@ -15,7 +15,7 @@ var app = new Vue({
     },
     boxes: initialBoxes,
     queue: exhibitionQueue,
-
+    playedTitles: [],
     finals: {
       active: false,
       finalists: finalists,
@@ -58,6 +58,7 @@ var app = new Vue({
           self.closeTheTitle();
         } else if (self.mode == 'countdown') {
           clearInterval(self.countdown.interval);
+          self.updateLocalStorage();
           if ((self.mode != 'vote') && (self.player.number == 4 || self.player.number == 8 || self.player.number == 12 )) {
             self.mode = 'vote';
           } else if (self.finals.active == true) {
@@ -206,8 +207,8 @@ var app = new Vue({
     pickOneRandomly() {
       let self = this;
       self.spinning = true;
-      self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 36);
-      //self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 11);
+      //self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 36);
+      self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 6);
     },
 
     boop() {
@@ -239,7 +240,6 @@ var app = new Vue({
 
       self.moveTheClock();
     },
-
 
     moveTheClock() {
       let self = this;
@@ -283,9 +283,49 @@ var app = new Vue({
         self.finals.current.choice = self.finals.current.choices[1];
       }
 
+    },
+
+    updateLocalStorage() {
+      let self = this;
+      //localStorage.playerNumber = self.player.number;
+      localStorage.playerNumber = 0;
+      self.playedTitles.push(self.current.title);
+      localStorage.setItem("playedTitles", JSON.stringify(self.playedTitles));
+      //alert(self.playedTitles);
+
+    },
+
+    loadVariablesFromLocalStorage() {
+      let self = this;
+
+      if (localStorage.playerNumber) {
+        self.player.number = localStorage.playerNumber;
+      } else {
+        localStorage.playerNumber = self.player.number;
+      }
+
+      if (localStorage.playedTitles) {
+        self.playedTitles = JSON.parse(localStorage.playedTitles);
+      }
+
+
+      self.playedTitles.forEach(function(playedTitle) {
+
+        self.boxes.forEach(function(box, i) {
+          if (playedTitle == box.title) {
+            //alert('I found a match for ' + playedTitle);
+            self.boxes.splice(i,1);
+            self.boxes.push(self.queue[0]);
+            self.queue.splice(0,1);
+          }
+        });
+
+      });
+
     }
 
-
+  
+  
   },
 
 
@@ -337,9 +377,7 @@ var app = new Vue({
   mounted: function() {
     let self = this;
 
-    // Uncomment if this is the finals
-    //self.finals.active = true;
-    //self.setupNewFinalist();
+    self.loadVariablesFromLocalStorage();
   },
 
 });
