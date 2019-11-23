@@ -57,7 +57,11 @@ const players = [
       pic:  "bozarth.jpg"
     },
     "K. Thor Jensen",
-    "Shell Game"
+    //"Shell Game"
+    {
+      name: "Shell Game",
+      pic:  "shellgame.jpg"
+    }
   ],
   [
     "bumpgrrl",
