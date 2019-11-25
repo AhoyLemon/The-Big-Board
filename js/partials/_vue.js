@@ -299,7 +299,7 @@ var app = new Vue({
       let self = this;
 
       if (localStorage.playerNumber) {
-        self.player.number = localStorage.playerNumber;
+        self.player.number = parseInt(localStorage.playerNumber);
       } else {
         localStorage.playerNumber = self.player.number;
       }

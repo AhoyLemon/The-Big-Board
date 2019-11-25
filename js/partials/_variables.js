@@ -64,7 +64,10 @@ const players = [
     }
   ],
   [
-    "bumpgrrl",
+    {
+      name: "bumpgrrl",
+      pic:  "bumpgrrl.jpg"
+    },
     {
       name: "Jimmyfranks",
       pic:  "jimmyfranks.jpg"
