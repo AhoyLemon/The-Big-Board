@@ -1,0 +1,8 @@
+
+<div class="screen" v-if="mode == 'sit down'">
+  <figure :style="{ 'background-image': 'url(img/bg/sitdown.jpg)' }"></figure>
+</div>
+<div class="screen break-screen" v-if="mode == 'vote'">
+  <figure v-if="player.number &lt; 5" :style="{ 'background-image': 'url(img/bg/vote-1.jpg)' }"></figure>
+  <figure v-if="player.number &lt; 9" :style="{ 'background-image': 'url(img/bg/vote-1.jpg)' }"></figure>
+</div>

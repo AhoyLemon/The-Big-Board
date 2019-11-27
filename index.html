@@ -16,10 +16,14 @@
         <figure :style="{ 'background-image': 'url(img/bg/sitdown.jpg)' }"></figure>
       </div>
       <div class="screen break-screen" v-if="mode == 'vote'">
-        <figure :style="{ 'background-image': 'url(img/bg/vote1.png)' }"></figure>
+        <figure v-if="player.number &lt; 5" :style="{ 'background-image': 'url(img/bg/vote-1.jpg)' }"></figure>
+        <figure v-else-if="player.number &lt; 9" :style="{ 'background-image': 'url(img/bg/vote-2.jpg)' }"></figure>
+        <figure v-else-if="player.number &lt; 13" :style="{ 'background-image': 'url(img/bg/vote-3.jpg)' }"></figure>
+        <figure v-else-if="!finals.active" :style="{ 'background-image': 'url(img/bg/vote-4.jpg)' }"></figure>
+        <figure v-else-if="finals.active" :style="{ 'background-image': 'url(img/bg/vote-final.jpg)' }"></figure>
       </div>
       <div class="press-your-luck" v-if="(mode == 'show player' || mode == 'spin' || mode == 'show title') &amp;&amp; !finals.active">
-        <div class="box" v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }">
+        <div class="box" v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking, huge: box.huge }">
           <figure :style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }"></figure>
           <figcaption v-text="box.title"> </figcaption>
         </div>
@@ -82,7 +86,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-10-22@19:27:08"></script>
+      <script src="js/min/site.min.js?updated2019-10-27@14:19:13"></script>
     </div>
   </body>
 </html>

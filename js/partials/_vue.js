@@ -1,7 +1,11 @@
+bozarthName = "Adam Bozarthhhhhhhh";
+
+
 var app = new Vue({
   el: '#app',
   data: {
     mode: 'sit down',
+    cacheRound: false,
     spinning: false,
     polling: null,
     ticks: 0,
@@ -20,7 +24,6 @@ var app = new Vue({
       active: false,
       finalists: finalists,
       choices: finalChoices,
-      
       current: {
         number: 0,
         player: {},
@@ -95,6 +98,9 @@ var app = new Vue({
       if (e.keyCode == 13) { // Enter pressed.
         if (self.mode == 'spin') {
           if (self.spinning == false) {
+            if (self.player.name == bozarthName) {
+              self.adamBozarthSubroutine();
+            }
             self.pickOneRandomly();
           }
         }
@@ -146,11 +152,32 @@ var app = new Vue({
 
     },
 
+    adamBozarthSubroutine() {
+      let self = this;
+      
+      let adamBox = {
+        blinking: false,
+        code: "ADAM_01",
+        pic: "sexy-football-bozarth.jpg",
+        file: "sexy-football-bozarth.jpg",
+        imgSrc: "img/drawings/sexy-football-bozarth.jpg",
+        focus: false,
+        provider: "Montrith",
+        rating: "LOL",
+        selected: false,
+        title: "How To Turn the Super Bowl into Super Sex!",
+        url: "http://www.howtodothings.com/family-relationships/how-to-turn-the-super-bowl-into-super-sex",
+        whammy: false,
+        huge: true
+      };
+
+      self.boxes.splice(2, 1, adamBox);
+    },
+
     setupNewSpin() {
       let self = this;
 
       self.chooseNewPlayer();
-
 
       // Rehydrate filled box -------------------------------
       if (self.current && self.current != {} ) {
@@ -207,8 +234,22 @@ var app = new Vue({
     pickOneRandomly() {
       let self = this;
       self.spinning = true;
-      //self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 36);
-      self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 6);
+      
+
+      if (self.player.name == bozarthName) {
+        self.setDeceleratingTimeout(function(){ 
+          self.boxes[2].focus = false;
+          sound.play();
+          self.boxes[2].lastFocused = 2;
+          self.temp.currentFocus = 2;
+
+          setTimeout(function(){ self.boxes[2].focus = true; }, 100);
+        }, 15, 56);
+      } else {
+        self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 36);
+        //self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 6);
+      }
+
     },
 
     boop() {
@@ -377,7 +418,9 @@ var app = new Vue({
   mounted: function() {
     let self = this;
 
-    self.loadVariablesFromLocalStorage();
+    if (self.cacheRound) {
+      self.loadVariablesFromLocalStorage();
+    }
   },
 
 });

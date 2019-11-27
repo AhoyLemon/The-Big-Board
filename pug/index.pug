@@ -18,15 +18,10 @@ html(lang="en")
 
       .keywatch(tabindex="-1" @keyup.enter="doSomething")
 
-
-      .screen(v-if="mode == 'sit down'")
-        figure(:style="{ 'background-image': 'url(img/bg/sitdown.jpg)' }")
-
-      .screen.break-screen(v-if="mode == 'vote'")
-        figure(:style="{ 'background-image': 'url(img/bg/vote1.png)' }")
+      include partials/_breaks
 
       .press-your-luck(v-if="(mode == 'show player' || mode == 'spin' || mode == 'show title') && !finals.active")
-        .box(v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking }")
+        .box(v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking, huge: box.huge }")
           figure(:style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }")
           figcaption(v-text="box.title") 
 

@@ -2780,6 +2780,38 @@ body {
   color: #212121;
   font-family: "Barlow Condensed", "Comic Sans MS"; }
 
+@-webkit-keyframes adamclack {
+  0% {
+    -webkit-filter: none;
+    filter: none; }
+  30% {
+    -webkit-filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
+    filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
+    opacity: 1; }
+  70% {
+    -webkit-filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
+    filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
+    opacity: 1; }
+  100% {
+    -webkit-filter: none;
+    filter: none; } }
+
+@keyframes adamclack {
+  0% {
+    -webkit-filter: none;
+    filter: none; }
+  30% {
+    -webkit-filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
+    filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
+    opacity: 1; }
+  70% {
+    -webkit-filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
+    filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1);
+    opacity: 1; }
+  100% {
+    -webkit-filter: none;
+    filter: none; } }
+
 .press-your-luck {
   display: -ms-grid;
   display: grid;
@@ -2812,6 +2844,11 @@ body {
     animation-duration: 0.15s;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite; }
+  .press-your-luck .box.huge {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+    -ms-grid-row-span: 3;
+    grid-row: span 3; }
 
 .show-title {
   position: fixed;
