@@ -45,8 +45,11 @@ const players = [
     "Kumquatxop"
   ],
   [
-    "fart",
-    "Nutshell Gulag",
+    //"fart",
+    {
+      name: "Nutshell Gulag",
+      pic: "gulag.jpg"
+    },
     
     {
       name: "Adam Bozarth",
