@@ -39,7 +39,10 @@ const players = [
     }
   ],
   [
-    "Lou Fernandez",
+    {
+      name: "Lou Fernandez",
+      pic:  "lou.jpg"
+    },
     "Jack Chick",
     {
       name: "Lemon",
