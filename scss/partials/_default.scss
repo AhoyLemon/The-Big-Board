@@ -42,7 +42,11 @@ a { @extend %textlink; }
   figure { @include position(absolute,0,0,0,0); background-size:contain; background-position: center; background-repeat: no-repeat; }
 
   .box-title { text-align: center; position: relative; background:rgba(0,0,0,0.5); padding:0.5em 3vw; z-index: 3;
-    h1 { color:$white; font-size:6.5vw;  font-weight: 300;  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 0.05em 0.05em 0.05em black; }
+    h1 { color:$white; font-size:6.5vw;  font-weight: 300;  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 0.05em 0.05em 0.05em black;
+      a { color:currentColor;
+        &:hover { color:yellow; }
+      }
+    }
     cite { color:$white; font-size:2.5vw; text-shadow: 1px 1px 0 black, 0.05em 0.05em 0.05em rgba(0,0,0,0.5); display: block; text-align: right; }
   }
   

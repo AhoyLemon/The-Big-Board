@@ -83,6 +83,8 @@ var app = new Vue({
       if (e.keyCode == 33) {
         if (self.mode == 'spin' || self.mode == "make your choice") {
           self.mode = 'show player';
+        } else if (self.mode == 'countdown') {
+          self.mode = 'show title';
         }
       }
 

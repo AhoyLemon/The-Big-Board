@@ -1,0 +1,14 @@
+
+<div class="show-title" v-if="mode == 'show title'">
+  <div class="whammy-holder" v-if="current.whammy"><img class="whammy" src="img/whammy1.png"/></div>
+  <transition name="zoom">
+    <figure class="box-drawing" v-if="mode == 'show title'" :style="{ 'backgroundImage': 'url(img/drawings/' + current.file +')' }"></figure>
+  </transition>
+  <div class="inner box-title">
+    <h1 v-text="current.title"></h1>
+    <cite v-if="current.provider"><span>Suggested by {{current.provider}}</span></cite>
+  </div>
+  <div class="code-holder" v-if="current.code">
+    <div class="code" v-text="current.code"></div>
+  </div>
+</div>

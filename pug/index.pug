@@ -31,21 +31,8 @@ html(lang="en")
           figcaption.player-number(v-if="!finals.active" :class="'player-'+player.number") Player {{player.number}}
           figcaption.player-number(v-if="finals.active" :class="'player-'+player.number") Finalist # {{player.number}}
           figcaption.player-name(:class="'player-'+player.number") {{player.name}}
-      
-      .show-title(v-if="mode == 'show title'")
 
-        .whammy-holder(v-if="current.whammy")
-          img.whammy(src="img/whammy1.png")
-
-        transition(name="zoom")
-          figure.box-drawing(v-if="mode == 'show title'" :style="{ 'backgroundImage': 'url(img/drawings/' + current.file +')' }")
-        .inner.box-title
-          h1(v-text="current.title")
-          cite(v-if="current.provider")
-            span Suggested by {{current.provider}}
-
-        .code-holder(v-if="current.code")
-          .code(v-text="current.code")
+      include partials/_show-title
 
       .make-your-choice(v-if="mode == 'make your choice'" :class="{ chosen: finals.current.choiceMade }")
         

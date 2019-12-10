@@ -1,0 +1,15 @@
+.show-title(v-if="mode == 'show title'")
+
+  .whammy-holder(v-if="current.whammy")
+    img.whammy(src="img/whammy1.png")
+
+  transition(name="zoom")
+    figure.box-drawing(v-if="mode == 'show title'" :style="{ 'backgroundImage': 'url(img/drawings/' + current.file +')' }")
+  .inner.box-title
+    h1
+      a(:href="current.url" target="_blank") {{current.title}}
+    cite(v-if="current.provider")
+      span Suggested by {{current.provider}}
+
+  .code-holder(v-if="current.code")
+    .code(v-text="current.code")

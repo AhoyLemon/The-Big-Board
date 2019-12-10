@@ -42,7 +42,7 @@
           <figure class="box-drawing" v-if="mode == 'show title'" :style="{ 'backgroundImage': 'url(img/drawings/' + current.file +')' }"></figure>
         </transition>
         <div class="inner box-title">
-          <h1 v-text="current.title"></h1>
+          <h1><a :href="current.url" target="_blank">{{current.title}}</a></h1>
           <cite v-if="current.provider"><span>Suggested by {{current.provider}}</span></cite>
         </div>
         <div class="code-holder" v-if="current.code">
@@ -98,7 +98,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-11-10@15:08:59"></script>
+      <script src="js/min/site.min.js?updated2019-11-10@16:09:43"></script>
     </div>
   </body>
 </html>
