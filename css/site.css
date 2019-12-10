@@ -3236,6 +3236,8 @@ body {
         font-weight: 300;
         color: #eee;
         font-size: 6.5vw; }
+        .countdown .round-details .title h1.long {
+          font-size: 3.25vw; }
     .countdown .round-details .timer-holder {
       display: -webkit-box;
       display: -ms-flexbox;

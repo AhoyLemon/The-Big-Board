@@ -73,7 +73,7 @@
       <div class="countdown" v-if="mode == 'countdown'" v-bind:class="{ 'time-up': (countdown.percent &gt;= 100) }">
         <div class="round-details">
           <div class="title">
-            <h1>{{current.title}}</h1>
+            <h1 :class="{ long: current.title.length &gt; 60 }">{{current.title}}</h1>
           </div>
           <div class="timer-holder">
             <div class="circle" v-bind:style="{ background: computedCircleFill }">
@@ -98,7 +98,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-11-10@14:24:17"></script>
+      <script src="js/min/site.min.js?updated2019-11-10@15:08:59"></script>
     </div>
   </body>
 </html>

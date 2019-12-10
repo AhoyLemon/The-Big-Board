@@ -2,7 +2,7 @@
 
   .round-details
     .title
-      h1 {{current.title}}
+      h1(:class="{ long: current.title.length > 60 }") {{current.title}}
 
     .timer-holder
       .circle(v-bind:style="{ background: computedCircleFill }")

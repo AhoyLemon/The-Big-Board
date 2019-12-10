@@ -1,4 +1,4 @@
-const bozarthName = "Adam Bozarthhhhhhhh";
+const bozarthName = "Adam Bozarth";
 const roundSeconds = 480;
 
 var app = new Vue({
@@ -287,7 +287,7 @@ var app = new Vue({
 
     startTheClock() {
       let self = this;
-      self.countdown.elapsed = 1900;
+      self.countdown.elapsed = 0;
 
       self.countdown.interval = setInterval(() => {
         self.countdown.elapsed++;

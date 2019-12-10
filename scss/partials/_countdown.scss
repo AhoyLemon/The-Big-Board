@@ -51,7 +51,9 @@
 
   .round-details { display: grid; grid-template-columns: repeat(2,1fr); height: 95vh;
     .title { grid-column: span 2;
-      h1 { text-align: center; font-weight:$light; color:$white; font-size:6.5vw;  }
+      h1 { text-align: center; font-weight:$light; color:$white; font-size:6.5vw;
+        &.long { font-size:3.25vw; }
+      }
     }
     .timer-holder { display:flex; align-items: center;
       .circle { margin-left: auto; margin-right: auto; }
