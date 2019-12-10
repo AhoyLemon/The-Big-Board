@@ -1,3 +1,12 @@
+@keyframes timeupeffect {
+  0%  { transform:scale(0.6); }
+  50% { transform:scale(1.2);}
+  100%  { transform:scale(0.6); }
+}
+
+
+
+
 .countdown { min-height: 100vh; background:#111; @include flex-center(); position: relative;
   .circle { height:50vh; width:50vh; background: radial-gradient(lime, blue,aqua,magenta,yellow,red,lime); border-radius: 50%; position: relative;
     transition: background 2s ease;
@@ -12,7 +21,44 @@
 
   .warning-lights { @include position(absolute,null,0,0,0); height:0; background:linear-gradient(to left, #f00000, #dc281e);
     //&.blinking { animation: blinkingKF 0.3s infinite; }
+
+  $timeUpShadowColor: #515151;
+
+    display:flex; align-items: center; justify-content: center;
+    .time-up-display { transform:rotate(-15deg);
+      .text { font-size:7vw; font-weight: $bold; color: #f5f5f5;
+        text-shadow:  1px 1px 1px $timeUpShadowColor,
+                      1px 2px 1px $timeUpShadowColor,
+                      1px 3px 1px $timeUpShadowColor,
+                      1px 4px 1px $timeUpShadowColor,
+                      1px 5px 1px $timeUpShadowColor,
+                      1px 6px 1px $timeUpShadowColor,
+                      1px 7px 1px $timeUpShadowColor,
+                      1px 8px 1px $timeUpShadowColor,
+                      1px 9px 1px $timeUpShadowColor,
+                      1px 10px 1px $timeUpShadowColor,
+                      1px 18px 6px rgba(16,16,16,0.7),
+                      1px 22px 10px rgba(16,16,16,0.35),
+                      1px 25px 35px rgba(16,16,16,0.35),
+                      1px 30px 60px rgba(16,16,16,0.75);
+        animation-name: timeupeffect; animation-duration: 3s; animation-iteration-count: infinite; animation-timing-function: linear;
+      }
+
+    }
+
   }
+
+
+  .round-details { display: grid; grid-template-columns: repeat(2,1fr); height: 95vh;
+    .title { grid-column: span 2;
+      h1 { text-align: center; font-weight:$light; color:$white; font-size:6.5vw;  }
+    }
+    .timer-holder { display:flex; align-items: center;
+      .circle { margin-left: auto; margin-right: auto; }
+    }
+    .image-holder { display:flex; align-items: center; }
+  }
+
 
 
   /*

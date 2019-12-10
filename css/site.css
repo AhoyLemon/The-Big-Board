@@ -3095,6 +3095,28 @@ body {
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards; }
 
+@-webkit-keyframes timeupeffect {
+  0% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6); }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); }
+  100% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6); } }
+
+@keyframes timeupeffect {
+  0% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6); }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); }
+  100% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6); } }
+
 .countdown {
   min-height: 100vh;
   background: #111;
@@ -3173,7 +3195,64 @@ body {
     background: -webkit-gradient(linear, right top, left top, from(#f00000), to(#dc281e));
     background: -webkit-linear-gradient(right, #f00000, #dc281e);
     background: -o-linear-gradient(right, #f00000, #dc281e);
-    background: linear-gradient(to left, #f00000, #dc281e); }
+    background: linear-gradient(to left, #f00000, #dc281e);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .countdown .warning-lights .time-up-display {
+      -webkit-transform: rotate(-15deg);
+      -ms-transform: rotate(-15deg);
+      transform: rotate(-15deg); }
+      .countdown .warning-lights .time-up-display .text {
+        font-size: 7vw;
+        font-weight: 700;
+        color: #f5f5f5;
+        text-shadow: 1px 1px 1px #515151, 1px 2px 1px #515151, 1px 3px 1px #515151, 1px 4px 1px #515151, 1px 5px 1px #515151, 1px 6px 1px #515151, 1px 7px 1px #515151, 1px 8px 1px #515151, 1px 9px 1px #515151, 1px 10px 1px #515151, 1px 18px 6px rgba(16, 16, 16, 0.7), 1px 22px 10px rgba(16, 16, 16, 0.35), 1px 25px 35px rgba(16, 16, 16, 0.35), 1px 30px 60px rgba(16, 16, 16, 0.75);
+        -webkit-animation-name: timeupeffect;
+        animation-name: timeupeffect;
+        -webkit-animation-duration: 3s;
+        animation-duration: 3s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear; }
+  .countdown .round-details {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    height: 95vh; }
+    .countdown .round-details .title {
+      -ms-grid-column-span: 2;
+      grid-column: span 2; }
+      .countdown .round-details .title h1 {
+        text-align: center;
+        font-weight: 300;
+        color: #eee;
+        font-size: 6.5vw; }
+    .countdown .round-details .timer-holder {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .countdown .round-details .timer-holder .circle {
+        margin-left: auto;
+        margin-right: auto; }
+    .countdown .round-details .image-holder {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
 
 @-webkit-keyframes blinkingKF {
   25% {

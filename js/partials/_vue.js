@@ -1,5 +1,5 @@
-bozarthName = "Adam Bozarthhhhhhhh";
-
+const bozarthName = "Adam Bozarthhhhhhhh";
+const roundSeconds = 480;
 
 var app = new Vue({
   el: '#app',
@@ -34,6 +34,7 @@ var app = new Vue({
     },
 
     countdown: {
+      elapsed: 0,
       percent: 0,
       interval: {}
     }
@@ -85,6 +86,7 @@ var app = new Vue({
         }
       }
 
+      /*
       // SPACEBAR
       if (e.keyCode == 32) { // Spacebar pressed.
         if (self.mode == 'spin') {
@@ -93,6 +95,7 @@ var app = new Vue({
           }
         }
       } 
+      */
 
       // ENTER
       if (e.keyCode == 13) { // Enter pressed.
@@ -279,16 +282,16 @@ var app = new Vue({
       self.countdown.percent = 0;
       self.mode = 'countdown'; 
 
-      self.moveTheClock();
+      self.startTheClock();
     },
 
-    moveTheClock() {
+    startTheClock() {
       let self = this;
+      self.countdown.elapsed = 1900;
+
       self.countdown.interval = setInterval(() => {
-        self.countdown.percent = self.countdown.percent + 1;
-        if (self.countdown.percent >= 100) {
-          clearInterval(self.countdown.interval);
-        }
+        self.countdown.elapsed++;
+        self.countdown.percent = ((self.countdown.elapsed / (roundSeconds * 4)) * 100);
 
         if (self.countdown.percent == 55 ) {
           hurryUp.play();
@@ -298,7 +301,12 @@ var app = new Vue({
           hurryUp.stop();
           nngg.play();
         }
-      }, 300);
+
+        if (self.countdown.percent >= 100) {
+          clearInterval(self.countdown.interval);
+        }
+
+      }, 250);
     },
 
     setupNewFinalist() {
