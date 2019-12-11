@@ -430,6 +430,9 @@ var app = new Vue({
 
     if (self.cacheRound) {
       self.loadVariablesFromLocalStorage();
+    } else {
+      localStorage.playedTitles = "";
+      localStorage.playerNumber = "";
     }
   },
 
