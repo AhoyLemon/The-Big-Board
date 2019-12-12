@@ -3259,6 +3259,10 @@ body {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
+      .countdown .round-details .image-holder img {
+        max-height: 70vh;
+        margin-left: auto;
+        margin-right: auto; }
 
 @-webkit-keyframes blinkingKF {
   25% {
