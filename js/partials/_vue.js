@@ -1,4 +1,4 @@
-const bozarthName = "Adam Bozarth";
+const bozarthName = "Adam Bozarthhhhhhhhh";
 const roundSeconds = 480;
 
 var app = new Vue({
@@ -251,8 +251,8 @@ var app = new Vue({
           setTimeout(function(){ self.boxes[2].focus = true; }, 100);
         }, 15, 56);
       } else {
-        //self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 36);
-        self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 6);
+        self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 36);
+        //self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 6);
       }
 
     },

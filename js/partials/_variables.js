@@ -51,7 +51,6 @@ const players = [
     "Kumquatxop"
   ],
   [
-    //"fart",
     {
       name: "Nutshell Gulag",
       pic: "gulag.jpg"
@@ -62,7 +61,6 @@ const players = [
       pic:  "bozarth.jpg"
     },
     "K. Thor Jensen",
-    //"Shell Game"
     {
       name: "Shell Game",
       pic:  "shellgame.jpg"
