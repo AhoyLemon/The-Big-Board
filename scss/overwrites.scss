@@ -12,3 +12,8 @@ $sans: 'Work Sans', sans-serif;
 }
 
 .slide-background { background-repeat: no-repeat; background-position: center;}
+
+table.math {
+  td { border:none !important; text-align: center; }
+  td.number { font-size:600%; line-height: 100%; padding:0; }
+}

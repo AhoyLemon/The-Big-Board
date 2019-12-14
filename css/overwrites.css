@@ -29,3 +29,12 @@
 .slide-background {
   background-repeat: no-repeat;
   background-position: center; }
+
+table.math td {
+  border: none !important;
+  text-align: center; }
+
+table.math td.number {
+  font-size: 600%;
+  line-height: 100%;
+  padding: 0; }
