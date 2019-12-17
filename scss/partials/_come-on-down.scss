@@ -1,0 +1,5 @@
+.come-on-down { background: #212121; color:#eee; display:flex; align-items: center; justify-content: center; 
+  h1 { font-size:13vw; }
+  li { font-size:4vw; list-style-type: decimal; }
+  i { @include position(absolute,null,0.2em,0.2em); font-size:4vw; color:#ee3333; }
+}

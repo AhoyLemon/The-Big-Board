@@ -14,6 +14,7 @@ var app = new Vue({
       currentFocus: 0
     },
     current: {},
+    players: players,
     player: {
       number: 0,
     },
@@ -50,6 +51,8 @@ var app = new Vue({
       // PAGE DOWN
       if (e.keyCode == 34) {
         if (self.mode == 'sit down') {
+          self.mode = 'come on down';
+        } else if (self.mode == 'come on down') {
           self.chooseNewPlayer();
           self.mode = 'show player';
         } else if (self.mode == 'show player') {
@@ -71,7 +74,7 @@ var app = new Vue({
             self.setupNewSpin();
           }
         } else if (self.mode == 'vote') { 
-          self.setupNewSpin();
+          self.mode = 'come on down';
         } else if (self.mode == "make your choice" && self.finals.active == true && self.finals.current.choiceMade == true) {
           self.closeTheTitle();
         }
@@ -390,6 +393,21 @@ var app = new Vue({
       } else {
         return (self.countdown.percent * 3.6) + 'deg';
       }
+    },
+
+    computedRoundNumber() {
+      let self = this;
+
+      if (self.player.number < 5) {
+        return 1;
+      } else if (self.player.number < 9) {
+        return 2;
+      } else if (self.player.number < 13) {
+        return 3;
+      } else {
+        return 4;
+      }
+
     },
 
     computedCircleFill() {

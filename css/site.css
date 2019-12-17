@@ -3280,6 +3280,30 @@ body {
   75% {
     opacity: 1; } }
 
+.come-on-down {
+  background: #212121;
+  color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .come-on-down h1 {
+    font-size: 13vw; }
+  .come-on-down li {
+    font-size: 4vw;
+    list-style-type: decimal; }
+  .come-on-down i {
+    position: absolute;
+    right: 0.2em;
+    bottom: 0.2em;
+    font-size: 4vw;
+    color: #ee3333; }
+
 .make-your-choice {
   position: fixed;
   top: 0;

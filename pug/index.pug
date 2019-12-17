@@ -20,6 +20,16 @@ html(lang="en")
 
       include partials/_breaks
 
+      .screen.come-on-down(v-if="mode == 'come on down'")
+        div(v-if="player.number < 5")
+          h1 HEAT &#35;{{computedRoundNumber}}
+          ol
+            li(v-for="player in players[(computedRoundNumber - 1)]")
+              span(v-if="player.name") {{player.name}}
+              span(v-else) {{player}}
+          i COME ON DOWN!
+        div(v-if="player.number < 9")
+
       .press-your-luck(v-if="(mode == 'show player' || mode == 'spin' || mode == 'show title') && !finals.active")
         .box(v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking, huge: box.huge }")
           figure(:style="{ 'backgroundImage': 'url(' + box.imgSrc +')' }")
