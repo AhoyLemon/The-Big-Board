@@ -12,7 +12,7 @@
   <body>
     <div id="app" v-cloak>
       <div class="keywatch" tabindex="-1" @keyup.enter="doSomething"></div>
-      <div class="screen" v-if="mode == 'sit down'">
+      <div class="screen title-screen" v-if="mode == 'sit down'">
         <figure :style="{ 'background-image': 'url(img/bg/sitdown.jpg)' }"></figure>
       </div>
       <div class="screen break-screen" v-if="mode == 'vote'">
@@ -114,7 +114,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-11-18@16:22:24"></script>
+      <script src="js/min/site.min.js?updated2019-11-18@16:35:29"></script>
     </div>
   </body>
 </html>
