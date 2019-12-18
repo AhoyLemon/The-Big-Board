@@ -25,7 +25,7 @@
   $timeUpShadowColor: #515151;
 
     display:flex; align-items: center; justify-content: center;
-    .time-up-display { transform:rotate(-15deg);
+    .time-up-display { transform:rotate(-15deg); position: relative; z-index: $z-time-up-text;
       .text { font-size:7vw; font-weight: $bold; color: #f5f5f5;
         text-shadow:  1px 1px 1px $timeUpShadowColor,
                       1px 2px 1px $timeUpShadowColor,
@@ -55,7 +55,7 @@
         &.long { font-size:3.25vw; }
       }
     }
-    .timer-holder { display:flex; align-items: center;
+    .timer-holder { display:flex; align-items: center; position: relative; z-index: $z-timer; mix-blend-mode: difference;
       .circle { margin-left: auto; margin-right: auto; }
     }
     .image-holder { display:flex; align-items: center;

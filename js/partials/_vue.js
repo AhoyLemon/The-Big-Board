@@ -286,12 +286,11 @@ var app = new Vue({
         self.countdown.elapsed++;
 
         if (self.finals.active) {
-          self.countdown.percent = ((self.countdown.elapsed / (roundSeconds * 4)) * 100);
+          self.countdown.percent = ((self.countdown.elapsed / finalSeconds) * 100);
         } else {
-          self.countdown.percent = ((self.countdown.elapsed / (finalSeconds * 4)) * 100);
+          self.countdown.percent = ((self.countdown.elapsed / roundSeconds) * 100);
         }
         
-
         if (self.countdown.percent == 80 ) {
           hurryUp.play();
         }
@@ -305,7 +304,7 @@ var app = new Vue({
           clearInterval(self.countdown.interval);
         }
 
-      }, 250);
+      }, 1000);
     },
 
     setupNewFinalist() {
@@ -406,9 +405,9 @@ var app = new Vue({
 
     computedCircleFill() {
       let self = this;
-      if (self.countdown.percent <  50) {
+      if (self.countdown.percent <  65) {
         return 'radial-gradient(#00ff00, #bbbbbb, #dddddd)';
-      } else if (self.countdown.percent < 80) {
+      } else if (self.countdown.percent < 90) {
         return 'radial-gradient(#00ff00, #9f9f34, #ffff00)';
       } else {
         return 'radial-gradient(#f00000, #dc281e)';

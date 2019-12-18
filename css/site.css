@@ -3212,7 +3212,9 @@ body {
     .countdown .warning-lights .time-up-display {
       -webkit-transform: rotate(-15deg);
       -ms-transform: rotate(-15deg);
-      transform: rotate(-15deg); }
+      transform: rotate(-15deg);
+      position: relative;
+      z-index: 9; }
       .countdown .warning-lights .time-up-display .text {
         font-size: 7vw;
         font-weight: 700;
@@ -3248,7 +3250,10 @@ body {
       display: flex;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+      position: relative;
+      z-index: 8;
+      mix-blend-mode: difference; }
       .countdown .round-details .timer-holder .circle {
         margin-left: auto;
         margin-right: auto; }
@@ -3501,5 +3506,3 @@ body {
       background: rgba(255, 255, 255, 0.8);
       padding: 0.25em 0.5em;
       font-weight: 900; }
-
-/*# sourceMappingURL=site.css.map */
