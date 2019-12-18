@@ -72,11 +72,7 @@ var app = new Vue({
           } else if (self.finals.active == true) {
             self.setupNewFinalist();
           } else {
-            if ((self.mode != 'vote') && (self.player.number == 4 || self.player.number == 8 || self.player.number == 12 )) {
-              self.mode = 'vote';
-            } else {
-              self.setupNewSpin();
-            }        
+            self.setupNewSpin();       
           }
         } else if (self.mode == 'vote') { 
           self.mode = 'come on down';
