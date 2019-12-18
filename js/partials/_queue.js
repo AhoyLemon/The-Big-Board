@@ -80,13 +80,24 @@ const queue = [
     provider: "Spooks",
     rating:   "LOL"
   },
-
+  /*
   {
     title:    "Yahoo! Answers for Christians Only",
     url:      "https://answers.yahoo.com/question/index;_ylt=AwrXnCJcbn5dgh4ANQ5PmolQ;_ylu=X3oDMTByc3RzMXFjBGNvbG8DZ3ExBHBvcwM0BHZ0aWQDBHNlYwNzcg--?qid=20080124113248AAfmjxo&guccounter=1",
     file:     "yahoo-answers.jpg",
     code:     "W_03",
     provider: "Adam Bozarth",
+    rating:   "WTF",
+    whammy:   true
+  },
+  */
+
+  {
+    title:    "Zeebo: The Placebo That Actually Works!",
+    url:      "https://www.amazon.com/Zeebo-Placebo-Designed-Experience-Well-being/dp/B00NUKW26M",
+    file:     "zeebo.jpg",
+    code:     "W_04",
+    provider: "Neal",
     rating:   "WTF",
     whammy:   true
   },
@@ -138,6 +149,7 @@ const queue = [
     rating:   "LOL"
   },
 
+  /*
   {
     title:    "Zeebo: The Placebo That Actually Works!",
     url:      "https://www.amazon.com/Zeebo-Placebo-Designed-Experience-Well-being/dp/B00NUKW26M",
@@ -145,6 +157,17 @@ const queue = [
     code:     "W_04",
     provider: "Neal",
     rating:   "WTF",
+    whammy:   true
+  },
+  */
+
+  {
+    title:    "B.A.B.E.S. (Bay Area Bug Eating Society)",
+    url:      "http://www.planetscott.com/babes/viewerstories.asp",
+    file:     "babes.jpg",
+    code:     "W_05",
+    provider: "GirlKisser420",
+    rating:   "YUK",
     whammy:   true
   },
 
@@ -167,6 +190,7 @@ const queue = [
     rating:   "WTF",
   },
 
+  /*
   {
     title:    "B.A.B.E.S. (Bay Area Bug Eating Society)",
     url:      "http://www.planetscott.com/babes/viewerstories.asp",
@@ -174,6 +198,17 @@ const queue = [
     code:     "W_05",
     provider: "GirlKisser420",
     rating:   "YUK",
+    whammy:   true
+  },
+  */
+
+  {
+    title:    "r/creepy_bossta",
+    url:      "https://web.archive.org/web/20170714172055/https://www.reddit.com/r/relationship_advice/comments/6mwspj/me_32m_with_my_coworkerfriend_24f_of_one_year_how/",
+    file:     "bosstra.jpg",
+    code:     "W_06",
+    provider: "Darkly & Sham Bam Bamina",
+    rating:   "WTF",
     whammy:   true
   },
 
@@ -196,12 +231,23 @@ const queue = [
     rating:   "WTF",
   },
 
+  /*
   {
     title:    "r/creepy_bossta",
     url:      "https://web.archive.org/web/20170714172055/https://www.reddit.com/r/relationship_advice/comments/6mwspj/me_32m_with_my_coworkerfriend_24f_of_one_year_how/",
     file:     "bosstra.jpg",
     code:     "W_06",
     provider: "Darkly & Sham Bam Bamina",
+    rating:   "WTF",
+    whammy:   true
+  },
+  */
+  {
+    title:    "Restaurant Service Pet Peeves #2 EXTENDED LIST",
+    url:      "http://restaurantservicepetpeeves.blogspot.com",
+    file:     "restaurant.jpg",
+    code:     "W_07",
+    provider: "Tulalip Tulips",
     rating:   "WTF",
     whammy:   true
   },
@@ -224,12 +270,24 @@ const queue = [
     rating:   "LOL",
   },
 
+  /*
   {
     title:    "Restaurant Service Pet Peeves #2 EXTENDED LIST",
     url:      "http://restaurantservicepetpeeves.blogspot.com",
     file:     "restaurant.jpg",
     code:     "W_07",
     provider: "Tulalip Tulips",
+    rating:   "WTF",
+    whammy:   true
+  },
+  */
+
+  {
+    title:    "Yahoo! Answers for Christians Only",
+    url:      "https://answers.yahoo.com/question/index;_ylt=AwrXnCJcbn5dgh4ANQ5PmolQ;_ylu=X3oDMTByc3RzMXFjBGNvbG8DZ3ExBHBvcwM0BHZ0aWQDBHNlYwNzcg--?qid=20080124113248AAfmjxo&guccounter=1",
+    file:     "yahoo-answers.jpg",
+    code:     "W_03",
+    provider: "Adam Bozarth",
     rating:   "WTF",
     whammy:   true
   },

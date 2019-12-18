@@ -82,20 +82,20 @@ const players = [
 
 const finalists = [
   {
-    name: "Achilles' Heelies",
-    pic:  "heelies.jpg"
+    name: "Victor Laszlo",
+    pic:  "victor.jpg"
   },
   {
-    name: "Kumquatxop",
-    pic:  "zangief.jpg"
+    name: "Lou Fernandez",
+    pic:  "lou.jpg"
   },
   {
     name: "Adam Bozarth",
-    pic:  "zangief.jpg"
+    pic:  "bozarth.jpg"
   },
   {
     name: "Jimmyfranks",
-    pic:  "zangief.jpg"
+    pic:  "jimmyfranks.jpg"
   },
 ];
 

@@ -3292,6 +3292,21 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  .come-on-down .heat-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
   .come-on-down h1 {
     font-size: 13vw; }
   .come-on-down li {
@@ -3302,7 +3317,25 @@ body {
     right: 0.2em;
     bottom: 0.2em;
     font-size: 4vw;
-    color: #ee3333; }
+    color: #ee3333;
+    text-shadow: 0.05em 0.05em 0.05em black, -2px -2px 2px black; }
+  .come-on-down .four-pics {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+    .come-on-down .four-pics figure {
+      position: relative; }
+  .come-on-down h1 {
+    position: relative;
+    text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, 0.9), -0.01em -0.01em 0.01em black; }
 
 .make-your-choice {
   position: fixed;
@@ -3329,7 +3362,6 @@ body {
       opacity: 0.5; }
     .make-your-choice .choice figcaption {
       font-size: 9vh;
-      font-family: Oswald, sans-serif;
       color: white;
       text-shadow: 2px 2px 0 black, -2px -2px 0 black, 0.1em 0.1em 0.1em black;
       position: absolute; }
@@ -3338,8 +3370,7 @@ body {
     .make-your-choice .choice .title {
       color: #050505;
       position: absolute;
-      font-size: 11vh;
-      font-family: Oswald, sans-serif; }
+      font-size: 14vh; }
     .make-your-choice .choice.a {
       left: 0;
       -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
@@ -3408,7 +3439,6 @@ body {
     padding: 0.5em 3vw;
     max-width: 90vw;
     margin: 0 auto;
-    font-family: Oswald, sans-serif;
     opacity: 0;
     -webkit-animation-name: boxTitleSlide;
     animation-name: boxTitleSlide;
@@ -3471,3 +3501,5 @@ body {
       background: rgba(255, 255, 255, 0.8);
       padding: 0.25em 0.5em;
       font-weight: 900; }
+
+/*# sourceMappingURL=site.css.map */

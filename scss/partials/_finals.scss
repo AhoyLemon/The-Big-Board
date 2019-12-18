@@ -3,9 +3,9 @@
 
     > figure { @include position(absolute,0,0,0,0); background-size:cover; background-position: center; filter:grayscale(100%); opacity: 0.5; }
 
-    figcaption { font-size:9vh;  font-family: Oswald, sans-serif; color:white; text-shadow:2px 2px 0 black, -2px -2px 0 black, 0.1em 0.1em 0.1em black; position: absolute; }
+    figcaption { font-size:9vh;  color:white; text-shadow:2px 2px 0 black, -2px -2px 0 black, 0.1em 0.1em 0.1em black; position: absolute; }
     figcaption { display: none; }
-    .title { color: #050505; position: absolute;  font-size:11vh; font-family: Oswald, sans-serif; }
+    .title { color: #050505; position: absolute;  font-size:14vh; }
     &.a { left:0;
       clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
       figure { mix-blend-mode: darken; }
@@ -35,7 +35,7 @@
 
     .chosen-item { 
       figure { z-index: 9; @include position(fixed,0,0,0,0); background-size:contain; background-position: center; background-repeat: no-repeat; }
-      figcaption { position: relative; background:rgba(0,0,0,0.5); padding:0.5em 3vw; max-width:90vw; margin:0 auto; font-family: Oswald, sans-serif;
+      figcaption { position: relative; background:rgba(0,0,0,0.5); padding:0.5em 3vw; max-width:90vw; margin:0 auto;
         .title { color:$white; font-size:6.5vw;  font-weight: 300;  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 0.05em 0.05em 0.05em black; text-align: center; }
         cite { color:$white; font-size:2.5vw; text-align: right; display: block; }
         opacity: 0;

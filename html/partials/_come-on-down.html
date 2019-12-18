@@ -1,0 +1,11 @@
+
+<div class="screen come-on-down" v-if="mode == 'come on down'">
+  <div v-if="finals.active"></div>
+  <div v-else="v-else">
+    <h1>HEAT &#35;{{computedRoundNumber}}</h1>
+    <ol>
+      <li v-for="player in players[(computedRoundNumber - 1)]"><span v-if="player.name">{{player.name}}</span><span v-else="v-else">{{player}}</span></li>
+    </ol><i>COME ON DOWN!</i>
+  </div>
+  <div v-if="player.number &lt; 9"></div>
+</div>

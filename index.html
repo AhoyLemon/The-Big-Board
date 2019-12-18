@@ -23,11 +23,17 @@
         <figure v-else-if="finals.active" :style="{ 'background-image': 'url(img/bg/vote-final.jpg)' }"></figure>
       </div>
       <div class="screen come-on-down" v-if="mode == 'come on down'">
-        <div v-if="player.number &lt; 5">
-          <h1>HEAT &#35;{{computedRoundNumber}}</h1>
-          <ol>
-            <li v-for="player in players[(computedRoundNumber - 1)]"><span v-if="player.name">{{player.name}}</span><span v-else>{{player}}</span></li>
-          </ol><i>COME ON DOWN!</i>
+        <div v-if="finals.active">
+          <div class="four-pics">
+            <figure v-for="f in finals.finalists" :style="{ 'background-image': 'url(img/players/big/'+f.pic+')' }"></figure>
+          </div>
+          <h1 class="final-four">The Final Four!</h1>
+        </div>
+        <div class="heat-bg" v-else style="background-image:url(img/bg/glitter.jpg)">
+          <h1 v-if="player.number &lt; 4">HEAT #1</h1>
+          <h1 v-else-if="player.number &lt; 8">HEAT #2</h1>
+          <h1 v-else-if="player.number &lt; 12">HEAT #3</h1>
+          <h1 v-else>HEAT #4</h1>
         </div>
         <div v-if="player.number &lt; 9"></div>
       </div>
@@ -82,7 +88,8 @@
       <div class="countdown" v-if="mode == 'countdown'" v-bind:class="{ 'time-up': (countdown.percent &gt;= 100) }">
         <div class="round-details">
           <div class="title">
-            <h1 :class="{ long: current.title.length &gt; 60 }">{{current.title}}</h1>
+            <h1 v-if="!finals.active" :class="{ long: current.title.length &gt; 60 }">{{current.title}}</h1>
+            <h1 v-if="finals.active">{{finals.current.choice.title}}</h1>
           </div>
           <div class="timer-holder">
             <div class="circle" v-bind:style="{ background: computedCircleFill }">
@@ -94,7 +101,7 @@
               </div>
             </div>
           </div>
-          <div class="image-holder"><img :src="'img/drawings/' + current.file"></div>
+          <div class="image-holder"><img v-if="!finals.active" :src="'img/drawings/' + current.file"><img v-if="finals.active" :src="'img/drawings/' + finals.current.choice.pic"></div>
         </div>
         <div class="warning-lights" v-bind:style="computedWarningLights" v-bind:class="{ blinking: (countdown.percent &gt;= 100) }">
           <div class="time-up-display" v-if="countdown.percent &gt;= 100"> 
@@ -107,7 +114,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2019-11-16@20:12:28"></script>
+      <script src="js/min/site.min.js?updated2019-11-17@19:55:15"></script>
     </div>
   </body>
 </html>

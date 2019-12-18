@@ -1,5 +1,7 @@
 const bozarthName = "Adam Bozarthhhhhhhhh";
 const roundSeconds = 480;
+const finalSeconds = 300;
+const spinFast = true;
 
 var app = new Vue({
   el: '#app',
@@ -53,8 +55,7 @@ var app = new Vue({
         if (self.mode == 'sit down') {
           self.mode = 'come on down';
         } else if (self.mode == 'come on down') {
-          self.chooseNewPlayer();
-          self.mode = 'show player';
+          self.setupNewSpin();
         } else if (self.mode == 'show player') {
           if (self.finals.active == true) {
             self.mode = 'make your choice';
@@ -71,7 +72,11 @@ var app = new Vue({
           } else if (self.finals.active == true) {
             self.setupNewFinalist();
           } else {
-            self.setupNewSpin();
+            if ((self.mode != 'vote') && (self.player.number == 4 || self.player.number == 8 || self.player.number == 12 )) {
+              self.mode = 'vote';
+            } else {
+              self.setupNewSpin();
+            }        
           }
         } else if (self.mode == 'vote') { 
           self.mode = 'come on down';
@@ -90,17 +95,6 @@ var app = new Vue({
           self.mode = 'show title';
         }
       }
-
-      /*
-      // SPACEBAR
-      if (e.keyCode == 32) { // Spacebar pressed.
-        if (self.mode == 'spin') {
-          if (self.spinning == false) {
-            self.pickOneRandomly();
-          }
-        }
-      } 
-      */
 
       // ENTER
       if (e.keyCode == 13) { // Enter pressed.
@@ -133,29 +127,24 @@ var app = new Vue({
     chooseNewPlayer() {
       let self = this;
 
-      if ((self.mode != 'vote') && (self.player.number == 4 || self.player.number == 8 || self.player.number == 12 )) {
-        self.mode = 'vote';
+      self.player.number++;
+      let p;
+      if (self.player.number < 5) {
+        p = players[0][(self.player.number - 1)];
+      } else if (self.player.number < 9) {
+        p = players[1][(self.player.number - 5)];
+      } else if (self.player.number < 13) {
+        p = players[2][(self.player.number - 9)];
       } else {
-        self.player.number++;
-        let p;
-        if (self.player.number < 5) {
-          p = players[0][(self.player.number - 1)];
-        } else if (self.player.number < 9) {
-          p = players[1][(self.player.number - 5)];
-        } else if (self.player.number < 13) {
-          p = players[2][(self.player.number - 9)];
-        } else if (self.player.number < 17) {
-          p = players[3][(self.player.number - 13)];
-        }
-        
-        if (p.pic) {
-          self.player.name = p.name;
-          self.player.pic  = p.pic;
-        } else {
-          self.player.name = p;
-          self.player.pic  = "zangief.jpg";
-        }
-
+        p = players[3][(self.player.number - 13)];
+      }
+      
+      if (p.pic) {
+        self.player.name = p.name;
+        self.player.pic  = p.pic;
+      } else {
+        self.player.name = p;
+        self.player.pic  = "zangief.jpg";
       }
 
     },
@@ -254,8 +243,11 @@ var app = new Vue({
           setTimeout(function(){ self.boxes[2].focus = true; }, 100);
         }, 15, 56);
       } else {
-        self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 36);
-        //self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 6);
+        if (spinFast == true) {
+          self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 6);
+        } else {
+          self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 36);
+        }
       }
 
     },
@@ -296,9 +288,15 @@ var app = new Vue({
 
       self.countdown.interval = setInterval(() => {
         self.countdown.elapsed++;
-        self.countdown.percent = ((self.countdown.elapsed / (roundSeconds * 4)) * 100);
 
-        if (self.countdown.percent == 55 ) {
+        if (self.finals.active) {
+          self.countdown.percent = ((self.countdown.elapsed / (roundSeconds * 4)) * 100);
+        } else {
+          self.countdown.percent = ((self.countdown.elapsed / (finalSeconds * 4)) * 100);
+        }
+        
+
+        if (self.countdown.percent == 80 ) {
           hurryUp.play();
         }
 
@@ -452,6 +450,11 @@ var app = new Vue({
       localStorage.playedTitles = "";
       localStorage.playerNumber = "";
     }
+
+    if (self.finals.active == true) {
+      self.setupNewFinalist();
+    }
+
   },
 
 });
