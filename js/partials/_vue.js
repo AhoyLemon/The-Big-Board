@@ -18,13 +18,13 @@ var app = new Vue({
     current: {},
     players: players,
     player: {
-      number: 0,
+      number: 15,
     },
     boxes: initialBoxes,
     queue: exhibitionQueue,
     playedTitles: [],
     finals: {
-      active: true,
+      active: false,
       finalists: finalists,
       choices: finalChoices,
       current: {
