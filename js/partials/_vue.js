@@ -39,6 +39,7 @@ var app = new Vue({
 
     countdown: {
       elapsed: 0,
+      remaining: 0,
       percent: 0,
       interval: {}
     }
@@ -288,11 +289,13 @@ var app = new Vue({
 
         if (self.finals.active) {
           self.countdown.percent = ((self.countdown.elapsed / finalSeconds) * 100);
+          self.countdown.remaining = finalSeconds - self.countdown.elapsed;
         } else {
           self.countdown.percent = ((self.countdown.elapsed / roundSeconds) * 100);
+          self.countdown.remaining = roundSeconds - self.countdown.elapsed;
         }
         
-        if (self.countdown.percent == 92) {
+        if (self.countdown.remaining == 30) {
           hurryUp.play();
         }
 

@@ -3268,6 +3268,14 @@ body {
         max-height: 70vh;
         margin-left: auto;
         margin-right: auto; }
+  .countdown .seconds-remaining {
+    position: fixed;
+    right: 5vw;
+    bottom: 5vh;
+    z-index: 8; }
+    .countdown .seconds-remaining .seconds {
+      font-size: 33vh;
+      color: white; }
 
 @-webkit-keyframes blinkingKF {
   25% {
@@ -3311,7 +3319,8 @@ body {
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    background-size: cover; }
   .come-on-down h1 {
     font-size: 13vw; }
   .come-on-down li {

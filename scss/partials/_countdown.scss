@@ -63,6 +63,10 @@
     }
   }
 
+  .seconds-remaining { @include position(fixed,null,5vw,5vh); z-index: $z-timer;
+    .seconds { font-size:33vh; color:white; }
+  }
+
 
 
   /*

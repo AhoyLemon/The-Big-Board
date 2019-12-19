@@ -13,7 +13,7 @@ var whammySound = new Howl({
 });
 
 var hurryUp = new Howl({
-  src: ['audio/carclock.ogg']
+  src: ['audio/minuteleft.ogg', 'audio/minuteleft.mp3']
 });
 
 var nngg = new Howl({

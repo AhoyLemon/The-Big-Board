@@ -16,6 +16,9 @@
       img(v-if="!finals.active" :src="'img/drawings/' + current.file")
       img(v-if="finals.active" :src="'img/drawings/' + finals.current.choice.pic")
 
+    .seconds-remaining(v-if="countdown.remaining < 11 && countdown.remaining > 0")
+      .seconds {{countdown.remaining}}
+
   .warning-lights(v-bind:style="computedWarningLights" v-bind:class="{ blinking: (countdown.percent >= 100) }")
 
     .time-up-display(v-if="countdown.percent >= 100") 
