@@ -1,13 +1,14 @@
 const bozarthName = "Adam Bozarthhhhhhhhh";
 const roundSeconds = 480;
 const finalSeconds = 300;
-const spinFast = true;
+const spinFast = false;
+const cacheRound = false;
 
 var app = new Vue({
   el: '#app',
   data: {
     mode: 'sit down',
-    cacheRound: false,
+    cacheRound: cacheRound,
     spinning: false,
     polling: null,
     ticks: 0,
@@ -18,7 +19,7 @@ var app = new Vue({
     current: {},
     players: players,
     player: {
-      number: 15,
+      number: 0,
     },
     boxes: initialBoxes,
     queue: exhibitionQueue,
@@ -291,7 +292,7 @@ var app = new Vue({
           self.countdown.percent = ((self.countdown.elapsed / roundSeconds) * 100);
         }
         
-        if (self.countdown.percent == 80 ) {
+        if (self.countdown.percent == 92) {
           hurryUp.play();
         }
 
