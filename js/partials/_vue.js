@@ -87,8 +87,14 @@ var app = new Vue({
 
       // PAGE UP
       if (e.keyCode == 33) {
-        if (self.mode == 'spin' || self.mode == "make your choice") {
+        if (self.mode == 'spin') {
           self.mode = 'show player';
+        } else if (self.mode == "make your choice") {
+          if (self.finals.current.choiceMade) {
+            self.finals.current.choiceMade = false;
+          } else {
+            self.mode = 'show player';
+          }
         } else if (self.mode == 'countdown') {
           self.mode = 'show title';
         }
