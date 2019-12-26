@@ -214,7 +214,7 @@ body
       section(data-background="img/random/185.jpg" data-background-size="contain")
       section(data-background="img/random/186.jpg" data-background-size="contain")
       section(data-background="img/random/187.jpg" data-background-size="contain")
-      section(data-background="img/random/188.jpg" data-background-size="contain")
+      //section(data-background="img/random/188.jpg" data-background-size="contain")
       section(data-background="img/random/189.jpg" data-background-size="contain")
       section(data-background="img/random/190.jpg" data-background-size="contain")
       section(data-background="img/random/191.jpg" data-background-size="contain")
@@ -237,14 +237,16 @@ body
     // - https://github.com/hakimel/reveal.js#dependencies
     Reveal.initialize({
       //history: true,
-      autoSlide: 11000,
+      autoSlide: 13000,
       controls: false,
       progress: true,
       autoPlayMedia: true,
       autoSlideStoppable: false,
       backgroundTransition: 'zoom',
+      //backgroundTransition: 'fade',
+      backgroundTransition: 'convex',
       transitionSpeed: 'slow',
-      //shuffle: true,
+      shuffle: true,
       slideNumber: true,
       loop: true,
       dependencies: [
