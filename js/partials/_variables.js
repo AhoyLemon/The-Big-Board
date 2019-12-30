@@ -75,7 +75,11 @@ const players = [
       name: "Jimmyfranks",
       pic:  "jimmyfranks.jpg"
     },
-    "Bunnybread",
+    {
+      name: "Bunnybread",
+      pic:  "bunnybread.jpg",
+    },
+    
     {
       name: "STOG",
       pic:  "stog.jpg"
