@@ -63,7 +63,10 @@ const players = [
       name: "Adam Bozarth",
       pic:  "bozarth.jpg"
     },
-    "K. Thor Jensen",
+    {
+      name: "K. Thor Jensen",
+      pic:  "kthor.jpg"
+    },
     {
       name: "Shell Game",
       pic:  "shellgame.jpg"
