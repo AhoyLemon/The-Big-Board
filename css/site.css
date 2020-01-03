@@ -2776,7 +2776,7 @@ h6 {
   font-size: .75rem; }
 
 body {
-  background: #eee;
+  background: #111;
   color: #212121;
   font-family: "Barlow Condensed", "Comic Sans MS"; }
 
@@ -2826,7 +2826,7 @@ body {
     background-size: cover;
     background-position: center;
     opacity: 0.8;
-    border: 3px solid #212121; }
+    border: 3px solid #111; }
   .press-your-luck .box figcaption {
     display: none; }
   .press-your-luck .box.focus figure {
@@ -3515,5 +3515,8 @@ body {
       background: rgba(255, 255, 255, 0.8);
       padding: 0.25em 0.5em;
       font-weight: 900; }
+
+body {
+  background-color: #111; }
 
 /*# sourceMappingURL=site.css.map */
