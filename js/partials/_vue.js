@@ -1,7 +1,7 @@
 const bozarthName = "Adam Bozarth";
 const roundSeconds = 480;
 const finalSeconds = 300;
-const spinFast = true;
+const spinFast = false;
 const cacheRound = false;
 
 var app = new Vue({
@@ -159,8 +159,8 @@ var app = new Vue({
       let adamBox = {
         blinking: false,
         code: "ADAM_01",
-        pic: "sexy-football-bozarth.jpg",
-        file: "sexy-football-bozarth.jpg",
+        pic: "cornerback.jpg",
+        file: "cornerback.jpg",
         imgSrc: "img/drawings/sexy-football-bozarth.jpg",
         focus: false,
         provider: "Montrith",

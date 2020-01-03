@@ -101,7 +101,7 @@
               </div>
             </div>
           </div>
-          <div class="image-holder"><img v-if="!finals.active &amp;&amp; player.name != 'Adam Bozarth'" :src="'img/drawings/' + current.file"><img v-else-if="!finals.active &amp;&amp; player.name == 'Adam Bozarth'" :src="'img/drawings/cornerback.jpg'"><img v-else-if="finals.active" :src="'img/drawings/' + finals.current.choice.pic"></div>
+          <div class="image-holder"><img v-if="!finals.active" :src="'img/drawings/' + current.file"><img v-if="finals.active" :src="'img/drawings/' + finals.current.choice.pic"></div>
           <div class="seconds-remaining" v-if="countdown.remaining &lt; 11 &amp;&amp; countdown.remaining &gt; 0">
             <div class="seconds">{{countdown.remaining}}</div>
           </div>
@@ -117,7 +117,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2020-00-02@22:48:10"></script>
+      <script src="js/min/site.min.js?updated2020-00-02@22:50:43"></script>
     </div>
   </body>
 </html>
