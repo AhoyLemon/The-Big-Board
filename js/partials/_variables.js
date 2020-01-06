@@ -32,7 +32,10 @@ const players = [
       name: "Achilles' Heelies",
       pic:  "heelies.jpg"
     },
-    "Frank West",
+    {
+      name: "Frank West",
+      pic:  "frankwest.jpg"
+    },
     {
       name: "Victor Laszlo",
       pic:  "victor.jpg"

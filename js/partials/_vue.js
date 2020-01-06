@@ -19,7 +19,7 @@ var app = new Vue({
     current: {},
     players: players,
     player: {
-      number: 0,
+      number: 2,
     },
     boxes: initialBoxes,
     queue: exhibitionQueue,
