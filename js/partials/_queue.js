@@ -65,7 +65,7 @@ const queue = [
   {
     title:    "“From Nightmares and Rockets” (An Elon Musk Erotic Fanfic)",
     url:      "https://archiveofourown.org/works/14412927/chapters/33287679",
-    file:     "muskgrimes.jpg",
+    file:     "whammy-musk.jpg",
     code:     "W_02",
     provider: "Seth “Slimy” Rollins",
     rating:   "YUK",
@@ -140,7 +140,7 @@ const queue = [
   {
     title:    "B.A.B.E.S. (Bay Area Bug Eating Society)",
     url:      "http://www.planetscott.com/babes/viewerstories.asp",
-    file:     "babes.jpg",
+    file:     "whammy-babes.jpg",
     code:     "W_05",
     provider: "GirlKisser420",
     rating:   "YUK",
@@ -169,7 +169,7 @@ const queue = [
   {
     title:    "r/creepy_bossta",
     url:      "https://web.archive.org/web/20170714172055/https://www.reddit.com/r/relationship_advice/comments/6mwspj/me_32m_with_my_coworkerfriend_24f_of_one_year_how/",
-    file:     "bosstra.jpg",
+    file:     "whammy-creepyboss.jpg",
     code:     "W_06",
     provider: "Darkly & Sham Bam Bamina",
     rating:   "WTF",
