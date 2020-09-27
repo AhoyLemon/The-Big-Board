@@ -1,9 +1,3 @@
-const bozarthName = "Adam Bozarth";
-const roundSeconds = 480;
-const finalSeconds = 300;
-const spinFast = false;
-const cacheRound = false;
-
 var app = new Vue({
   el: '#app',
   data: {
@@ -69,12 +63,14 @@ var app = new Vue({
         } else if (self.mode == 'countdown') {
           clearInterval(self.countdown.interval);
           self.updateLocalStorage();
-          if ((self.mode != 'vote') && (self.player.number == 4 || self.player.number == 8 || self.player.number == 12 )) {
+          if (singleRoundMode) {
+            self.setupNewSpin();
+          } else if ((self.mode != 'vote') && (self.player.number == 4 || self.player.number == 8 || self.player.number == 12 )) {
             self.mode = 'vote';
           } else if (self.finals.active == true) {
             self.setupNewFinalist();
           } else {
-            self.setupNewSpin();       
+            self.setupNewSpin();
           }
         } else if (self.mode == 'vote') { 
           self.mode = 'come on down';
@@ -133,14 +129,19 @@ var app = new Vue({
 
       self.player.number++;
       let p;
-      if (self.player.number < 5) {
-        p = players[0][(self.player.number - 1)];
-      } else if (self.player.number < 9) {
-        p = players[1][(self.player.number - 5)];
-      } else if (self.player.number < 13) {
-        p = players[2][(self.player.number - 9)];
+
+      if (singleRoundMode) {
+        p = players[self.player.number - 1 ];
       } else {
-        p = players[3][(self.player.number - 13)];
+        if (self.player.number < 5) {
+          p = players[0][(self.player.number - 1)];
+        } else if (self.player.number < 9) {
+          p = players[1][(self.player.number - 5)];
+        } else if (self.player.number < 13) {
+          p = players[2][(self.player.number - 9)];
+        } else {
+          p = players[3][(self.player.number - 13)];
+        }
       }
       
       if (p && p.pic) {
@@ -193,7 +194,13 @@ var app = new Vue({
       // End rehydrate ---------------------------------------
 
       self.countdown.percent = 0;
-      self.mode = 'show player';
+
+      if (self.player.name) {
+        self.mode = 'show player';
+      } else {
+        self.mode = "vote";
+      }
+      
     },
 
     setDeceleratingTimeout(callback, factor, times) {

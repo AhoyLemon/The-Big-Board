@@ -1,4 +1,11 @@
+const bozarthName = "Adam Bozarthhhhhh";
+const roundSeconds = 480;
+const finalSeconds = 300;
+const spinFast = true;
+const cacheRound = false;
+const boardBoxCount = 9;
 const siteURL = "";
+const singleRoundMode = true;
 
 var sound = new Howl({
   src: ['audio/wheel2.ogg']
@@ -23,81 +30,14 @@ var nngg = new Howl({
 const loadDamnDog = false;
 
 const players = [
-  [
-    {
-      name: "Boots Raingear",
-      pic:  "boots.jpg"
-    },
-    {
-      name: "Achilles' Heelies",
-      pic:  "heelies.jpg"
-    },
-    {
-      name: "Frank West",
-      pic:  "frankwest.jpg"
-    },
-    {
-      name: "Victor Laszlo",
-      pic:  "victor.jpg"
-    }
-  ],
-  [
-    {
-      name: "Lou Fernandez",
-      pic:  "lou.jpg"
-    },
-    {
-      name: "Jack Chick",
-      pic:  "jackchick.jpg"
-    },
-    {
-      name: "Lemon",
-      pic:  "lemon.jpg"
-    },
-    {
-      name: "Kumquatxop",
-      pic:  "kumquatxop.jpg"
-    }
-  ],
-  [
-    {
-      name: "Nutshell Gulag",
-      pic: "gulag.jpg"
-    },
-    
-    {
-      name: "Adam Bozarth",
-      pic:  "bozarth.jpg"
-    },
-    {
-      name: "K. Thor Jensen",
-      pic:  "kthor.jpg"
-    },
-    {
-      name: "Shell Game",
-      pic:  "shellgame.jpg"
-    }
-  ],
-  [
-    {
-      name: "bumpgrrl",
-      pic:  "bumpgrrl.jpg"
-    },
-    {
-      name: "Jimmyfranks",
-      pic:  "jimmyfranks.jpg"
-    },
-    {
-      name: "Bunnybread",
-      pic:  "bunnybread.jpg",
-    },
-    
-    {
-      name: "STOG",
-      pic:  "stog.jpg"
-    }
-    
-  ]
+  {
+    name: "Boots Raingear",
+    pic:  "boots.jpg"
+  },
+  {
+    name: "Achilles' Heelies",
+    pic:  "heelies.jpg"
+  }
 ];
 
 const finalists = [

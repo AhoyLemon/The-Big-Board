@@ -80,6 +80,7 @@ const queue = [
     rating:   "LOL"
   },
 
+  /*
   {
     title:    "Zeebo: The Placebo That Actually Works!",
     url:      "https://www.amazon.com/Zeebo-Placebo-Designed-Experience-Well-being/dp/B00NUKW26M",
@@ -250,5 +251,6 @@ const queue = [
     provider: "dickthedick",
     rating:   "YUK",
   }
+  */
 
 ];

@@ -17,7 +17,7 @@ a { @extend %textlink; }
   100%  { filter: none; }
 }
 
-.press-your-luck { display:grid;  grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, 1fr); height:100vh; background:#131313;
+.press-your-luck { display:grid;  grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); height:100vh; background:#131313;
   .box {
     figure { height:100%; background-size:cover; background-position: center; opacity:0.8; border:3px solid $black; }
     figcaption { display:none; }
@@ -25,7 +25,7 @@ a { @extend %textlink; }
       figure { filter: sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(1); opacity: 1; }
     }
     &.selected { 
-      figure { filter: grayscale(100%); opacity: 0.5; }
+      figure { filter: grayscale(100%); opacity: 0.15; }
     }
     &.blinking {
       figure { animation-name:blinkRedFilter; animation-duration: 0.15s; animation-iteration-count: infinite; }
