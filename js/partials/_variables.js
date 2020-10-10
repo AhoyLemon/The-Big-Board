@@ -1,5 +1,5 @@
 const bozarthName = "Adam Bozarthhhhhh";
-const roundSeconds = 480;
+const roundSeconds = 360;
 const finalSeconds = 300;
 const spinFast = true;
 const cacheRound = false;
@@ -35,9 +35,25 @@ const players = [
     pic:  "boots.jpg"
   },
   {
-    name: "Achilles' Heelies",
-    pic:  "heelies.jpg"
-  }
+    name: "Bunnybread",
+    pic:  "bunnybread.jpg"
+  },
+  {
+    name: "Frank West",
+    pic:  "frankwest.jpg"
+  },
+  {
+    name: "Nutshell Gulag",
+    pic:  "gulag.jpg"
+  },
+  {
+    name: "Lou Fernandez",
+    pic:  "lou.jpg"
+  },
+  {
+    name: "K Thor Jensen",
+    pic:  "kthor.jpg"
+  },
 ];
 
 const finalists = [

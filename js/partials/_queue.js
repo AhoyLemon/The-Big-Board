@@ -1,256 +1,141 @@
 const queue = [
+
+  //**************************************************** */
+  // BEGIN OF SHOW 1 //
+  //**************************************************** */
   {
-    title:    "How to Appreciate Death Metal",
-    url:      "https://www.wikihow.com/Appreciate-Death-Metal",
-    file:     "Appreciate-Death-Metal.jpg",
-    code:     "M_01",
-    provider: "Old_Zircon",
-    rating:   "LOL"
+    title:    "How to Act Like a Wolf",
+    url:      "https://www.wikihow-fun.com/Act-Like-a-Wolf",
+    file:     "Act-Like-A-Wolf.jpg",
+    code:     "A_01",
+    provider: "Adam Bozarth",
   },
 
   {
-    title:    "How to Become Pope",
-    url:      "https://www.wikihow.com/Become-Pope",
-    file:     "Become-Pope.jpg",
-    code:     "M_02",
-    provider: "crow",
-    rating:   "WTF"
-  },
-
-  {
-    title:    "Daniel Songer's Comedy Act #191: “The Day After The End Of The World Born In Hell Born Again In Hell”",
-    url:      "https://www.youtube.com/watch?v=057tOLxJ4vI",
-    file:     "whammy-songer.jpg",
+    title:    "My new boyfriend cannot receive a blowjob like a normal human being",
+    url:      "https://rareddit.com/r/sex/comments/8k0ztc/my_new_boyfriend_cannot_receive_a_blowjob_like_a",
+    file:     "corndog-blowjob.jpg",
     code:     "W_01",
     provider: "Adam Bozarth",
-    rating:   "WTF",
-    whammy:   true
+    whammy:   true,
   },
 
   {
-    title:    "How to Fake Your Own Death",
-    url:      "https://www.wikihow.com/Fake-Your-Own-Death",
-    file:     "Fake-Your-Own-Death.jpg",
-    code:     "M_03",
-    provider: "Eider Duck",
-    rating:   "LOL"
+    title:    "How to Become a Western Philosophy Guru",
+    url:      "https://www.wikihow.com/Become-a-Western-Philosophy-Guru",
+    file:     "Become-a-Western-Philosophy-Guru.jpg",
+    code:     "A_02",
+    provider: "Adam Bozarth",
+  },
+
+  
+  {
+    title:    "How to Become Good at Knife Fighting",
+    url:      "https://www.wikihow.com/Become-Good-at-Knife-Fighting",
+    file:     "Become-Good-at-Knife-Fighting.jpg",
+    code:     "A_03",
+    provider: "Adam Bozarth",
   },
 
   {
-    title:    "How to Escape a Minefield",
-    url:      "https://www.wikihow.com/Escape-a-Minefield",
-    file:     "Escape-a-Minefield.jpg",
-    code:     "M_04",
-    provider: "Victor Laszlo",
-    rating:   "WTF"
+    title:    "How to Dance With a Girl in a Club",
+    url:      "https://www.wikihow.com/Dance-With-a-Girl-in-a-Club",
+    file:     "Dance-With-a-Girl-in-a-Club.jpg",
+    code:     "A_04",
+    provider: "Adam Bozarth",
   },
 
   {
-    title:    "How to Get over Your Fear of Slenderman",
-    url:      "https://www.wikihow.com/Get-over-Your-Fear-of-Slenderman",
-    file:     "Get-over-Your-Fear-of-Slenderman.jpg",
-    code:     "M_05",
-    provider: "Wrought",
-    rating:   "LOL"
-  },
-  {
-    title:    "How to Get Rid of Demons",
-    url:      "https://www.wikihow.com/Get-Rid-of-Demons",
-    file:     "Get-Rid-of-Demons.jpg",
-    code:     "M_06",
-    provider: "Montrith",
-    rating:   "WTF"
-  },
-
-  {
-    title:    "“From Nightmares and Rockets” (An Elon Musk Erotic Fanfic)",
-    url:      "https://archiveofourown.org/works/14412927/chapters/33287679",
-    file:     "whammy-musk.jpg",
+    title:    "SERVE ME, PLEASE!",
+    url:      "http://servemeplease.blogspot.com/",
+    file:     "servemeplease.jpg",
     code:     "W_02",
-    provider: "Seth “Slimy” Rollins",
-    rating:   "YUK",
-    whammy:   true
+    provider: "Adam Bozarth",
+    whammy:   true,
   },
+
   {
-    title:    "How to Have Fun Being Naked",
-    url:      "https://www.wikihow.com/Have-Fun-Being-Naked",
-    file:     "Have-Fun-Being-Naked.jpg",
-    code:     "M_07",
-    provider: "Spooks",
-    rating:   "LOL"
+    title:    "Fifty Shades of Craigslist",
+    url:      null,
+    file:     "50shades.jpg",
+    code:     "W_03",
+    provider: "Adam Bozarth",
+    whammy:   true,
   },
+  
+  {
+    title:    "How to Hogtie Someone",
+    url:      "https://www.wikihow.com/Hogtie-Someone",
+    file:     "Hogtie-Someone.jpg",
+    code:     "A_05",
+    provider: "Adam Bozarth",
+  },
+  
+  {
+    title:    "How to Make Buttered Toast",
+    url:      "https://www.wikihow.com/Make-Buttered-Toast",
+    file:     "Make-Buttered-Toast.jpg",
+    code:     "A_06",
+    provider: "Adam Bozarth"
+  },
+
+  //**************************************************** */
+  // END OF SHOW 1 //
+  //**************************************************** */
+
+
+  //**************************************************** */
+  // BEGIN SHOW 2 //
+  //**************************************************** */
 
   /*
   {
-    title:    "Zeebo: The Placebo That Actually Works!",
-    url:      "https://www.amazon.com/Zeebo-Placebo-Designed-Experience-Well-being/dp/B00NUKW26M",
-    file:     "whammy-zeebo.jpg",
+    title:    "How to Make Buttered Toast",
+    url:      null,
+    file:     "band-dogs.jpg",
+    code:     "B_01",
+    provider: "Adam Bozarth"
+  },
+
+  {
+    title:    "How to Make a Pun",
+    url:      "https://www.wikihow.com/Make-a-Pun",
+    file:     "Make-a-Pun.jpg",
+    code:     "B_02",
+    provider: "Adam Bozarth"
+  },
+
+  {
+    title:    "Restaurant Pet Peeves List #2 by springs1",
+    url:      "http://restaurantservicepetpeeves.blogspot.com",
+    file:     "restaurant2.jpg",
     code:     "W_04",
-    provider: "Neal",
-    rating:   "WTF",
-    whammy:   true
+    provider: "Adam Bozarth"
   },
 
   {
-    title:    "How to Ignore Your Husband",
-    url:      "https://www.wikihow.com/Ignore-Your-Husband",
-    file:     "Ignore-Your-Husband.jpg",
-    code:     "M_08",
-    provider: "chai tea latte",
-    rating:   "YUK"
-  },
-
-
-  {
-    title:    "How to Pretend to Have Ice Powers (for Girls)",
-    url:      "https://www.wikihow.com/Pretend-to-Have-Ice-Powers-(for-Girls)",
-    file:     "icepowers.jpg",
-    code:     "M_09",
-    provider: "Kaleidescope & Muffinator",
-    rating:   "LOL",
+    title:    "Don't Message Me On OKcupid If.....",
+    url:      "https://baskauskas.tumblr.com/post/58477142867/oh-my-god-this-guy-messaged-me-on-okcupid-and-he",
+    file:     "cupid.jpg",
+    code:     "W_04",
+    provider: "Adam Bozarth"
   },
   
-
   {
-    title:    "How to Report Illegal Immigrants",
-    url:      "https://www.wikihow.com/Report-Illegal-Immigrants",
-    file:     "Report-Illegal-Immigrants.jpg",
-    code:     "M_10",
-    provider: "Old_Zircon",
-    rating:   "YUK",
+    title:    "How to Make It Rain Money",
+    url:      "https://www.wikihow.com/Make-It-Rain-Money",
+    file:     "Make-It-Rain-Money.jpg",
+    code:     "B_03",
+    provider: "Adam Bozarth"
   },
 
   {
-    title:    "How to Shave Your Genitals (Male)",
-    url:      "https://www.wikihow.com/Shave-Your-Genitals-(Male)",
-    file:     "shave.jpg",
-    code:     "M_11",
-    provider: "Old_Zircon",
-    rating:   "YUK",
+    title:    "How to Perform a Monologue",
+    url:      "https://www.wikihow.com/Perform-a-Monologue",
+    file:     "Perform-a-Monologue.jpg",
+    code:     "B_04",
+    provider: "Adam Bozarth"
   },
-
-  {
-    title:    "How to Start a Cult",
-    url:      "https://www.wikihow.com/Start-a-Cult",
-    file:     "Start-a-Cult.jpg",
-    code:     "M_12",
-    provider: "Spontificus",
-    rating:   "LOL"
-  },
-
-  {
-    title:    "B.A.B.E.S. (Bay Area Bug Eating Society)",
-    url:      "http://www.planetscott.com/babes/viewerstories.asp",
-    file:     "whammy-babes.jpg",
-    code:     "W_05",
-    provider: "GirlKisser420",
-    rating:   "YUK",
-    whammy:   true
-  },
-
-
-  {
-    title:    "How to Survive a Freestyle Rap Battle",
-    url:      "https://www.wikihow.com/Survive-a-Freestyle-Rap-Battle",
-    file:     "Survive-a-Freestyle-Rap-Battle.jpg",
-    code:     "M_13",
-    provider: "Aljonso",
-    rating:   "LOL"
-  },
-
-  {
-    title:    "How to Tell if Someone is Your Friend",
-    url:      "https://www.wikihow.com/Tell-if-Someone-Is-Your-Friend",
-    file:     "Tell-if-Someone-Is-Your-Friend.jpg",
-    code:     "M_14",
-    provider: "Adam Bozarth",
-    rating:   "WTF",
-  },
-
-  {
-    title:    "r/creepy_bossta",
-    url:      "https://web.archive.org/web/20170714172055/https://www.reddit.com/r/relationship_advice/comments/6mwspj/me_32m_with_my_coworkerfriend_24f_of_one_year_how/",
-    file:     "whammy-creepyboss.jpg",
-    code:     "W_06",
-    provider: "Darkly & Sham Bam Bamina",
-    rating:   "WTF",
-    whammy:   true
-  },
-
-
-  {
-    title:    "How to Tell if You Have Hit Puberty (Boys)",
-    url:      "https://www.wikihow.com/Tell-if-You-Have-Hit-Puberty-%28Boys%29",
-    file:     "puberty.jpg",
-    code:     "M_15",
-    provider: "Victor Laszlo",
-    rating:   "YUK",
-  },
-
-  {
-    title:    "How to Tell Whether You are Left Wing or Right Wing",
-    url:      "https://www.wikihow.com/Tell-Whether-You%27re-Right-Wing-or-Left-Wing",
-    file:     "Right-Wing-or-Left-Wing.jpg",
-    code:     "M_16",
-    provider: "Murphy",
-    rating:   "WTF",
-  },
-
-  {
-    title:    "Restaurant Service Pet Peeves #2 EXTENDED LIST",
-    url:      "http://restaurantservicepetpeeves.blogspot.com",
-    file:     "whammy-peeves.jpg",
-    code:     "W_07",
-    provider: "Tulalip Tulips",
-    rating:   "WTF",
-    whammy:   true
-  },
-
-  {
-    title:    "How to Think of Quick Witted Comebacks",
-    url:      "https://www.wikihow.com/Think-of-Quick-Witted-Comebacks",
-    file:     "Think-of-Quick-Witted-Comebacks.jpg",
-    code:     "M_17",
-    provider: "Old_Zircon",
-    rating:   "LOL",
-  },
-
-  {
-    title:    "How to Throw a LEGO Party (for Adults)",
-    url:      "https://www.wikihow.com/Throw-a-LEGO-Party-(for-Adults)",
-    file:     "lego.jpg",
-    code:     "M_18",
-    provider: "Old_Zircon",
-    rating:   "LOL",
-  },
-
-  {
-    title:    "Yahoo! Answers for Christians Only",
-    url:      "https://answers.yahoo.com/question/index;_ylt=AwrXnCJcbn5dgh4ANQ5PmolQ;_ylu=X3oDMTByc3RzMXFjBGNvbG8DZ3ExBHBvcwM0BHZ0aWQDBHNlYwNzcg--?qid=20080124113248AAfmjxo&guccounter=1",
-    file:     "whammy-yahoo.jpg",
-    code:     "W_03",
-    provider: "Adam Bozarth",
-    rating:   "WTF",
-    whammy:   true
-  },
-
-  {
-    title:    "How to Use Orgonite/Orgone",
-    url:      "https://www.wikihow.com/Use-Orgonite/Orgone",
-    file:     "orgonite.jpg",
-    code:     "M_19",
-    provider: "Bomberjacket",
-    rating:   "WTF",
-  },
-
-  {
-    title:    "How to Vomit While Driving",
-    url:      "https://www.wikihow.com/Vomit-While-Driving",
-    file:     "Vomit-While-Driving.jpg",
-    code:     "M_19",
-    provider: "dickthedick",
-    rating:   "YUK",
-  }
   */
 
 ];
