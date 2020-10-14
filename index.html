@@ -13,14 +13,12 @@
     <div id="app" v-cloak>
       <div class="keywatch" tabindex="-1" @keyup.enter="doSomething"></div>
       <div class="screen title-screen" v-if="mode == 'sit down'">
-        <figure :style="{ 'background-image': 'url(img/bg/title-screen.jpg)' }"></figure>
+        <video controls muted>
+          <source src="/video/title.mp4" type="video/mp4">
+        </video>
       </div>
       <div class="screen break-screen" v-if="mode == 'vote'">
-        <figure v-if="player.number &lt; 5" :style="{ 'background-image': 'url(img/bg/vote-1.jpg)' }"></figure>
-        <figure v-else-if="player.number &lt; 9" :style="{ 'background-image': 'url(img/bg/vote-2.jpg)' }"></figure>
-        <figure v-else-if="player.number &lt; 13" :style="{ 'background-image': 'url(img/bg/vote-3.jpg)' }"></figure>
-        <figure v-else-if="!finals.active" :style="{ 'background-image': 'url(img/bg/vote-4.jpg)' }"></figure>
-        <figure v-else-if="finals.active" :style="{ 'background-image': 'url(img/bg/vote-final.jpg)' }"></figure>
+        <figure :style="{ 'background-image': 'url(img/bg/gd-vote-1.jpg)' }"></figure>
       </div>
       <div class="screen come-on-down" v-if="mode == 'come on down'">
         <div v-if="finals.active">
@@ -29,13 +27,7 @@
           </div>
           <h1 class="final-four">The Final Four!</h1>
         </div>
-        <div class="heat-bg" v-else style="background-image:url(img/bg/glitter.jpg)">
-          <h1 v-if="player.number &lt; 4">HEAT #1</h1>
-          <h1 v-else-if="player.number &lt; 8">HEAT #2</h1>
-          <h1 v-else-if="player.number &lt; 12">HEAT #3</h1>
-          <h1 v-else>HEAT #4</h1>
-        </div>
-        <div v-if="player.number &lt; 9"></div>
+        <div class="bunnypoint" style="background-image:url(img/bg/bunnypoint.jpg)"></div>
       </div>
       <div class="press-your-luck" v-if="(mode == 'show player' || mode == 'spin' || mode == 'show title') &amp;&amp; !finals.active">
         <div class="box" v-for="(box, index) in boxes" :class="{ focus: box.focus, selected: box.selected, blinking: box.blinking, huge: box.huge }">
@@ -117,7 +109,7 @@
       <script src="js/libraries/vue.full.js"></script>
       <script>const testing = true;</script>
       <script src="js/libraries/howler.min.js"></script>
-      <script src="js/min/site.min.js?updated2020-00-02@22:50:43"></script>
+      <script src="js/min/site.min.js?updated2020-09-13@20:42:44"></script>
     </div>
   </body>
 </html>

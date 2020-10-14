@@ -7,10 +7,13 @@
 
     h1.final-four The Final Four!
 
-  div.heat-bg(v-else style="background-image:url(img/bg/glitter.jpg)")
+
+  .bunnypoint(style="background-image:url(img/bg/bunnypoint.jpg)")
+
+  //-div.heat-bg(v-else style="background-image:url(img/bg/glitter.jpg)")
 
     h1(v-if="player.number < 4") HEAT #1
     h1(v-else-if="player.number < 8") HEAT #2
     h1(v-else-if="player.number < 12") HEAT #3
     h1(v-else) HEAT #4
-  div(v-if="player.number < 9")
+  //-div(v-if="player.number < 9")

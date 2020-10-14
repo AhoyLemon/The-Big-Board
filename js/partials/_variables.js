@@ -35,24 +35,23 @@ const players = [
     pic:  "boots.jpg"
   },
   {
-    name: "Bunnybread",
-    pic:  "bunnybread.jpg"
-  },
-  {
     name: "Frank West",
     pic:  "frankwest.jpg"
-  },
-  {
-    name: "Nutshell Gulag",
-    pic:  "gulag.jpg"
   },
   {
     name: "Lou Fernandez",
     pic:  "lou.jpg"
   },
   {
-    name: "K Thor Jensen",
-    pic:  "kthor.jpg"
+    name: "JW Friedman"
+  },
+  {
+    name: "Bunnybread",
+    pic:  "bunnybread.jpg"
+  },
+  {
+    name: "Adam Bozarth",
+    pic:  "bozarth.jpg"
   },
 ];
 

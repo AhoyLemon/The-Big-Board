@@ -63,6 +63,13 @@ var app = new Vue({
         } else if (self.mode == 'countdown') {
           clearInterval(self.countdown.interval);
           self.updateLocalStorage();
+          if (self.player.number >= self.players.length) {
+            self.mode = 'vote';
+          } else {
+            self.mode = 'come on down';
+          }
+          
+          /*
           if (singleRoundMode) {
             self.setupNewSpin();
           } else if ((self.mode != 'vote') && (self.player.number == 4 || self.player.number == 8 || self.player.number == 12 )) {
@@ -72,6 +79,7 @@ var app = new Vue({
           } else {
             self.setupNewSpin();
           }
+          */
         } else if (self.mode == 'vote') { 
           self.mode = 'come on down';
         } else if (self.mode == "make your choice" && self.finals.active == true && self.finals.current.choiceMade == true) {
