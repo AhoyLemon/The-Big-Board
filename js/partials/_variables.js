@@ -1,7 +1,7 @@
-const bozarthName = "Adam Bozarthhhhhh";
+const bozarthName = "Adam Bozarth";
 const roundSeconds = 360;
 const finalSeconds = 300;
-const spinFast = true;
+const spinFast = false;
 const cacheRound = false;
 const boardBoxCount = 9;
 const siteURL = "";

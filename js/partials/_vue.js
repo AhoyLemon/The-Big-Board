@@ -167,21 +167,20 @@ var app = new Vue({
       
       let adamBox = {
         blinking: false,
-        code: "ADAM_01",
-        pic: "cornerback.jpg",
-        file: "cornerback.jpg",
-        imgSrc: "img/drawings/sexy-football-bozarth.jpg",
-        focus: false,
-        provider: "Montrith",
-        rating: "LOL",
+        code:     "ADAM_01",
+        file:     "big-cucumber.jpg",
+        imgSrc:   "img/drawings/bozarth-underwear.jpg",
+        focus:    false,
+        provider: "Dijon Du Jour",
+        rating:   "LOL",
         selected: false,
-        title: "How To Turn the Super Bowl into Super Sex!",
-        url: "http://www.howtodothings.com/family-relationships/how-to-turn-the-super-bowl-into-super-sex",
-        whammy: false,
-        huge: true
+        title:    "This is a true story from r/TrueBigDickStories",
+        url:      "https://www.reddit.com/r/TrueBigDickStories/comments/jdyt0r/i_could_finally_go_wild/",
+        whammy:   false,
+        huge:     true
       };
 
-      self.boxes.splice(2, 1, adamBox);
+      self.boxes.splice(1, 1, adamBox);
     },
 
     setupNewSpin() {
@@ -256,13 +255,12 @@ var app = new Vue({
 
       if (self.player.name == bozarthName) {
         self.setDeceleratingTimeout(function(){ 
-          self.boxes[2].focus = false;
+          self.boxes[1].focus = false;
           sound.play();
-          self.boxes[2].lastFocused = 2;
-          self.temp.currentFocus = 2;
-
-          setTimeout(function(){ self.boxes[2].focus = true; }, 100);
-        }, 15, 56);
+          self.boxes[1].lastFocused = false;
+          self.temp.currentFocus = 1;
+          setTimeout(function(){ self.boxes[1].focus = true; }, 100);
+        }, 15, 33);
       } else {
         if (spinFast == true) {
           self.setDeceleratingTimeout(function(){ self.boop(); }, 15, 6);

@@ -8,7 +8,7 @@ const queue = [
     url:      "https://www.wikihow-fun.com/Act-Like-a-Wolf",
     file:     "Act-Like-A-Wolf.jpg",
     code:     "A_01",
-    provider: "Adam Bozarth",
+    //provider: "Adam Bozarth",
   },
 
   {
@@ -16,7 +16,7 @@ const queue = [
     url:      "https://rareddit.com/r/sex/comments/8k0ztc/my_new_boyfriend_cannot_receive_a_blowjob_like_a",
     file:     "corndog-blowjob.jpg",
     code:     "W_01",
-    provider: "Adam Bozarth",
+    //provider: "Adam Bozarth",
     whammy:   true,
   },
 
@@ -25,7 +25,7 @@ const queue = [
     url:      "https://www.wikihow.com/Become-a-Western-Philosophy-Guru",
     file:     "Become-a-Western-Philosophy-Guru.jpg",
     code:     "A_02",
-    provider: "Adam Bozarth",
+    //provider: "Adam Bozarth",
   },
 
   
@@ -34,7 +34,7 @@ const queue = [
     url:      "https://www.wikihow.com/Become-Good-at-Knife-Fighting",
     file:     "Become-Good-at-Knife-Fighting.jpg",
     code:     "A_03",
-    provider: "Adam Bozarth",
+    //provider: "Adam Bozarth",
   },
 
   {
@@ -42,7 +42,7 @@ const queue = [
     url:      "https://www.wikihow.com/Dance-With-a-Girl-in-a-Club",
     file:     "Dance-With-a-Girl-in-a-Club.jpg",
     code:     "A_04",
-    provider: "Adam Bozarth",
+    //provider: "Adam Bozarth",
   },
 
   {
@@ -50,7 +50,7 @@ const queue = [
     url:      "http://servemeplease.blogspot.com/",
     file:     "servemeplease.jpg",
     code:     "W_02",
-    provider: "Adam Bozarth",
+    //provider: "Adam Bozarth",
     whammy:   true,
   },
 
@@ -59,7 +59,7 @@ const queue = [
     url:      null,
     file:     "50shades.jpg",
     code:     "W_03",
-    provider: "Adam Bozarth",
+    //provider: "Adam Bozarth",
     whammy:   true,
   },
   
@@ -68,7 +68,7 @@ const queue = [
     url:      "https://www.wikihow.com/Hogtie-Someone",
     file:     "Hogtie-Someone.jpg",
     code:     "A_05",
-    provider: "Adam Bozarth",
+    //provider: "Adam Bozarth",
   },
   
   {
@@ -76,7 +76,7 @@ const queue = [
     url:      "https://www.wikihow.com/Make-Buttered-Toast",
     file:     "Make-Buttered-Toast.jpg",
     code:     "A_06",
-    provider: "Adam Bozarth"
+    //provider: "Adam Bozarth"
   },
 
   //**************************************************** */
