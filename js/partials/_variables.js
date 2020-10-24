@@ -1,5 +1,5 @@
 const bozarthName = "Adam Bozarth";
-const roundSeconds = 360;
+const roundSeconds = 300;
 const finalSeconds = 300;
 const spinFast = false;
 const cacheRound = false;

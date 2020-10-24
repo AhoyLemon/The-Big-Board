@@ -315,10 +315,12 @@ var app = new Vue({
           self.countdown.percent = ((self.countdown.elapsed / roundSeconds) * 100);
           self.countdown.remaining = roundSeconds - self.countdown.elapsed;
         }
-        
+
+        /*
         if (self.countdown.remaining == 30) {
           hurryUp.play();
         }
+        */
 
         if (self.countdown.percent == 100) {
           hurryUp.stop();
