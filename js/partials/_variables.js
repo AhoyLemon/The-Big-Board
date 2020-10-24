@@ -30,6 +30,11 @@ var nngg = new Howl({
 const loadDamnDog = false;
 
 const players = [
+
+  /*****************************************************
+  Players for Round 1.
+  ********************************************/
+  
   {
     name: "Boots Raingear",
     pic:  "boots.jpg"
@@ -54,6 +59,34 @@ const players = [
     name: "Adam Bozarth",
     pic:  "bozarth.jpg"
   },
+
+
+  /*****************************************************
+  Players for Round 2.
+  ********************************************/
+
+  /*
+  {
+    name: "Achilles' Heelies",
+    pic:  "heelies.jpg"
+  },
+  {
+    name: "Jimmyfranks",
+    pic:  "jimmyfranks.jpg"
+  },
+  {
+    name: "Shell Game",
+    pic:  "shellgame.jpg"
+  },
+  {
+    name: "K Thor Jensen",
+    pic:  "kthor.jpg"
+  },
+  {
+    name: "Kumquatxop",
+    pic:  "kumquatxop.jpg"
+  },
+  */
 ];
 
 const finalists = [
