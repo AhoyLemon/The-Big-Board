@@ -168,14 +168,14 @@ var app = new Vue({
       let adamBox = {
         blinking: false,
         code:     "ADAM_01",
-        file:     "big-cucumber.jpg",
-        imgSrc:   "img/drawings/bozarth-underwear.jpg",
+        file:     "typeo.jpg",
+        imgSrc:   "img/drawings/typeo.jpg",
         focus:    false,
-        provider: "Dijon Du Jour",
+        provider: "Lemon",
         rating:   "LOL",
         selected: false,
-        title:    "This is a true story from r/TrueBigDickStories",
-        url:      "https://www.reddit.com/r/TrueBigDickStories/comments/jdyt0r/i_could_finally_go_wild/",
+        title:    "Here’s Some Actual Some Lyrics For You To Read Out Loud!",
+        url:      null,
         whammy:   false,
         huge:     true
       };

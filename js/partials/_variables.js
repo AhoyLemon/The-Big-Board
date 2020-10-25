@@ -1,7 +1,7 @@
-const bozarthName = "Adam Bozarth";
+const bozarthName = "JW Friedman";
 const roundSeconds = 300;
 const finalSeconds = 300;
-const spinFast = false;
+const spinFast = true;
 const cacheRound = false;
 const boardBoxCount = 9;
 const siteURL = "";
@@ -35,6 +35,7 @@ const players = [
   Players for Round 1.
   ********************************************/
   
+  /*
   {
     name: "Boots Raingear",
     pic:  "boots.jpg"
@@ -59,13 +60,14 @@ const players = [
     name: "Adam Bozarth",
     pic:  "bozarth.jpg"
   },
+  */
 
 
   /*****************************************************
   Players for Round 2.
   ********************************************/
 
-  /*
+  
   {
     name: "Achilles' Heelies",
     pic:  "heelies.jpg"
@@ -79,14 +81,18 @@ const players = [
     pic:  "shellgame.jpg"
   },
   {
+    name: "Kumquatxop",
+    pic:  "kumquatxop.jpg"
+  },
+  {
     name: "K Thor Jensen",
     pic:  "kthor.jpg"
   },
   {
-    name: "Kumquatxop",
-    pic:  "kumquatxop.jpg"
-  },
-  */
+    name: "JW Friedman",
+    pic:  "jwf.jpg"
+  }
+  
 ];
 
 const finalists = [

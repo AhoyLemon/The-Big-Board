@@ -14,29 +14,11 @@ const queue = [
   },
 
   {
-    title:    "My new boyfriend cannot receive a blowjob like a normal human being",
-    url:      "https://rareddit.com/r/sex/comments/8k0ztc/my_new_boyfriend_cannot_receive_a_blowjob_like_a",
-    file:     "corndog-blowjob.jpg",
-    code:     "W_01",
-    provider: "GirlKisser420",
-    whammy:   true,
-  },
-
-  {
     title:    "How to Become a Western Philosophy Guru",
     url:      "https://www.wikihow.com/Become-a-Western-Philosophy-Guru",
     file:     "Become-a-Western-Philosophy-Guru.jpg",
     code:     "A_02",
     provider: "Old_Zircon",
-  },
-
-  
-  {
-    title:    "How to Become Good at Knife Fighting",
-    url:      "https://www.wikihow.com/Become-Good-at-Knife-Fighting",
-    file:     "Become-Good-at-Knife-Fighting.jpg",
-    code:     "A_03",
-    provider: "Jack Chick",
   },
 
   {
@@ -45,24 +27,6 @@ const queue = [
     file:     "Dance-With-a-Girl-in-a-Club.jpg",
     code:     "A_04",
     provider: "Old_Zircon",
-  },
-
-  {
-    title:    "SERVE ME, PLEASE!",
-    url:      "http://servemeplease.blogspot.com/",
-    file:     "servemeplease.jpg",
-    code:     "W_02",
-    provider: "Tulalip Tulips",
-    whammy:   true,
-  },
-
-  {
-    title:    "Fifty Shades of Craigslist",
-    url:      null,
-    file:     "50shades.jpg",
-    code:     "W_03",
-    provider: "goombapolice",
-    whammy:   true,
   },
   
   {
@@ -89,30 +53,6 @@ const queue = [
   //**************************************************** */
   // BEGIN SHOW 2 //
   //**************************************************** */
-
-  {
-    title:    "How to Kill Famous Bands In Dog World",
-    url:      null,
-    file:     "band-dogs.jpg",
-    code:     "B_01",
-    provider: "fruithag"
-  },
-
-  {
-    title:    "How to Make a Pun",
-    url:      "https://www.wikihow.com/Make-a-Pun",
-    file:     "Make-a-Pun.jpg",
-    code:     "B_02",
-    provider: "Spontificus"
-  },
-
-  {
-    title:    "Restaurant Pet Peeves List #2 by springs1",
-    url:      "http://restaurantservicepetpeeves.blogspot.com",
-    file:     "restaurant2.jpg",
-    code:     "W_04",
-    provider: "Tulalip Tulips"
-  },
 
   {
     title:    "Don't Message Me On OKcupid If.....",
@@ -147,6 +87,15 @@ const queue = [
   },
 
   {
+    title:    "How to Write a Free Verse Poem (With 3 Examples!)",
+    url:      "https://www.wikihow.com/Write-a-Free-Verse-Poem",
+    file:     "free-verse-poetry.jpg",
+    code:     "B_06",
+    provider: "Lemon"
+  },
+
+  /*
+  {
     title:    "Here’s Some Actual Some Lyrics For You To Read Out Loud!",
     url:      null,
     file:     "typeo.jpg",
@@ -154,13 +103,8 @@ const queue = [
     provider: "Lemon",
     whammy:   true,
   },
+  */
   
-  {
-    title:    "How to Write a Free Verse Poem (With 3 Examples!)",
-    url:      "https://www.wikihow.com/Write-a-Free-Verse-Poem",
-    file:     "free-verse-poetry.jpg",
-    code:     "B_06",
-    provider: "Lemon"
-  },
+  
 
 ];
