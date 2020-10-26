@@ -1,7 +1,7 @@
 const bozarthName = "JW Friedman";
 const roundSeconds = 300;
 const finalSeconds = 300;
-const spinFast = true;
+const spinFast = false;
 const cacheRound = false;
 const boardBoxCount = 9;
 const siteURL = "";

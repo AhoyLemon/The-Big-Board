@@ -167,7 +167,7 @@ var app = new Vue({
       
       let adamBox = {
         blinking: false,
-        code:     "ADAM_01",
+        code:     "TYPE_O",
         file:     "typeo.jpg",
         imgSrc:   "img/drawings/typeo.jpg",
         focus:    false,

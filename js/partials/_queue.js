@@ -5,6 +5,7 @@ const queue = [
   //**************************************************** */
 
   
+  /*
   {
     title:    "How to Act Like a Wolf",
     url:      "https://www.wikihow-fun.com/Act-Like-a-Wolf",
@@ -12,6 +13,7 @@ const queue = [
     code:     "A_01",
     provider: "nilvoid",
   },
+  */
 
   {
     title:    "How to Become a Western Philosophy Guru",
